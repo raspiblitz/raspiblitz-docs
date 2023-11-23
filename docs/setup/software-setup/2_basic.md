@@ -38,7 +38,7 @@ Choose `NONE` if you're only interested in running a Bitcoin full node without L
 
 ![SSH1](../../../static/img/ssh1-layer2.png)
 
-:::info 
+:::info
 In the following we show the setup with LND - which is very similar to the steps with Core Lightning.
 :::
 
@@ -52,10 +52,10 @@ Normally you just chose `NEW` here, but to recover an old wallet you have the fo
 
 You have the following options to recover an old node.
 
-#### LNDRESCUE 
+#### LNDRESCUE
 
 :::info
-This is the preffered choice
+This is the preferred choice
 :::
 
 Choose this option if you have made a complete backup of the LND or Core Lightning data and have a tar.gz file starting with the word 'lnd-rescue' or 'cl-rescue' available.
