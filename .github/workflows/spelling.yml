@@ -2,7 +2,7 @@ name: Spelling
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   spelling:
