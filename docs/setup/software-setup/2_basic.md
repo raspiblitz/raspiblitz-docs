@@ -5,7 +5,7 @@ sidebar_position: 2
 # Basic Setup
 
 Every time you start with a fresh SD card image you will be offered different options.
-For example this is also the point where you can import a Migration file from an older RaspiBlitz - read about Migration `TODO: further down README.md#import-a-migration-file`.
+For example this is also the point where you can import a Migration file from an older RaspiBlitz - read about Migration. 
 But because you are setting up a brand new RaspiBlitz you will choose here `FRESHSETUP`.
 
 ![SSH0](../../../static/img/ssh0-welcome2.png)
@@ -51,6 +51,27 @@ Normally you just chose `NEW` here, but to recover an old wallet you have the fo
 ![SSH1](../../../static/img/ssh2-layer2old.png)
 
 You have the following options to recover an old node.
+
+#### Import a Migration File
+
+As mentioned above you can export a Migration File from your RaspiBlitz with `MAINMENU > REPAIR > MIGRATION` and store it on your laptop.
+
+A Migration file contains all the important data from your RaspiBlitz, like your LND data, Bitcoin Wallet, raspiblitz.config, Tor/SSH keys, and also installed apps.
+You can use this to migrate your RaspiBlitz to new hardware.
+
+If you want to import it again to a new RaspiBlitz (for example with an updated HDD/SSD), you can choose the `FROMBACKUP` option on the first setup dialogue of a fresh SD card image.
+
+![SSH0](../../../static/img/ssh0-welcome2.png)
+
+If you start MIGRATION you be get asked whether you would like to use a existing blockchain on the hard drive/SSD and delete the rest, or whether you'd prefer to format the entire drive.
+Once that's done you are shown instructions on how to upload the migration file (use the password `raspiblitz` when asked on executing the upload command):
+
+![MIGRATION1](../../../static/img/migration1.png)
+
+After this you will be asked to set a new password A, and your RaspiBlitz will go into recovery/provision process.
+Then RaspiBlitz might give you the option again to self-sync or copy the blockchain from another computer/blitz, and afterwards a final reboot.
+
+Then the blockchain needs to sync up and you should be back to normal.
 
 #### LNDRESCUE
 
