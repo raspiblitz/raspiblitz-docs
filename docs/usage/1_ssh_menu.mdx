@@ -35,9 +35,9 @@ It\'s useful to call in a remote situation from SSH if you don\'t have your Rasp
 _It's not automatically updating.
 It's just for one-time info._
 
-- [Why is my bitcoin IP on the display red?](FAQ.md#why-is-my-bitcoin-ip-on-the-display-red)
-- [Why is my node address on the display red?](FAQ.md#why-is-my-node-address-on-the-display-red)
-- [Why is my node address on the display yellow (not green)?](FAQ.md#why-is-my-node-address-on-the-display-yellow-not-green)
+- [Why is my bitcoin IP on the display red?](../faq/faq.md#why-is-my-bitcoin-ip-on-the-display-red)
+- [Why is my node address on the display red?](../faq/faq.md#why-is-my-node-address-on-the-display-red)
+- [Why is my node address on the display yellow (not green)?](../faq/faq.md#why-is-my-node-address-on-the-display-yellow-not-green)
 
 #### LIGHTNING (Basic Node Management)
 
@@ -225,11 +225,11 @@ It can be activated under "Services" -> "Auto-unlock LND".
 We recommend that it be turned on when DynamicDNS is used.
 If there is a public IP change on your router LND restarts automatically, and without Auto-Unlock it will stay inactive/unreachable until you manually unlock it which could be annoying.
 
-- [When using Auto-Unlock, how much security do I lose?](FAQ.md#when-using-auto-unlock-how-much-security-do-i-lose)
+- [When using Auto-Unlock, how much security do I lose?](../faq/faq.md#when-using-auto-unlock-how-much-security-do-i-lose)
 
 ##### StaticChannel/Emergency-Backup on Nextcloud
 
-See [below on this README](README.md#backup-for-on-chain---channel-funds) for your Backup options when it comes to securing your funds against accidental loss.
+See [below on this README](../setup/software-setup/2_basic.md#backup-for-on-chain---channel-funds) for your Backup options when it comes to securing your funds against accidental loss.
 Storing the encrypted Static Channel Backup file to your Nextcloud account is an easy and secure way to do this.
 
 Nextcloud is an open-source project to host your own files: https://en.wikipedia.org/wiki/Nextcloud - in its basics it's an open DropBox replacement... but can do much much more.
@@ -243,7 +243,7 @@ That USB drive will then be used to store your latest StaticChannelBackup, just 
 
 ##### StaticChannel/Emergency-Backup per SCP/SSH to other server
 
-See [SCP Backup Target](README.md#b-scp-backup-target) for details on how to setup static channel backups using SCP.
+See [SCP Backup Target](../setup/software-setup/2_basic.md#b-scp-backup-target) for details on how to setup static channel backups using SCP.
 
 ##### CORE LIGHTNING NODE
 
@@ -252,7 +252,7 @@ If switched on it means the c-lighting node implementation is installed and runn
 If activated you will find an additional option in the SSH main menu that offers you more options to operate the Core Lightning node.
 Also under `SERVICES` some apps might only be available if Core Lightning is activated.
 
-For more details on this lightning node implementation go to the [Core Lightning FAQ page](FAQ.cl.md).
+For more details on this lightning node implementation go to the [Core Lightning FAQ page](../faq/cl.md).
 
 ##### CL CLBOSS Automatic Node Manager
 
@@ -643,7 +643,7 @@ Multiple options to repair/backup your c-lightning node:
 This stops your RaspiBlitz and creates a Migration ZIP file you can download/export per SCP to your laptop.
 This contains all the important data from your RaspiBlitz including LND, your Blitz configuration and also data from your installed apps.
 Can be used to migrate your RaspiBlitz to a new hardware - for example if you want to replace the HDD with a SSD.
-For details on how to import a Migration File [see here](README.md#import-a-migration-file).
+For details on how to import a Migration File [see here](../setup/software-setup/2_basic.md#import-a-migration-file).
 
 _NOTICE: If you start your RaspiBlitz after exporting the migration file again it is outdated and using it can risk losing your channel funds._
 
