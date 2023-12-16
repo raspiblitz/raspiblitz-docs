@@ -4,24 +4,25 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "RaspiBlitz",
-  tagline: "Dragons are cool",
+  tagline: "Bitcoin and Lightning node",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: "https://raspiblitz.org",
+  url: "https://docs.raspiblitz.org",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/raspiblitz/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "fusion44", // Usually your GitHub org/user name.
-  projectName: "raspiblitz", // Usually your repo name.
+  organizationName: "raspiblitz", // Usually your GitHub org/user name.
+  projectName: "raspiblitz-docs", // Usually your repo name.
+  deploymentBranch: 'gh-pages',
   trailingSlash: false,
 
   onBrokenLinks: "throw",
