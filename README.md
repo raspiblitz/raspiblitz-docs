@@ -1,6 +1,10 @@
-# Website
+# RaspiBLitz Documentation Website
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+This is the repository for the documentation for the [RaspiBlitz](https://github.com/raspiblitz/raspiblitz) project. It is built using [Docusaurus 3](https://docusaurus.io/).
+
+### Nix 
+If you have the Nix package manager installed you can use the included flake file to setup the development environment.
+`nix develop`
 
 ### Installation
 
@@ -39,3 +43,8 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Useful links 
+
+https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one
+https://docusaurus.io/docs/markdown-features/admonitions
