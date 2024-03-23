@@ -223,8 +223,7 @@ Neither the CLBOSS nor the RaspiBlitz developers can take responsibility for los
 - activate the feature on your node:
   Type: `clconf` or use the menu `SYSTEM` - `CLCONF`.
   Add the line:
-  `     experimental-dual-fund
-  `
+  `    experimental-dual-fund`
   Save and restart CLN.
 
 - set up a liquidity ad:
@@ -284,15 +283,13 @@ Neither the CLBOSS nor the RaspiBlitz developers can take responsibility for los
 - the amount is the own funds in the wallet contributed
   use equal amounts to have a balanced channel from start
   the amounts can be specified in `sat` or `btc`
-  `     lightning-cli fundchannel -k id=NODE_ID amount=OWN_AMOUNTsat request_amt=PEER_CONTRIBUTION_AMOUNTsat compact_lease=COMPACT_LEASE
-  `
+  `    lightning-cli fundchannel -k id=NODE_ID amount=OWN_AMOUNTsat request_amt=PEER_CONTRIBUTION_AMOUNTsat compact_lease=COMPACT_LEASE`
   It can fail if the offer changed or there are not enough funds available on either side.
 
 - open a dual funded channel with a chosen utxo and miner feerate
   list the utxo-s with `lightning-cli listfunds`, can list multiple
   the feerate is in `perkb` by default, e.g. use 1000 for 1 sat/byte
-  `     lightning-cli fundchannel feerate=PERKB_FEERATE utxos='["TRANSACTION_ID:INDEX_NUMBER"]' -k id=NODE_ID amount=OWN_AMOUNTsat request_amt=PEER_CONTRIBUTION_AMOUNTsat compact_lease=COMPACT_LEASE
-  `
+  `    lightning-cli fundchannel feerate=PERKB_FEERATE utxos='["TRANSACTION_ID:INDEX_NUMBER"]' -k id=NODE_ID amount=OWN_AMOUNTsat request_amt=PEER_CONTRIBUTION_AMOUNTsat compact_lease=COMPACT_LEASE`
 
 #### Multifundchannel syntax
 
@@ -356,22 +353,18 @@ Neither the CLBOSS nor the RaspiBlitz developers can take responsibility for los
 - Details at bolt12.org
 - Create an offer to receive payments:
   https://lightning.readthedocs.io/lightning-offer.7.html
-  `     lightning-cli offer amount description [vendor] [label] [quantity_min] [quantity_max] [absolute_expiry] [recurrence] [recurrence_base] [recurrence_paywindow] [recurrence_limit] [single_use]
-  `
+  `    lightning-cli offer amount description [vendor] [label] [quantity_min] [quantity_max] [absolute_expiry] [recurrence] [recurrence_base] [recurrence_paywindow] [recurrence_limit] [single_use]`
 - Example:
   Create a reusable offer which can be paid with any amount for LN tips using a fixed string.
-  `     lightning-cli offer any tip
-  `
+  `    lightning-cli offer any tip`
 
 - Create an offer to send payments:
   https://lightning.readthedocs.io/lightning-offerout.7.html
-  `     lightning-cli offerout amount description [vendor] [label] [absolute_expiry] [refund_for]
-  `
+  `    lightning-cli offerout amount description [vendor] [label] [absolute_expiry] [refund_for]`
 - Fetch an invoice to pay an offer:
   https://lightning.readthedocs.io/lightning-fetchinvoice.7.html
   Will need at least one peer which supports onion the messages. For example:
-  `     lightning-cli connect 024b9a1fa8e006f1e3937f65f66c408e6da8e1ca728ea43222a7381df1cc449605@128.199.202.168:9735
-  `
+  `    lightning-cli connect 024b9a1fa8e006f1e3937f65f66c408e6da8e1ca728ea43222a7381df1cc449605@128.199.202.168:9735`
 - Then use the command to fetch the BOLT12 invoice:
   ```
   lightning-cli fetchinvoice offer [msatoshi] [quantity] [recurrence_counter] [recurrence_start] [recurrence_label] [timeout] [payer_note]
@@ -382,8 +375,7 @@ Neither the CLBOSS nor the RaspiBlitz developers can take responsibility for los
   ```
 - pay a a BOLT12 invoice:
   Will need to pay through a peer which supports the onion messages which means you need at least one channel with such a node.
-  `     lightning-cli pay bolt12_invoice
-  `
+  `    lightning-cli pay bolt12_invoice`
 - see if there is a new invoice is paid with:
   ```
   lightning-cli listinvoices
