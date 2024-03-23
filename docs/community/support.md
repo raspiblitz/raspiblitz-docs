@@ -38,6 +38,7 @@ There are plenty off rooms you can find Raspiblitz users that can help you:
 7. [Matrix - Element client](https://element.io/) Channel: #raspiblitz:libera.chat
 
 8. IRC - Libera chat -> irc.libera.chat:6697 -> Channel: #raspiblitz
+
 ```text
 TODO: fixme
 9. Sphinx Chat -> sphinx.chat://?action=tribe&uuid=YFsuxCApuU-TBIRWeWY_Gl52IOx2clJKZYLxDn78Z9RgcWNx9zUube7mkK4IyXQjLril-tgKZs3wOxDlWqpiyxp8jTbt&host=tribes.sphinx.chat -> [Connection code](YFsuxCApuU-TBIRWeWY_Gl52IOx2clJKZYLxDn78Z9RgcWNx9zUube7mkK4IyXQjLril-tgKZs3wOxDlWqpiyxp8jTbt) --> [QR code](https://github.com/rootzoll/raspiblitz/issues/2089#issuecomment-805789854)

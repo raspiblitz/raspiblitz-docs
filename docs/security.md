@@ -5,7 +5,7 @@ sidebar_position: 2
 # Security Policy
 
 :::info
-*NOTE: This document is just a first draft and still under construction.*
+_NOTE: This document is just a first draft and still under construction._
 :::
 
 Only use this software with funds you could afford to lose. Especially a lightning wallet that is a hot wallet, which has constant connection to the internet and can be target of exploitation.
@@ -26,6 +26,7 @@ Updates are made only for the latest version.
 Security patches can be done with `MAINMENU > UPDATE > PATCH` for the current branch in the case of a high risk issue before next release.
 
 The latest version always have the `latest` tag. To make sure you are using the latest version, run:
+
 ```
 curl -s https://api.github.com/repos/rootzoll/raspiblitz/releases/latest|grep tag_name|head -1|cut -d '"' -f4
 ```
@@ -42,36 +43,38 @@ The following keys may be used to communicate sensitive information to developer
 | Openoms  | 13C6 88DB 5B9C 745D E4D2 E454 5BFB 7760 9B08 1B65 | 5BFB 7760 9B08 1B65 |
 
 You can import a key by running the following command with that individual’s fingerprint:
+
 ```
 curl https://keybase.io/rootzoll/pgp_keys.asc | gpg --import
 curl https://keybase.io/oms/pgp_keys.asc | gpg --import
 ```
+
 Ensure that you put quotes around fingerprints containing spaces if importing with other methods.
 
 # Privacy Protection
 
-When you call `debug` on the command line you get basic system & services logs that can be used if you need to report details for support by other users. There is already a basic redaction of private data (nodeids, IPv4s, .onion-addresses, balances) for that debug report BUT always check the data you post in DMs or public before sending. If you find further private data that needs redaction, please report as an issue on the github repo.  
+When you call `debug` on the command line you get basic system & services logs that can be used if you need to report details for support by other users. There is already a basic redaction of private data (nodeids, IPv4s, .onion-addresses, balances) for that debug report BUT always check the data you post in DMs or public before sending. If you find further private data that needs redaction, please report as an issue on the github repo.
 
 # Network Security
 
-* Limit attack surface: Wi-fi and Bluetooth is disabled by default in the build script.
-* Firewall: UFW is active and only specific ports are open, closing ports and removing hidden services when services are uninstalled.
-* Password brute forcing protection: Fail-2-Ban is protecting the SSH login against brute-force-attacks.
+- Limit attack surface: Wi-fi and Bluetooth is disabled by default in the build script.
+- Firewall: UFW is active and only specific ports are open, closing ports and removing hidden services when services are uninstalled.
+- Password brute forcing protection: Fail-2-Ban is protecting the SSH login against brute-force-attacks.
 
 # Software security
 
-* The `admin` (and the `joinmarket` [optional]) users have passwordless sudo access to be able to perform installations and read password without much user interaction.
+- The `admin` (and the `joinmarket` [optional]) users have passwordless sudo access to be able to perform installations and read password without much user interaction.
 
-* Downloaded binaries and source code is verified with the authors' PGP keys by either:
-    * signed shasum files and checking the hash of each downloaded binary
-    * verifying the signature on the source code changes utilising the `git verify-commit` or `git verify-tag` commands
+- Downloaded binaries and source code is verified with the authors' PGP keys by either:
+  - signed shasum files and checking the hash of each downloaded binary
+  - verifying the signature on the source code changes utilising the `git verify-commit` or `git verify-tag` commands
 
 # Physical Security
 
-* The lightning wallet and user interfaces are password protected by default so this has more privacy implications (in the case of physical theft) than security.
-* Basic hardening measures are applied to all non-root systemd services
-* Optional log in through SSH using a hardware wallet.
-* LUKS encryption would be welcome in the future.
+- The lightning wallet and user interfaces are password protected by default so this has more privacy implications (in the case of physical theft) than security.
+- Basic hardening measures are applied to all non-root systemd services
+- Optional log in through SSH using a hardware wallet.
+- LUKS encryption would be welcome in the future.
 
 # On-chain Funds
 
@@ -83,15 +86,14 @@ The default is the on-chain lightning wallet - that's the wallet where you norma
 
 ## Bitcoin Core Wallet (deactivated by default)
 
-Beside lightning you have a Bitcoin core installed. Normally, Bitcoin core acts just as a blockchain informational service to the lightning wallet and its internal separate on-chain wallet is deactivated. 
+Beside lightning you have a Bitcoin core installed. Normally, Bitcoin core acts just as a blockchain informational service to the lightning wallet and its internal separate on-chain wallet is deactivated.
 
-Some apps (like Fully Noded or JoinMarket) activate the Bitcoin core wallet and use it for their own needs. This on-chain balance will not be reflected in the rest of the RaspiBlitz software and is NOT backed up by the seed words from the RaspiBlitz setup. If you make use of the Bitcoin core wallet please take care of these funds. 
+Some apps (like Fully Noded or JoinMarket) activate the Bitcoin core wallet and use it for their own needs. This on-chain balance will not be reflected in the rest of the RaspiBlitz software and is NOT backed up by the seed words from the RaspiBlitz setup. If you make use of the Bitcoin core wallet please take care of these funds.
 
 # Off-chain Funds (Lightning Channels)
 
 Please note that there is no perfect backup concept for the funds in your lightning channels yet. We strongly recommend using the `Static Channel Backup` provided by LND and consider off-line location backup of that file to have the best chances to recover Lightning funds in a case of recovering from a disaster.
 
 The C-lightning lightning.sqlite3 is replicated on the SDcard from the disk in real time. See more details in the [Core Lightning FAQ](faq/cl#backups)
-
 
 For more practical information on this topic see: `TODO: Backup Channel Funds README.md#backup-for-on-chain---channel-funds`

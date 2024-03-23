@@ -5,7 +5,7 @@ sidebar_position: 2
 # Basic Setup
 
 Every time you start with a fresh SD card image you will be offered different options.
-For example this is also the point where you can import a Migration file from an older RaspiBlitz - read about Migration. 
+For example this is also the point where you can import a Migration file from an older RaspiBlitz - read about Migration.
 But because you are setting up a brand new RaspiBlitz you will choose here `FRESHSETUP`.
 
 ![SSH0](../../../static/img/ssh0-welcome2.png)
@@ -87,6 +87,7 @@ _If you have tar.gz file that starts with 'raspiblitz', that's a migration file.
 That also includes your old LND/Core Lightning wallet, but you import that file at the beginning of the setup process with 'FROMBACKUP - Upload Migration Backup' instead choosing FRESHSETUP_
 
 #### SEED+SCB Words Seed & channel.backup file (OK)
+
 :::info
 This is the second best option if LNDRESCUE is not available
 :::
@@ -96,6 +97,7 @@ All channels you had open before will be closed during this procedure.
 See [Bitcoin Optech - Static Channel Backups](https://bitcoinops.org/en/topics/static-channel-backups/) for more background information on this process.
 
 #### ONLY SEED Only Seed Word List (Fallback)
+
 :::info
 This option should only be used if all off the above options fail.
 :::

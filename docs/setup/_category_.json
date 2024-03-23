@@ -1,8 +1,8 @@
 {
-    "label": "RaspiBlitz Setup",
-    "position": 3,
-    "link": {
-        "type": "generated-index",
-        "description": "Raspiblitz Setup"
-    }
+  "label": "RaspiBlitz Setup",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "RaspiBlitz Setup"
+  }
 }
