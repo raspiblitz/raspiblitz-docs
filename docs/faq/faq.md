@@ -67,7 +67,7 @@ Of course, people should modify the system, add own scripts, etc ... but if you 
 
 _BTW there is a beneficial side effect when updating with a new SD card: You also get rid of any malware or system bloat that happened in the past. You start with a fresh system :)_
 
-### How can I update LND or bitcoind even before the next RaspiBlitz update?
+### How can I update LND or Bitcoind even before the next RaspiBlitz update?
 
 Try updating before a official RaspiBlitz at your own risk - you can find some info about that here:
 https://raspibolt.org/bonus/raspberry-pi/odroid-setup.html#bitcoin-core-upgrade
@@ -212,7 +212,7 @@ Some displays have a different orientation. To fix this activate/deactivate the 
 
 The display is one of the nice features of the RaspiBlitz but it can run without it. Maybe not all the add-on features can be used to the full extent, but you can get started without the LCD and if you wish, plug it on later.
 
-If you want to use the HDMI output you can place a file called `hdmi` on the `boot` section of the RaspiBlitz sd card ... just connect the sd card to your laptop, create that file and then boot it up in the RaspberryPi.
+If you want to use the HDMI output you can place a file called `hdmi` on the `boot` section of the RaspiBlitz sd card ... just connect the sd card to your laptop, create that file and then boot it up in the Raspberry Pi.
 
 If you are already logged in you can use on the console the commands:
 
@@ -221,11 +221,11 @@ If you are already logged in you can use on the console the commands:
 
 ### How do I find the IP address when running without a display?
 
-If you can login into your local internet router it should show you the IP address assigned to the RaspberryPi.
+If you can login into your local internet router it should show you the IP address assigned to the Raspberry Pi.
 
 Another way is to use [Angry IP Scanner](https://angryip.org/) to find the IP address.
 
-You can also put an empty file just called `hdmi` (without any ending) onto the sd card when connected to your laptop and then start it up on the RaspberryPi. This will activate the HDMI port and if you connect a HDMI monitor to the RaspberryPi it will show you the RaspiBlitz status screen containing the local IP address.
+You can also put an empty file just called `hdmi` (without any ending) onto the sd card when connected to your laptop and then start it up on the Raspberry Pi. This will activate the HDMI port and if you connect a HDMI monitor to the Raspberry Pi it will show you the RaspiBlitz status screen containing the local IP address.
 
 ## Debug
 
@@ -257,19 +257,19 @@ One requirement is that the blockchain is from another bitcoin-core client with 
 
 But we don't copy the data via USB to the device, because the HDD needs to be formatted in EXT4 and that is usually not read/writable by Windows or Mac computers. So I will explain a way to copy the data through your local network. This should work from Windows, Mac, Linux and even from another already synced RaspiBlitz.
 
-Both computers (your RaspberryPi and the other computer with the full blockchain) need to be connected to the same local network. Make sure that bitcoind/bitcoin-qt is stopped on the computer containing the blockchain.
+Both computers (your Raspberry Pi and the other computer with the full blockchain) need to be connected to the same local network. Make sure that Bitcoind/bitcoin-qt is stopped on the computer containing the blockchain.
 If your blockchain source is another RaspiBlitz v1.5 or higher - go to `REPAIR` > `COPY-SOURCE`.
-If your RaspiBlitz is below v1.5 then on the terminal `sudo systemctl stop bitcoind` and then go to the directory where the blockchain data is with `cd /mnt/hdd/bitcoin` - when the copy/transfer is done later reboot a RaspiBlitz source with `sudo shutdown -r now`.
+If your RaspiBlitz is below v1.5 then on the terminal `sudo systemctl stop Bitcoind` and then go to the directory where the blockchain data is with `cd /mnt/hdd/bitcoin` - when the copy/transfer is done later reboot a RaspiBlitz source with `sudo shutdown -r now`.
 
 If everything described above is in order, start the setup of the new RaspiBlitz with a fresh SD card (like explained in the README) - it's OK that there is no blockchain data on your HDD yet - just follow the setup. When you get to the setup-point `Getting the Blockchain` choose the COPY option. Starting from version 1.0 of the RaspiBlitz this will give you further detailed instructions how to transfer the blockchain data onto your RaspiBlitz. In short: On your computer with the blockchain data source you will execute SCP commands that will copy the data over your local network to your RaspiBlitz.
 
-Once you finished all the transfers, the Raspiblitz will make a quick-check on the data - but that will not guarantee that everything in detail was OK with the transfer. Check further FAQ answers if you get stuck or see a final sync with a value below 90%.
+Once you finished all the transfers, the RaspiBlitz will make a quick-check on the data - but that will not guarantee that everything in detail was OK with the transfer. Check further FAQ answers if you get stuck or see a final sync with a value below 90%.
 
 ### Bitcoind tells me to reindex - how can I do this?
 
 To find/access information fast in large data sets like the Bitcoin blockchain indexes are needed. Those indexes can get corrupted on your HDD/SSD and to repair them they need to be rebuilt - re-indexed. Bitcoind has two different options to do this - a fast way called "reindex-chainstate" (which just rebuilds the UTXO set from the blocks as you have them) and the slow but complete way called just "reindex" that would even recheck all your block data - see for details here: https://bitcoin.stackexchange.com/questions/60709/when-should-i-use-reindex-chainstate-and-when-reindex
 
-So if you read in your debug logs of bitcoind that you should "reindex" you can try first just to do a fast "reindex-chainstate" and if that didnt worked a slow and full "reindex".
+So if you read in your debug logs of Bitcoind that you should "reindex" you can try first just to do a fast "reindex-chainstate" and if that didnt worked a slow and full "reindex".
 
 See the raspiblitz script `./config.scripts/network.reindex.sh` or the REAPIR menu to start these processes.
 
@@ -496,18 +496,18 @@ In short for OSX:
 In short for Windows:
 
 - make sure all VPNs are off (can interfere with local LAN)
-- connect Raspiblitz with laptop LAN/ethernet directly
+- connect RaspiBlitz with laptop LAN/ethernet directly
 - Control Panel > Network and Internet > Network and Sharing Centre
 - Click on your active internet connection highlighted in blue
 - Properties > Sharing
 - Check the box titled "Allow other network users to connect through this computer's Internet connection
 - Select LAN/Ethernet from the "Home networking connection:" dropdown menu
 - Click OK
-- Restart the Raspiblitz
+- Restart the RaspiBlitz
 
 If anyone has experience on doing this in Linux please share.
 
-### How to attach the RaspberryPi to the HDD?
+### How to attach the Raspberry Pi to the HDD?
 
 Try a rubber band.
 
@@ -659,8 +659,8 @@ For more background on the LND mnemonic seed [read this article](https://github.
 
 ### How do I set up VNC?
 
-Enter the Console/Terminal by selecting the last option from the Raspiblitz menu.
-![Raspiblitz menu](../../static/img/vnc-go-to-console.png)
+Enter the Console/Terminal by selecting the last option from the RaspiBlitz menu.
+![RaspiBlitz menu](../../static/img/vnc-go-to-console.png)
 
 Enable the VNC server using raspi-config:
 
@@ -670,14 +670,14 @@ In the menu, go to
 _Interfacing Options > VNC > Enable_
 ![Raspi-config menu](../../static/img/vnc-raspi-config-menu.png)
 
-After that reboot the Raspiblitz. You can do this easily from the Raspiblitz menu.
+After that reboot the RaspiBlitz. You can do this easily from the RaspiBlitz menu.
 In the command line, type:
 `menu`
-The Raspiblitz menu has a reboot option if you scroll down. Select it and reboot.
+The RaspiBlitz menu has a reboot option if you scroll down. Select it and reboot.
 
 ![Raspi-config menu](../../static/img/vnc-reboot-from-menu.png)
 
-After the Raspiblitz is rebooted, set a password for the VNC Server:
+After the RaspiBlitz is rebooted, set a password for the VNC Server:
 `sudo vncpasswd -service`
 
 Set the Authentication parameter:
@@ -689,7 +689,7 @@ Restart the VNC Server for settings to take effect:
 Open the relevant port in the firewall (ufw):
 `sudo ufw allow vnc`
 
-Start the VNC server from the Raspiblitz:
+Start the VNC server from the RaspiBlitz:
 `vncserver`
 This will run by default in the display number '1'. If you want to specify another number, run this (change _\<display-number\>_ to whatever you prefer):
 `vncserver :<display-number>`
@@ -698,7 +698,7 @@ This will run by default in the display number '1'. If you want to specify anoth
 
 From the VNC client (e.g. your PC, laptop), connect to the IP that the previous command has displayed in the screen (I covered it in pink in the screenshot). If everything is alright, you can see the display from the VNC client now.
 
-In order to stop broadcasting your display, stop the server from the Raspiblitz with this:
+In order to stop broadcasting your display, stop the server from the RaspiBlitz with this:
 `vncserver -kill :<display-number>`
 
 For example:
@@ -720,7 +720,7 @@ The file system [BTRFS](https://de.wikipedia.org/wiki/Btrfs) for your HDD/SSD pr
 
 BTRFS comes with build in RAID features - that means that data can be stored on two physical drives at the same time and if one is failing the other one can be used to heal the other one or its replacement.
 
-For the Raspiblitz this means that you can connect an additional 32GB USB3 Thumb Drive (under 10 USD) and have it running in a RAID with your HDD/SSD - keeping your LND channel data and all other important data of your RaspiBlitz double-safe.
+For the RaspiBlitz this means that you can connect an additional 32GB USB3 Thumb Drive (under 10 USD) and have it running in a RAID with your HDD/SSD - keeping your LND channel data and all other important data of your RaspiBlitz double-safe.
 
 #### Snapshotting the Blockchain
 

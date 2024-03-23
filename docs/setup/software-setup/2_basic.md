@@ -29,7 +29,7 @@ First thing to setup is giving your RaspiBlitz a name:
 The name you choose for your RaspiBlitz will also be used as your public alias of your lightning node so choose wisely.
 
 Then you can choose which Lightning implementation you want to run on top of your Bitcoin Fullnode.
-RaspiBlitz started with `LND` from Lightning Labs which is used by most other RaspberryPi lightning nodes and works with most additional apps.
+RaspiBlitz started with `LND` from Lightning Labs which is used by most other Raspberry Pi lightning nodes and works with most additional apps.
 But you can now also choose `CL` for Core Lightning by Blockstream which is a good choice for more experienced node operators & lightning developers that want to use the highly customizable plugin structure that Core Lightning offers.
 
 It's also possible to use both lightning node implementations in parallel on your RaspiBlitz later on - just pick one to start with for now.

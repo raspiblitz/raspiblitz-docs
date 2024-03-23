@@ -36,7 +36,7 @@ Creating the base minimal sd card:
 - Monitor/Check outputs for warnings/errors
 - Login new with `ssh admin@[IP-OF-RASPIBLITZ]` (pw: raspiblitz) and run `release`
 - Disconnect WiFi/LAN on build laptop (hardware switch off) and shutdown
-- Remove `Ubuntu LIVE` USB stick and cut power from the RaspberryPi
+- Remove `Ubuntu LIVE` USB stick and cut power from the Raspberry Pi
 
 Creating the image of sd card:
 
@@ -47,7 +47,7 @@ Creating the image of sd card:
 - Open Terminal and cd into directory of USB Stick under `/media/amnesia`
 - Run `gpg --import ./sub.key`, check and `exit`
 - Disconnect USB stick with GPG keys
-- Take the SD card from the RaspberryPi and connect with an external SD card reader to the laptop
+- Take the SD card from the Raspberry Pi and connect with an external SD card reader to the laptop
 - Click on `boot` volume once in the file manger
 - Connect the NTFS USB stick, open in file manager and delete old files
 - To make a raw image from sd card - second way (UI with progress):
@@ -132,7 +132,7 @@ The RaspiBlitz is your computer to experiment with. Feel free to add your own sc
 - Once a release is ready, that release branch will be set as the "default" branch on GitHub (so its shown as main page)
 - Hot fixes & new features for minor versions will be created as single branches from the release branch, and once ready will be merged back into that release branch as a Pull Request using 'Squash-Merge' AND then, this 'Squash-Merge' (one single commit) will get cherry-picked into the 'dev' branch ('git cherry-pick COMMITHASH' - may call 'git fetch' & 'git pull' before to make a clean cherry-pick into dev).
 
-### Can I run RaspiBlitz on other computers than RaspberryPi?
+### Can I run RaspiBlitz on other computers than Raspberry Pi?
 
 There is an experimental section in this GitHub that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: `TODO: alternative.platforms/README.md alternative.platforms/README.md`
 

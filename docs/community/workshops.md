@@ -31,7 +31,9 @@ These are the following steps you need to prepare (follow links for details):
 - Run Basic Node Setup
 - [Setup Workshop Environment](workshops#setup-workshop-environment)
 
-_NOTE: Make sure that the blockchain of the RaspiBlitzes are synced before the workshop begins._
+:::warning
+Make sure that the blockchain of the RaspiBlitzes are synced before the workshop begins.
+:::
 
 ## Workshop Scenario B) Provide a RaspiBlitz Hardware-Kit
 
@@ -102,11 +104,11 @@ Then everybody is SSHing into the RaspiBlitz and is following the setup dialog. 
 
 ## Waiting Time
 
-After the lightning wallet setup comes the longest waiting time during the workshop - around 30 min. When you have a pre-synced ready-2-go or up to 1 hour for the other scenarios. It's the time when the node is syncing up the blockchain and LND is scanning. If you see someone's blockchain progress under 97%, something is wrong - possibly the HDD was not correctly prepared or the blockchain data is way too old to finish during workshop time if you work with old RaspberryPi3. The new RaspberryPi4 with SSD can catch up much faster.
+After the lightning wallet setup comes the longest waiting time during the workshop - around 30 min. When you have a pre-synced ready-2-go or up to 1 hour for the other scenarios. It's the time when the node is syncing up the blockchain and LND is scanning. If you see someone's blockchain progress under 97%, something is wrong - possibly the HDD was not correctly prepared or the blockchain data is way too old to finish during workshop time if you work with old Raspberry Pi3. The new Raspberry Pi4 with SSD can catch up much faster.
 
 Use this time for a more in-depth educational segment on lightning in general. This time can also be used to demo with one RaspiBlitz that is already on clean-setup (you prepared before the workshop) how the funding, setting up channels and the other features of the RaspiBlitz work. That way people see what are the next steps once their node is ready and even if your workshop time is over by then they can know the next steps to do at home.
 
-Also this time is good for troubleshooting in individual sessions. If someone is not able to finish the sync on location in time shutdown the Raspiblitz from SSH terminal with CTRL+C and then `shutdown now`. If the device gets connected back up at home it should pickup the sync/scan process (let people know about the wallet unlock).
+Also this time is good for troubleshooting in individual sessions. If someone is not able to finish the sync on location in time shutdown the RaspiBlitz from SSH terminal with CTRL+C and then `shutdown now`. If the device gets connected back up at home it should pickup the sync/scan process (let people know about the wallet unlock).
 
 ## Finalizing Setup
 
@@ -174,17 +176,17 @@ This can be used to prepare and keep multiple HDDs in sync with blockchain data 
 
 _Beware that it will not run as a Lightning Node during that time (LND is stopped). And to reset it back into normal mode you need to stop the script with `CTLR+c` and the reboot with `sudo shutdown -r now`._
 
-In "Copy Station Mode" the RaspiBlitz will just run the bitcoind (so it needs network connection), copy fresh blockchain data over to a template folder on the HDD called `/mnt/hdd/templateHDD` and from there sync it to further HDDs that get connected to it.
+In "Copy Station Mode" the RaspiBlitz will just run the Bitcoind (so it needs network connection), copy fresh blockchain data over to a template folder on the HDD called `/mnt/hdd/templateHDD` and from there sync it to further HDDs that get connected to it.
 
 If you run it in a setup like on this photo with an extra powered USB hub, you can connect up to 10 HDDs at once to be synced with an almost up-to-date blockchain.
 
-At the moment the "Blockchain Copy Station" is just a computer (laptop - not a RaspberryPi) having an image of a "template" HDD (see above) and you can attach (with a USB3.0 Hub) multiple fresh HHDs to it and start writing in the template image to that.
+At the moment the "Blockchain Copy Station" is just a computer (laptop - not a Raspberry Pi) having an image of a "template" HDD (see above) and you can attach (with a USB3.0 Hub) multiple fresh HHDs to it and start writing in the template image to that.
 
 To update the "template" HDD for the next workshop use it for a fresh clean RaspiBlitz setup just days before, sync the blockchain to 100% and repeat the process above.
 
 _This version is not tested, but seems like the easiest to setup so far. Images can have the problem of being too large when some 1TB HDDs are just some bytes smaller. So for the template HDD it would be best to find the smallest 1TB HDD possible or just writing the image to HDDs of the same brand & model._
 
-Copying the blockchain between RaspberryPis during the workshop is not an option, because the network and its USB2 is too slow and will take 3 to 4 hours.
+Copying the blockchain between Raspberry Pis during the workshop is not an option, because the network and its USB2 is too slow and will take 3 to 4 hours.
 
 For former workshops I had a laptop just with the data and had a script that was formatting and rsyning that data over to a fresh HDD. That took around 1,5 hours per HDD.
 
@@ -200,4 +202,4 @@ See hardware checklist for what to bring to the workshop in the earlier chapter.
 
 Setup power outlets for everybody. Its always good to be way early at the workshop location for setup, especially if you run the "pre-sync" of the ready-2-go scenario.
 
-Most important is the network setup. Every RaspiBlitz needs a LAN port in the switch and that switch needs to be on the same local network as the WLAN so that participants laptop can SSH into the RaspiBlitz. If that is not the case or you cannot confirm that before the event its best to bring an additional WLAN router. Then you give the WLAN router internet uplink thru the available LAN cable and you put the network switch for the Raspiblitzes behind that router and open an additional WLAN on that WLAN router for everybody to connect to. It's OK to be behind a NAT; it's just important for everybody to be behind the same NAT.
+Most important is the network setup. Every RaspiBlitz needs a LAN port in the switch and that switch needs to be on the same local network as the WLAN so that participants laptop can SSH into the RaspiBlitz. If that is not the case or you cannot confirm that before the event its best to bring an additional WLAN router. Then you give the WLAN router internet uplink thru the available LAN cable and you put the network switch for the RaspiBlitzes behind that router and open an additional WLAN on that WLAN router for everybody to connect to. It's OK to be behind a NAT; it's just important for everybody to be behind the same NAT.

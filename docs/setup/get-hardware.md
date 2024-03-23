@@ -15,7 +15,7 @@ _Please try to use the exact hardware models that are recommended in the shoppin
 We have had multiple reports where, for example, other SSD or SSD cases/controllers lead to problems.
 The idea of the shopping lists is to provide you the best tested hardware components that work together - improvement recommendations are always welcome._
 
-- RaspberryPi 4 4GB (or 8GB) [amazon referral link](https://geni.us/raspiblitz-4gb-new)
+- Raspberry Pi 4 4GB (or 8GB) [amazon referral link](https://geni.us/raspiblitz-4gb-new)
 - Power Supply - USB-C, 5V, >=3A [amazon referral link](https://geni.us/raspiblitz-ps)
 - 1TB SSD - SanDisk SSD Plus 1TB 2.5" : [amazon referral link](https://geni.us/raspiblitz-1000gb-san) _other 1TB SSD models might cause power issues_
 - SSD-case - UGREEN 2.5" External USB 3.0 Hard Disk Case with UASP support : [amazon referral link](https://geni.us/raspiblitz-ssd-case)
@@ -40,8 +40,8 @@ _You can even pay for your RaspiBlitz Amazon Shopping with Bitcoin & Lightning t
 
 When you have all parts you need to:
 
-- Assemble the Heatsink-Case on the RaspberryPi (follow the instructions in package).
-- Put the SSD/HDD into the Case and connect it per USB to the RaspberryPi (blue ports).
+- Assemble the Heatsink-Case on the Raspberry Pi (follow the instructions in package).
+- Put the SSD/HDD into the Case and connect it per USB to the Raspberry Pi (blue ports).
 - Add the display on top with the pins like in picture below.
 - Plug in the network cable.
 

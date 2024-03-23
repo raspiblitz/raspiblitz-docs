@@ -13,8 +13,6 @@ For each password please choose unique, single strings, without spaces and speci
 
 You can use this [RaspiBlitz Recovery Sheet (PDF)](https://github.com/rootzoll/raspiblitz/raw/v1.7/home.admin/assets/RaspiBlitzRecoverySheet.pdf) to write those passwords down for safe storage and also use it later on for your Seed Words.
 
-**_TODO: Not sure about the info boxes. They feel like they are too prominent and detract from the actual content_**
-
 :::info
 The password A,B,C idea is based on the [RaspiBolt Guide Preparations](https://raspibolt.org/guide/raspberry-pi/preparations.html#write-down-your-passwords) - check out for more background.
 :::
@@ -62,13 +60,13 @@ There are two basic options :
 
 #### 1. SYNC - Self validate all Blocks
 
-For the new RaspberryPi 4 (with SSD & min 2GB RAM) this is the best way to go.
+For the new Raspberry Pi 4 (with SSD & min 2GB RAM) this is the best way to go.
 It will take around 3-6 days to sync & validate directly with the bitcoin network.
 With this option, you have done it the original `don't trust, verify` way.
 
 :::info
-For the old RaspberryPi 3 this is not recommended.
-A RaspberryPi 3 has a very low power CPU and syncing+validating the blockchain directly with the peer2peer network can take multiple weeks - that's why for a RP3 you should choose the COPY option .\_
+For the old Raspberry Pi 3 this is not recommended.
+A Raspberry Pi 3 has a very low power CPU and syncing+validating the blockchain directly with the peer2peer network can take multiple weeks - that's why for a RP3 you should choose the COPY option .\_
 :::
 
 #### 2. COPY - Copy from Laptop or another RaspiBlitz over Local Network
@@ -111,5 +109,5 @@ There is an option to activate auto-unlock of LND if you prefer, this can be fou
 
 Your RaspiBlitz might need quite some time to sync and validate the blockchain -- this can be multiple days.
 In the beginning you might see fast progress but this gets slower later on as historical blocks start to get fuller.
-Your RaspberryPi CPU will likely get quite hot during initial sync.
-However this is OK as the RaspberryPi has its own protection against overheating and will ensure the CPU doesn't critically overheat.
+Your Raspberry Pi CPU will likely get quite hot during initial sync.
+However this is OK as the Raspberry Pi has its own protection against overheating and will ensure the CPU doesn't critically overheat.
