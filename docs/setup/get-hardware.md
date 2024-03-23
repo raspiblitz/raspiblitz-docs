@@ -6,12 +6,6 @@ sidebar_position: 2
 
 All parts together cost around 200-300 USD - based on shops and location.
 
-### Buy a ready-2-go RaspiBlitz (Germany, EU and International)
-
-If you like to support the RaspiBlitz project you can order a plug&play RaspiBlitz from [raspiblitz.com](https://raspiblitz.com)
-
-Find a list of other shops selling a plug&play RaspiBlitz in your area on [raspiblitz.org](https://raspiblitz.org).
-
 ### Amazon Shopping List (buy parts & build it yourself)
 
 The cheapest way is to buy and assemble the single parts yourself.
