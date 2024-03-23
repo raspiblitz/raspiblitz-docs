@@ -41,7 +41,6 @@ Further Services that are just available thru SSH menu (advanced users):
 - **Chantools** (Fund Rescue) [details](https://github.com/guggero/chantools/blob/master/README.md)
 - **Suez** (Channel Visualization for LND & CL) [details](https://github.com/prusnak/suez#suez)
 - **Helipad** (Podcasting 2.0 Boostagram reader) [details](https://github.com/Podcastindex-org/helipad)
-- **Homer** (Web Dashboard) [details](https://github.com/bastienwirtz/homer#readme)
 - **Squeaknode** [details](https://github.com/yzernik/squeaknode)
 - **CL Spark Wallet** (WalletUI with BOLT12 offers) [details](https://github.com/shesek/spark-wallet#progressive-web-app)
 - **CL plugin: Sparko** (WalletUI & HTTP-RPC bridge) [details](https://github.com/fiatjaf/sparko#the-sparko-plugin)
@@ -50,6 +49,7 @@ Further Services that are just available thru SSH menu (advanced users):
 - **Tallycoin Connect** (Use Tallycoin with your own node) [details](https://github.com/djbooth007/tallycoin_connect)
 - **ItchySats** (Non-custodial peer-to-peer CFD trading) [details](https://github.com/itchysats/itchysats)
 - **LNDg** (WebUI analyze/manage lnd with automation) [details](https://github.com/cryptosharks131/lndg)
+- **LNDK** (runs on top of LND to help forward onion messages (BOLT 12)) [details](https://github.com/lndk-org/lndk)
 
 You can connect the following Wallet-Apps to your RaspiBlitz (thru SSH menu):
 
