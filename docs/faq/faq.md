@@ -328,7 +328,7 @@ Remember those 24 words you were writing down during the setup? That's your "cip
 
 With the word seed you can recover the on-chain funds that LND was managing for you - but it does not contain all the details about the channels you have open - it's mostly the key to your funding wallet. If you were able to close all channels or never opened any, then you should be safe: The best results to recover on-chain funds from wallet seeds have been reported from people installing the Lightning Labs App on laptop and then using the wallet seed (and same wallet passwords): https://github.com/lightninglabs/lightning-app/releases. Other people were successful in this process using the Zap Desktop wallet (OSX, Win, Linux): https://zap.jackmallers.com/download
 
-If you had open channels it would be best to check if you have also the `channel.backup` file (Static-Channel-Backup feature) that is available since LND 0.6 (RaspiBlitz v1.2) and use it in the process below ... for more details on the `channel.backup` file see TODO: fixme README.md on backups README.md#backup-for-on-chain---channel-funds .`
+If you had open channels it would be best to check if you have also the `channel.backup` file (Static-Channel-Backup feature).
 
 - SetUp a fresh RaspiBlitz (fresh SD-Card image and clean HDD).
 - During the new SetUp, when you get to the point of creating the LND wallet (see image below).

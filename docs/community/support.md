@@ -39,8 +39,6 @@ There are plenty off rooms you can find RaspiBlitz users that can help you:
 
 8. IRC - Libera chat -> irc.libera.chat:6697 -> Channel: #raspiblitz
 
-9. Sphinx Chat -> sphinx.chat://?action=tribe&uuid=YFsuxCApuU-TBIRWeWY_Gl52IOx2clJKZYLxDn78Z9RgcWNx9zUube7mkK4IyXQjLril-tgKZs3wOxDlWqpiyxp8jTbt&host=tribes.sphinx.chat -> [Connection code](YFsuxCApuU-TBIRWeWY_Gl52IOx2clJKZYLxDn78Z9RgcWNx9zUube7mkK4IyXQjLril-tgKZs3wOxDlWqpiyxp8jTbt) --> [QR code](https://github.com/rootzoll/raspiblitz/issues/2089#issuecomment-805789854)
-
 ## Setup Process (Detailed Documentation)
 
 _The following documentation will provide more detailed background information on the setup process._
