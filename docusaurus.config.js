@@ -60,7 +60,7 @@ const config = {
       colorMode: {
         defaultMode: "dark", // Set default mode to dark
         disableSwitch: true, // Keep the switch in the navbar
-        respectPrefersColorScheme: true, // Ignore user system preferences
+        respectPrefersColorScheme: false, // Ignore user system preferences
       },
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
