@@ -134,13 +134,13 @@ The RaspiBlitz is your computer to experiment with. Feel free to add your own sc
 
 ### Can I run RaspiBlitz on other computers than Raspberry Pi?
 
-There is an experimental section in this GitHub that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: `TODO: alternative.platforms/README.md alternative.platforms/README.md`
+There is an experimental section in this GitHub that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: [https://github.com/raspiblitz/raspiblitz/blob/v1.11/alternative.platforms/README.md](https://github.com/raspiblitz/raspiblitz/blob/v1.11/alternative.platforms/README.md)
 
 ### How can I build an SD card from another branch?
 
 There might be new, but not released features in development that are not yet in the default version branch - but you want to try them out.
 
-To build a SD card image from another branch than master, you follow the `TODO: Build the SD Card Image  README.md#build-the-sd-card-image ` from the README, but execute the build script from the other branch and add the name of that branch as a parameter to the build script.
+To build a SD card image from another branch than master, you follow the [Build the SD Card Image](../faq/dev.md#what-is-the-process-of-creating-a-new-sd-card-image-release) from the development section, but execute the build script from the other branch and add the name of that branch as a parameter to the build script.
 
 For example if you want to make a build from the 'dev' branch you execute the following command:
 
@@ -154,7 +154,7 @@ If you fork the RaspiBlitz repo (much welcome) and you want to run that code on 
 
 - The quick way: For small changes in a single script, go to `/home/admin` on your running RaspiBlitz, delete the old git with `sudo rm -r raspiblitz` then replace it with your code `git clone [YOURREPO]` and `patch`
 
-- The long way: If you like to install/remove/change services and system configurations you need to build a SD card from your own code. Prepare like in `TODO: Build the SD Card Image README.md#build-the-sd-card-image ` from the README but in the end run the command:
+- The long way: If you like to install/remove/change services and system configurations you need to build a SD card from your own code. Prepare like in [Build the SD Card Image](../faq/dev.md#what-is-the-process-of-creating-a-new-sd-card-image-release):
 
 `wget --no-cache https://raw.githubusercontent.com/[GITHUB-USERNAME]/raspiblitz/[BRANCH]/build_sdcard.sh && sudo bash build_sdcard.sh -b [BRANCH]`
 

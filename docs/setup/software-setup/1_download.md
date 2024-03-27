@@ -38,16 +38,6 @@ THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF L
 - Torrent: [raspiblitz-min-v1.9.0-2022-12-21.img.gz.torrent](https://github.com/rootzoll/raspiblitz/raw/dev/home.admin/assets/raspiblitz-min-v1.9.0-2023-05-22.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
-Further Info:
-
-```
-TODO: fixme
-- What's new in Version 1.9.0 of RaspiBlitz? https://github.com/fusion44/raspiblitz/blob/95c495ea0195765d3391eb9603e6cdeb24075c2c/CHANGES.md
-- How to update my RaspiBlitz? README.md#updating-raspiblitz-to-new-version
-- How to migrate to RaspiBlitz from Umbrel/myNode/Citadel #make-a-raspiblitz-out-of-your-umbrel-citadel-or-mynode
-```
-
 ## Write the SD-Card image to your SD Card
 
-You need to write the downloaded SD card image (the img.gz-file) to your SD card (32GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this: .
-It's available for Win, Mac & Linux.
+You need to write the downloaded SD card image (the img.gz-file) to your SD card (32GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.

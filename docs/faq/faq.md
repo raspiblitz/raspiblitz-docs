@@ -328,7 +328,7 @@ Remember those 24 words you were writing down during the setup? That's your "cip
 
 With the word seed you can recover the on-chain funds that LND was managing for you - but it does not contain all the details about the channels you have open - it's mostly the key to your funding wallet. If you were able to close all channels or never opened any, then you should be safe: The best results to recover on-chain funds from wallet seeds have been reported from people installing the Lightning Labs App on laptop and then using the wallet seed (and same wallet passwords): https://github.com/lightninglabs/lightning-app/releases. Other people were successful in this process using the Zap Desktop wallet (OSX, Win, Linux): https://zap.jackmallers.com/download
 
-If you had open channels it would be best to check if you have also the `channel.backup` file (Static-Channel-Backup feature) that is available since LND 0.6 (RaspiBlitz v1.2) and use it in the process below ... for more details on the `channel.backup` file see `TODO: fixme README.md on backups README.md#backup-for-on-chain---channel-funds .`
+If you had open channels it would be best to check if you have also the `channel.backup` file (Static-Channel-Backup feature) that is available since LND 0.6 (RaspiBlitz v1.2) and use it in the process below ... for more details on the `channel.backup` file see TODO: fixme README.md on backups README.md#backup-for-on-chain---channel-funds .`
 
 - SetUp a fresh RaspiBlitz (fresh SD-Card image and clean HDD).
 - During the new SetUp, when you get to the point of creating the LND wallet (see image below).
@@ -507,27 +507,7 @@ In short for Windows:
 
 If anyone has experience on doing this in Linux please share.
 
-### How to attach the Raspberry Pi to the HDD?
-
-Try a rubber band.
-
-### What other case options do I have?
-
-You can put the heatsink-case (top-part mentioned in the shopping lists) into a customized 3D printed case for the RaspiBlitz called "Lightning Shell" - great work by @CryptoCloaks
-
-https://www.cryptocloaks.com/product/lightningshell/ (Delivery from USA)
-
-![LightningShell](../../static/img/lightningshell.jpeg)
-
-![LightningShell](../../static/img/lightningshell2.jpeg)
-
-Also there is the ZKDS metal case available that also needs some extra hardware (SATA-USB expansion board and USB bridge).
-
-https://diynodes.com (delivery from UK)
-
-![ZKDSMetalCase](../../static/img/metalcase.png)
-
-### Are those "Under-Voltage detected" warnings a problem?
+#rd## Are those "Under-Voltage detected" warnings a problem?
 
 When your USB power adapter for the RaspiBlitz delivers too low of a power level, those messages with "Under-Voltage detected" (under-voltage) are shown on the display. This can lead to data loss/corruption on the HDD. If you see this just one or two times it's not OK, but can be in a tolerant window. Nevertheless it is important to make sure that your USB power adapter can deliver at least 3A (big and stable is good). If you still see those warnings maybe get a second USB Power adapter just for the HDD, and power the HDD through a Y-Cable - see https://en.wikipedia.org/wiki/Y-cable#USB or put a USB Hub with extra power between the Raspberry and the HDD.
 
