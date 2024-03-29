@@ -41,3 +41,31 @@ THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF L
 ## Write the SD-Card image to your SD Card
 
 You need to write the downloaded SD card image (the img.gz-file) to your SD card (32GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
+
+## Boot your RaspiBlitz
+
+Insert the SD card and connect the power plug.
+
+- Make sure to connect the raspberry with a LAN cable to the internet at this point.
+- Make sure that your laptop and the raspberry are on the same local network.
+
+**Troubleshoot:**
+
+- [I don't have a LAN port on my Laptop - how to connect to my RaspiBlitz?](../../faq/faq.md#i-dont-have-a-lan-port-on-my-laptop---how-do-i-connect-to-my-raspiblitz)
+- [Is it possible to connect the Blitz over Wifi instead of using a LAN cable?](../../faq/faq.md#is-it-possible-to-connect-the-blitz-over-wifi-instead-of-using-a-lan-cable)
+- [Can I directly connect the RaspiBlitz with my laptop?](../../faq/faq.md#can-i-directly-connect-the-raspiblitz-to-my-laptop)
+- [I connected my HDD, but it still says 'Connect HDD' on the display?](../../faq/faq.md#i-connected-my-hdd-but-it-still-says-connect-hdd-on-the-display)
+
+When everything boots up correctly (one reboot is normal), you should finally see the local IP address of your RaspiBlitz on the LCD panel.
+
+- [How do I find the IP address when running without a display?](../../faq/faq.md#how-do-i-find-the-ip-address-when-running-without-a-display)
+
+![LCD0](../../../static/img/lcd0-welcome.png)
+
+Now open up a terminal ([OSX](https://www.youtube.com/watch?v=5XgBd6rjuDQ)/[Win10](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)) and connect through SSH with the command displayed by the RaspiBlitz:
+
+`ssh admin@[YOURIP]` → use password: `raspiblitz`
+ 
+- [I cannot connect by SSH to my RaspiBlitz. What to do?](../../faq/faq.md#i-cannot-connect-via-ssh-to-my-raspiblitz-what-do-i-do)
+
+To follow the setup dialogue in your terminal you can continue with chapter [Basic Setup](2_basic.md).

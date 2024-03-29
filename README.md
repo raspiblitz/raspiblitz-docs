@@ -9,6 +9,8 @@ If you have the Nix package manager installed you can use the included flake fil
 
 ### Installation
 
+Make yure to have yarn installed - for example with `npm install --global yarn`
+
 ```
 $ yarn
 ```

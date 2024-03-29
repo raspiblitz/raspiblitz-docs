@@ -105,3 +105,6 @@ If you only have the seed word list (RaspiBlitz 1.1 and older) you can at least 
 Recovery of channel funds is not very likely in this scenario.
 
 But normally you are setting up a new node - so simply choose `NEW` in the menu.
+
+---
+Your setup is almost done - continue in chapter [Final Steps](3_finalize.md).

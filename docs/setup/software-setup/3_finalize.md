@@ -107,7 +107,6 @@ There is an option to activate auto-unlock of LND if you prefer, this can be fou
 
 ![SSH5](../../../static/img/ssh5-blocksync.png)
 
-Your RaspiBlitz might need quite some time to sync and validate the blockchain -- this can be multiple days.
-In the beginning you might see fast progress but this gets slower later on as historical blocks start to get fuller.
-Your Raspberry Pi CPU will likely get quite hot during initial sync.
-However this is OK as the Raspberry Pi has its own protection against overheating and will ensure the CPU doesn't critically overheat.
+Your RaspiBlitz might need quite some time to sync and validate the blockchain -- this can be multiple days. In the beginning you might see fast progress but this gets slower later on as historical blocks start to get fuller. Your Raspberry Pi CPU will likely get quite hot during initial sync. However this is OK as the Raspberry Pi has its own protection against overheating and will ensure the CPU doesn't critically overheat.
+
+Once synced your RaspiBlitz is ready to use. Continue tutorial with chapter [SSH menu](../../usage/1_ssh_menu.mdx) to get an overview of the most common features.
