@@ -27,9 +27,9 @@ THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF L
 
 This is the sd card image for RaspiBlitz users that are already more experienced and want to use just a limited set of features of the RaspiBlitz. This image has just the bare minimum of features pre-installed - LCD & HDMI output is off by default. Setup, Update or Recovery needs to be done thru SSH login - API & WebUI are later available but are not pre-installed/activated by default. The RaspiBlitz will download & compile just the tools that are in your ´raspiblitz.conf´ - this will take longer but as a trade-off this RaspiBlitz then just runs with a reduced set of dependencies and so a minimized attack vector and better performance. Its for the serious & experienced node runners.
 
-:::warning
+<!-- :::warning
 THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF LOSING FUNDS!
-:::
+::: -->
 
 - **MINIMAL SD CARD IMAGE ⮕ [raspiblitz-min-v1.11.0-2024-03-28.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.0-2024-03-28.img.gz)**
 - SHA-256: 5d249ba20b408da0bf80d7902749a73e547957b2046bc0c13401e014d6f7e97c
