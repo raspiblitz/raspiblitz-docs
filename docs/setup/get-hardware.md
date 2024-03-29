@@ -28,7 +28,7 @@ The idea of the shopping lists is to provide you the best tested hardware compon
 - LCD - 3.5" RPi Display, GPIO connection, XPT2046 Touch Controller: [amazon referral link](https://geni.us/raspiblitz-touchscreen)
 - MicroSDCard 32GB - Samsung PRO Endurance 32 GB microSDHC UHS-I U1: [amazon referral link](https://geni.us/raspiblitz-sc-card)
 
-### RasberryPi 4 Setup (legacy)
+### RaspberryPi 4 Setup (legacy)
 
 - Raspberry Pi 4 4GB (or 8GB) [amazon referral link](https://geni.us/raspiblitz-4gb-new)
 - Heatsink Case for RPi4 : [amazon referral link](https://geni.us/heatsink-raspi4)
@@ -49,7 +49,7 @@ _If the above mentioned LCD screen is sold out you can also use these different 
 
 With all LCD screen models don't use the ones that have an HDMI port/connector - what you need is a 3.5 inch LCD screen model (resolution of 480×320) that connects only thru the GPIO ports (SPI) and has an XPT2046 touch controller.
 
-If you already want to get an NVMe instead of a external SSD you can try already these models - but thsi remommendation might change in the future:
+If you already want to get an NVMe instead of a external SSD you can try already these models - but this remommendation might change in the future:
 
 - Pimoroni NVMe Base [pimoroni shop](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579)
 - NVMe Crucial P3 Plus 2TB Gen4 CT2000P3PSSD8 [amazon link](https://www.amazon.com/dp/B0B25ML2FH)
