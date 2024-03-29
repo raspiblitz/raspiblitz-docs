@@ -20,7 +20,7 @@ THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF L
 - SHA-256: 2c495a1890449149d0288c8b41b3791c3d0be62c7638c30998bc2f54ac0f5381
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
 - Signature-File: [raspiblitz-fat-v1.11.0-2024-03-28.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.0-2024-03-28.img.gz.sig)
-<!-- - Torrent: [raspiblitz-fat-v1.9.0-2022-12-21.img.gz.torrent](https://github.com/rootzoll/raspiblitz/raw/dev/home.admin/assets/raspiblitz-fat-v1.9.0-2023-05-22.img.gz.torrent) -->
+- Torrent: [raspiblitz-fat-v1.11.0-2024-03-28.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/v1.11/home.admin/assets/raspiblitz-fat-v1.11.0-2024-03-28.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 ### MINIMAL SD Card Image (Experienced Users - SSH)
@@ -35,7 +35,7 @@ THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF L
 - SHA-256: 5d249ba20b408da0bf80d7902749a73e547957b2046bc0c13401e014d6f7e97c
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
 - Signature-File: [raspiblitz-min-v1.11.0-2024-03-28.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.0-2024-03-28.img.gz.sig)
-<!-- - Torrent: [raspiblitz-min-v1.9.0-2022-12-21.img.gz.torrent](https://github.com/rootzoll/raspiblitz/raw/dev/home.admin/assets/raspiblitz-min-v1.9.0-2023-05-22.img.gz.torrent) -->
+- Torrent: [raspiblitz-min-v1.11.0-2024-03-28.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/v1.11/home.admin/assets/raspiblitz-min-v1.11.0-2024-03-28.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 ## Write the SD-Card image to your SD Card
