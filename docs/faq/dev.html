@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.1.1">
 <title data-rh="true">Development | RaspiBlitz</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.raspiblitz.org/docs/faq/dev"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Development | RaspiBlitz"><meta data-rh="true" name="description" content="What is the process of creating a new SD card image release?"><meta data-rh="true" property="og:description" content="What is the process of creating a new SD card image release?"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.raspiblitz.org/docs/faq/dev"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/faq/dev" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/faq/dev" hreflang="x-default"><link rel="stylesheet" href="/assets/css/styles.890c17de.css">
-<script src="/assets/js/runtime~main.eb07c001.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.0b7f4aaf.js" defer="defer"></script>
 <script src="/assets/js/main.6c23b8e5.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -107,7 +107,16 @@
 <li>Run tests on the new image</li>
 <li>Upload the new image to the Download Server - put sig-file next to it</li>
 <li>Copy SHA256-String into GitHub README and update the download link</li>
-<li>Create Torrent file from image (for example with Transmission) and place in in the <code>home.admin/assets</code> folder &amp; link on README</li>
+<li>Create Torrent file from image and place in in the <code>home.admin/assets</code> folder<!-- -->
+<ul>
+<li>upload images per FTP (Filezilla) to <code>yourseedbox.com</code> server under <code>torrent/rtorrent</code></li>
+<li>open QuickBox &gt; ruTorrent and choose <code>create Torrent</code></li>
+<li>select image file, add trackers (see below) and start seeding</li>
+<li>download the torrent-file into <code>home.admin/assets</code> folder &amp; commit</li>
+<li>get raw-link to torrent file from gitub</li>
+<li>edit in <code>raspiblitz-docs</code> the <code>docs/software-setup/_download.md</code></li>
+</ul>
+</li>
 </ul>
 <p>This is a recommended tracker list to be used with the torrent:</p>
 <div class="codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">udp://tracker.coppersurfer.tk:6969/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">http://tracker.yoshi210.com:6969/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">http://open.acgtracker.com:1096/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">http://tracker.skyts.net:6969/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">udp://9.rarbg.me:2780/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">http://tracker2.itzmx.com:6961/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">udp://exodus.desync.com:6969/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">http://pow7.com:80/announce</span><br></span><span class="token-line" style="color:#F8F8F2"><span class="token plain">udp://tracker.leechers-paradise.org:6969</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
