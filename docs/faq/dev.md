@@ -178,7 +178,7 @@ For example if you want to make a build from the 'dev' branch you execute the fo
 
 `wget --no-cache https://raw.githubusercontent.com/raspiblitz/raspiblitz/dev/build_sdcard.sh && sudo bash build_sdcard.sh -b dev`
 
-If you want to see all the optional parameters for building your sd card, just answere `no` on first question and call `sudo bash build_sdcard.sh --help`.
+If you want to see all the optional parameters for building your sd card, just answer `no` on first question and call `sudo bash build_sdcard.sh --help`.
 
 ### How can I build an SD card from my forked GitHub Repo?
 
