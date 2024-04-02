@@ -13,3 +13,5 @@ extend-exclude = ["*.nodes","*.torrent","*.sh","*.py","*.proto","*.conf","*.json
 tpos = "tpos"
 ba = "ba"
 tne = "tne"
+HD = "HD"
+HDD = "HDD"
