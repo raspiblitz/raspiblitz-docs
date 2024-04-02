@@ -176,15 +176,7 @@ To build a SD card image from another branch than master, you can use the packer
 
 ### How can I build an SD card from my forked GitHub Repo?
 
-If you fork the RaspiBlitz repo (much welcome) and you want to run that code on your RaspiBlitz, there are two ways to do that:
-
-* The quick way: For small changes in a single script, go to `/home/admin` on your running RaspiBlitz, delete the old git with `sudo rm -r raspiblitz` then replace it with your code `git clone [YOURREPO]` and `patch`
-
-* The long way: If you like to install/remove/change services and system configurations you need to build a SD card from your own code. Prepare like in [Build the SD Card Image](README.md#build-the-sd-card-image) from the README but in the end run the command:
-
-`wget --no-cache https://raw.githubusercontent.com/[GITHUB-USERNAME]/raspiblitz/[BRANCH]/build_sdcard.sh && sudo bash build_sdcard.sh -b [BRANCH]`
-
-If you are then working in your forked repo and want to update the scripts on your RaspiBlitz with your latest repo changes, run `patch` - That's OK as long as you don't make changes to the SD card build script - for that you would need to build a fresh SD card again from your repo.
+If you fork the RaspiBlitz repo (much welcome) and you want to build an sd vcard you need to change one line in your code to the address of your repo and use that packer file to run: https://github.com/raspiblitz/raspiblitz/blob/655f5cb7b08d090fd5e5a54d5ee7f300bb975aab/ci/packer.sh#L9 
 
 ### How can I checkout a new branch from the RaspiBlitz repo to my forked repo?
 
