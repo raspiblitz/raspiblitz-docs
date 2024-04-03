@@ -721,3 +721,36 @@ Once the Blitz is running on BTRFS you can use the '/home/admin/config.scripts/b
 This articles goes thru the usual options:
 https://ownyourbits.com/2019/03/03/how-to-recover-a-btrfs-partition/
 https://seravo.fi/2015/using-raid-btrfs-recovering-broken-disks
+
+### How to setup RaspberryPi4 with Heatsink Case
+
+1. Put screw mounts on the SSD shield.
+2. Prepare screws for mounting the Raspberry PI and corresponding heat sink.
+3. Apply thermal pads.
+4. Attach the heat sink and raspberry pi.
+5. Attach the foot that will later hold things in place.
+6. Make sure you use the right pins when mounting the display.
+7. Fasten the SSD so that it doesn't shake.
+
+![MetalCasePart1](../../static/img/metal_case/part1_with_numbers.jpg)
+
+8. Open the SD card slot.
+9. Attach everything to the case.
+10. Close the case.
+11. Connect the SSD with the raspberry pi.
+12. Insert the flashed SD card.
+13. Remember to use a tamper evident bag before entrusting a third party
+with physical access to the device.
+
+![MetalCasePart2](../../static/img/metal_case/part_2_with_numbers.jpg)
+
+### How to setup RaspberryPi4 with Metal Case
+
+1. Apply thermal pads.
+2. Close the case.
+3. Make sure you use the right pins when mounting the display.
+4. Connect the SSD with the raspberry pi.
+5. Plug your device into power and give it internet access to check if
+everything is working as expected.
+
+![HeatsinkCaseAssembly](../../static/img/heatsink_case/heatsink_case_assembly.jpg)
