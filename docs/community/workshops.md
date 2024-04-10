@@ -18,9 +18,11 @@ Also, if your group is lager then 5 participants, calculate some extra time for 
 
 ## Checklist for Running a Workshop
 
+![SetupRaspiBlitzWorkshop](../../static/img/SetupRaspiBlitzWorkshop.png)
+
 Make sure you have the following hardware and infrastructure ready for the workshop:
 
-- Lots of 'multiple power outlets/extensions' (min. 2 per participants - RaspiBlitz + Laptop)
+- Lots of 'multiple power outlets/extensions' (minimum outlets: number of RaspiBlitzes x 2 plus 6)
 - Network-Switch with enough ports (min. 1 per RaspiBlitz)
 - Enough LAN network cables (short ones to connect the RaspiBlitzes)
 - Good internet connection at location with LAN port (or a WLAN to LAN adapter)
