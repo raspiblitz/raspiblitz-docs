@@ -92,6 +92,10 @@ Then everybody starts with the RaspiBlitz setup. Its best to do the setup togeth
 
 After the lightning wallet setup comes the longest waiting time during the workshop - around 30 min. It's the time when the node is syncing up the blockchain and LND is scanning. If you see someone's blockchain progress under 95%, something is wrong - possibly the HDD was not correctly prepared or the blockchain data it might be too old to finish during workshop.
 
+:::info
+Depending on your workshops internet uplink connection sync behind Tor might be slow or blocked. Check options to let bitcoin sync thru clearnet (Tor switched off) if you detect a slow sync with your participants.
+:::
+
 Use this time for a more in-depth educational segment on Bitcoin & Lightning in general. This time can also be used to demo with one RaspiBlitz that is already on clean-setup (you prepared before the workshop) how the funding, setting up channels and the other features of the RaspiBlitz work. That way people see what are the next steps once their node is ready and even if your workshop time is over by then they can know the next steps to do at home.
 
 Also this time is good for troubleshooting in individual sessions. If someone is not able to finish the sync on location in time shutdown the RaspiBlitz from SSH terminal with CTRL+C and then `shutdown now`. If the device gets connected to the internet again at home it should pickup the sync/scan process (let people know about the wallet unlock).
