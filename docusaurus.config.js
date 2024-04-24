@@ -97,7 +97,7 @@ const config = {
         appId: 'H1OPUQUC79',
         apiKey: '5ae665bb7d16f08c07105a628adcd2bc',
         indexName: 'raspiblitz',
-        //contextualSearch: false,
+        contextualSearch: false, // only false works
       },
     }),
 };
