@@ -473,11 +473,23 @@ You don't need a LAN port on your laptop as long as you can connect over WLAN to
 
 A LAN cable is recommended because it reduces a possible source of error on the network connection side. But how to setup WLAN when you don't have a LAN-Router/Switch available see here:
 
-Using [Raspberry Pi Imager: ](https://www.raspberrypi.com/software/)
-https://raspibolt.org/guide/raspberry-pi/operating-system.html#configure-boot-options
+To set up WiFi on the RaspiBlitz, you need to place a configuration file on the root directory of the SD card used to boot your Raspberry Pi. The RaspiBlitz checks for two specific files: `wifi` and `wpa_supplicant.conf`.
 
-Manually
-https://github.com/raspibolt/raspibolt/blob/a21788c0518618d17093e3f447f68a53e4efa6e7/raspibolt/raspibolt_20_pi.md#prepare-wifi
+To store these files on the root directory of your SD card, you can use a computer with an SD card reader:
+1. Insert the SD card into your computer.
+2. Open the SD card directory (usually labeled as "boot" or similar).
+3. Create a `wifi` text file (without an ening like .txt - just the name) on the root directory of the SD card (not inside any folders).
+4. Within the file write the SSID (name of your WiFi network) on the first line and the WiFi password on the second line. Make sure there are no extra spaces or blank lines. Save this file and place it in the root directory of your SD card.
+
+Example content of the `wifi` file:
+```
+YourWiFiSSID
+YourWiFiPassword
+```
+
+When the RaspiBlitz boots up, it will check for the presence of the `wifi` file. If it finds the file, it will read the SSID and password and attempt to configure the WiFi connection. If the configuration is successful, the `wifi` file will be removed from the SD card, and a success message will be logged.
+
+If an error occurs during this process, an error message will be logged, "errorWIFI" will be displayed on the LCD for one minute, and the system will shut down.
 
 ### Can I directly connect the RaspiBlitz to my laptop?
 
