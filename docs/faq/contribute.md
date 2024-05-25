@@ -61,5 +61,5 @@ When ready you need to save/commit the changes and create a request to add the c
 ![your PR](/static/img/contribute_docs/yourpr.png)
 
 - You can bookmark the URL to add comments later.
-- You should get an email once your changes got accpeted.
+- You should get an email once your changes got accepted.
 - Thx
