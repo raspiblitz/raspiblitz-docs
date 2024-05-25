@@ -722,7 +722,7 @@ This articles goes thru the usual options:
 https://ownyourbits.com/2019/03/03/how-to-recover-a-btrfs-partition/
 https://seravo.fi/2015/using-raid-btrfs-recovering-broken-disks
 
-### How to setup RaspberryPi4 with Heatsink Case
+### How to setup RaspberryPi4 with Heatsink Case?
 
 1. Put screw mounts on the SSD shield.
 2. Prepare screws for mounting the Raspberry PI and corresponding heat sink.
