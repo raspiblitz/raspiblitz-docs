@@ -9,7 +9,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "RaspiBlitz",
-  tagline: "Bitcoin and Lightning node",
+  tagline: "DIY Bitcoin and Lightning Node on a RaspberryPi",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -82,6 +82,11 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            href: "./docs/setup/software-setup/download",
+            label: "Download",
+            position: "right",
+          },
         ],
       },
       footer: {
@@ -94,9 +99,9 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       algolia: {
-        appId: 'H1OPUQUC79',
-        apiKey: '5ae665bb7d16f08c07105a628adcd2bc',
-        indexName: 'raspiblitz',
+        appId: "H1OPUQUC79",
+        apiKey: "5ae665bb7d16f08c07105a628adcd2bc",
+        indexName: "raspiblitz",
         contextualSearch: false, // only false works
       },
     }),
