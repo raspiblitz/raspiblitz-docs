@@ -83,7 +83,7 @@ const config = {
             position: "right",
           },
           {
-            href: "./docs/setup/software-setup/download",
+            href: "https://docs.raspiblitz.org/docs/setup/software-setup/download",
             label: "Download",
             position: "right",
           },
