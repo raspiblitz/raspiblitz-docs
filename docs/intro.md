@@ -36,7 +36,6 @@ Further Services that are just available thru SSH menu (advanced users):
 - **Stacking Sats Kraken** (Auto-DCA script) [details](https://github.com/dennisreimann/stacking-sats-kraken)
 - **Circuit Breaker** (Lightning Channel Firewall) [details](https://github.com/lightningequipment/circuitbreaker/blob/master/README.md)
 - **PyBlock** (Python Util & Fun Scripts) [details](https://github.com/curly60e/pyblock/blob/master/README.md)
-- **Sphinx Chat Relay Server** [details](https://github.com/stakwork/sphinx-relay/blob/master/README.md)
 - **Telegraf metrics** [details](https://github.com/rootzoll/raspiblitz/issues/1369)
 - **Chantools** (Fund Rescue) [details](https://github.com/guggero/chantools/blob/master/README.md)
 - **Suez** (Channel Visualization for LND & CL) [details](https://github.com/prusnak/suez#suez)
@@ -46,17 +45,15 @@ Further Services that are just available thru SSH menu (advanced users):
 - **CL plugin: Sparko** (WalletUI & HTTP-RPC bridge) [details](https://github.com/fiatjaf/sparko#the-sparko-plugin)
 - **CL plugin: CLBOSS** (Automated Node Manager) [details](https://github.com/ZmnSCPxj/clboss#clboss-the-c-lightning-node-manager)
 - **CL plugin: The Eye of Satoshi** (Watchtower) [details](https://github.com/talaia-labs/rust-teos/tree/master/watchtower-plugin)
-- **Tallycoin Connect** (Use Tallycoin with your own node) [details](https://github.com/djbooth007/tallycoin_connect)
-- **ItchySats** (Non-custodial peer-to-peer CFD trading) [details](https://github.com/itchysats/itchysats)
 - **LNDg** (WebUI analyze/manage lnd with automation) [details](https://github.com/cryptosharks131/lndg)
 - **LNDK** (runs on top of LND to help forward onion messages (BOLT 12)) [details](https://github.com/lndk-org/lndk)
 
 You can connect the following Wallet-Apps to your RaspiBlitz (thru SSH menu):
 
 - **Zeus** (Android & iOS) [details](https://zeusln.app)
-- **Zap** (Android & iOS) [details](https://www.zaphq.io)
+- **Zap** (iOS) [details](https://www.zaphq.io)
+- **Bitbanana** (Android) [details](https://bitbanana.app/)
 - **Fully Noded** (iOS) [details](https://apps.apple.com/us/app/fully-noded/id1436425586)
-- **Sphinx Chat App** (Android & iOS) [details](https://sphinx.chat)
 - **Alby** (Desktop) [details](https://getalby.com)
 
 Also many more features like Touchscreen, Channels Autopilot, Backup, DynDNS, SSH-Tunneling, UPS Support, ...
