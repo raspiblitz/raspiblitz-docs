@@ -195,20 +195,6 @@ If switched on it means the LND lightning node implementation is installed and r
 If activated you will find an additional option in the SSH Main Menu that offers you more options for operating the LND node.
 Also under `SERVICES` some apps might only be available if LND is activated.
 
-##### LND Channel Autopilot
-
-The channel autopilot feature of LND allows an "autopilot" to automatically use around half of your on-chain (i.e. bitcoin) funds, if available, to open new channels with other lightning nodes.
-The autopilot can be very useful to get started transacting swiftly if you're a newbie, as channels are opened for you.
-It is very likely that after a while, once you will have a hang of the concept of channels and how they work, that you will not need channels autopilot any more.
-
-Beware that currently, toggling the Channels Autopilot setting will trigger a reboot of your RaspiBlitz.
-It is not a problem per se, just a bit of waste of time [Improvement request #1953](https://github.com/rootzoll/raspiblitz/issues/1953)
-
-##### LND Accept Keysend
-
-Keysend is a feature of LND that allows your node to accept payments without having created an invoice first.
-This needs to be activated, for example, if you want to use your nodes for experimental messaging over the Lightning Network (see RaspiBlitz MOBILE apps like SendMany).
-
 ##### LND Circuitbreaker (Firewall for LND)
 
 Not all peers in the Lightning network are necessarily friendly.
