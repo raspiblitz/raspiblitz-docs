@@ -343,29 +343,16 @@ https://medium.com/@guggero/did-you-lose-funds-on-the-lightning-network-because-
 
 _Important: If you see a zero balance for on-chain funds after restoring from seed ... see details discussed [here](https://github.com/raspiblitz/raspiblitz/issues/278) - you might try setup fresh this time with bigger look-ahead number._
 
-### How do I move funds & channels from RaspiBlitz to LND Lightning Desktop App?
+### How Can I Use Blixt Wallet to Rescue LND Funds with Seed Words and a Static Channel Backup (SCB)?
 
-Before you start - download a LND-data-rescue file from your RaspiBlitz to your laptop `main menu -> UPDATE -> Update Anyway -> Start Update -> Download Backup -> FOLLOW INSTRUCTIONS and press Enter when ready with download -> START UPDATE`. Now your RaspiBlitz will power down.
+- Install Blixt Wallet from the App Store or Google Play Store.
+- Restore your wallet using your 24-word seed phrase.
+- Import the Static Channel Backup (SCB) file into Blixt Wallet.
+- Verify the restoration of your channels and balances.
+- Close channels manually if needed and monitor the on-chain transactions.
+- Using Blixt Wallet with your LND seed words and SCB file provides a straightforward method to rescue your funds without needing a fully synced Bitcoin blockchain.
 
-Now install the LND Lightning Desktop App for your OS: https://github.com/lightninglabs/lightning-app/releases
-
-Then start the App and create a new wallet - it's a throw-away wallet (will be deleted afterwards with no funds) - so you don't need to keep seeds safe. To get easily through the setup just make a photo of the seed with your mobile. If you get asked for funding - just click "done" until you reach the basic wallet screen. Then close the LND Desktop App.
-
-Now find out the path where LND stores the wallet data on your computer.
-
-Linux: [USER-DIRECTORY]/.config/lightning-app/lnd
-OSX: [USER-DIRECTORY]/Library/Application Support/lightning-app/lnd
-Windows: %USERPROFILE%\AppData\Roaming\lightning-app\lnd
-
-Then open that directory on your local file manager and delete all data in the `lnd` directory.
-
-Now unpack the lnd-rescue you made before and copy all the data from the `mnt/hdd/lnd` directory (including sub directories) into the LND-Path lnd directory. Delete the "lnd.conf" file.
-
-Now start the Lightning App again. Your wallet password should now be your RaspIBlitz Password C.
-
-**If it's working and you have access to your funds/channels on the Desktop App ... don't start the RaspiBlitz anymore. Delete SD card and HDD.**
-
-### How do I change the Name/Alias of my lightning node
+### How do I change the Name/Alias of my lightning node?
 
 Use the "Change Name/Alias of Node" option in the Lightning - LND Wallet Options menu. The RaspiBlitz will automatically reboot after this.
 
