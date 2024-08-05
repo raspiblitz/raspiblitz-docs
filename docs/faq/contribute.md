@@ -19,11 +19,11 @@ One time you need to fork the RaspiBlitz Docs into your account. That basically 
 - Go to the RaspiBlitz Docs repository: [https://github.com/raspiblitz/raspiblitz-docs](https://github.com/raspiblitz/raspiblitz-docs).
 - On the repository page, click on the "Fork" button in the upper-right corner.
 
-![fork repo](/static/img/contribute_docs/forkrepo.png)
+![fork repo](/img/contribute_docs/forkrepo.png)
 
 - On the next screen you can just click "Create Fork".
 
-![create fork](/static/img/contribute_docs/forkrepo2.png)
+![create fork](/img/contribute_docs/forkrepo2.png)
 
 #### 3. Find the Documentation File to Edit
 
