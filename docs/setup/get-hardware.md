@@ -54,6 +54,9 @@ If you already want to get an NVMe instead of a external SSD you can try these p
 - Pimoroni NVMe Base [pimoroni shop](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579)
 - NVMe Crucial P3 Plus 2TB Gen4 CT2000P3PSSD8 [amazon link](https://www.amazon.com/dp/B0B25ML2FH)
 
+If you are testing or searching alternative SSD/NVMe models - check out this repository:
+[https://github.com/chGoodchild/raspi5_ssd_compattibility](https://github.com/chGoodchild/raspi5_ssd_compattibility)
+
 ## Assemble your RaspiBlitz
 
 When you have all parts you need to:
