@@ -195,20 +195,6 @@ If switched on it means the LND lightning node implementation is installed and r
 If activated you will find an additional option in the SSH Main Menu that offers you more options for operating the LND node.
 Also under `SERVICES` some apps might only be available if LND is activated.
 
-##### LND Channel Autopilot
-
-The channel autopilot feature of LND allows an "autopilot" to automatically use around half of your on-chain (i.e. bitcoin) funds, if available, to open new channels with other lightning nodes.
-The autopilot can be very useful to get started transacting swiftly if you're a newbie, as channels are opened for you.
-It is very likely that after a while, once you will have a hang of the concept of channels and how they work, that you will not need channels autopilot any more.
-
-Beware that currently, toggling the Channels Autopilot setting will trigger a reboot of your RaspiBlitz.
-It is not a problem per se, just a bit of waste of time [Improvement request #1953](https://github.com/rootzoll/raspiblitz/issues/1953)
-
-##### LND Accept Keysend
-
-Keysend is a feature of LND that allows your node to accept payments without having created an invoice first.
-This needs to be activated, for example, if you want to use your nodes for experimental messaging over the Lightning Network (see RaspiBlitz MOBILE apps like SendMany).
-
 ##### LND Circuitbreaker (Firewall for LND)
 
 Not all peers in the Lightning network are necessarily friendly.
@@ -443,15 +429,6 @@ Also some other useful command line features.
 
 https://github.com/guggero/chantools
 
-##### Sphinx Relay Server
-
-The Sphinx App allows chat over the Lightning Network with LND and ties into the idea of [Podcasting 2.0](https://u.today/father-of-podcasting-integrates-bitcoin-lightning-into-his-app).
-To use the mobile app with your own RaspiBlitz you need to install the [Sphinx Relay Server](https://github.com/stakwork/sphinx-relay/blob/master/README.md).
-
-![SPHINX](https://github.com/stakwork/sphinx-relay/raw/master/public/relay.jpg)
-
-After install, you will see a new `SPHINX` option in the SSH main menu - it will give you all the information you need to start using it.
-
 ##### Core Lightning RTL Webinterface
 
 The same RTL as above but running with Core Lightning node.
@@ -492,7 +469,6 @@ At the moment the following mobile wallets are supported - some are only availab
 - [Zap (iOS/Android)](https://www.zaphq.io/) (only LND)
 - [Fully Noded (iOS over Tor)](https://apps.apple.com/us/app/fully-noded/id1436425586)
 - [SendMany (Android)](https://github.com/fusion44/sendmany/blob/master/README.md) (only LND)
-- [Sphinx Chat App (iOS/Android)](https://sphinx.chat/) (only LND)
 
 Mobile wallets work as a remote control app for your RaspiBlitz.
 First you need to install the apps on your phone - a QR code with the links to the app stores are displayed.

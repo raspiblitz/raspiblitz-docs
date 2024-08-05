@@ -343,29 +343,16 @@ https://medium.com/@guggero/did-you-lose-funds-on-the-lightning-network-because-
 
 _Important: If you see a zero balance for on-chain funds after restoring from seed ... see details discussed [here](https://github.com/raspiblitz/raspiblitz/issues/278) - you might try setup fresh this time with bigger look-ahead number._
 
-### How do I move funds & channels from RaspiBlitz to LND Lightning Desktop App?
+### How Can I Use Blixt Wallet to Rescue LND Funds with Seed Words and a Static Channel Backup (SCB)?
 
-Before you start - download a LND-data-rescue file from your RaspiBlitz to your laptop `main menu -> UPDATE -> Update Anyway -> Start Update -> Download Backup -> FOLLOW INSTRUCTIONS and press Enter when ready with download -> START UPDATE`. Now your RaspiBlitz will power down.
+- Install Blixt Wallet from the App Store or Google Play Store.
+- Restore your wallet using your 24-word seed phrase.
+- Import the Static Channel Backup (SCB) file into Blixt Wallet.
+- Verify the restoration of your channels and balances.
+- Close channels manually if needed and monitor the on-chain transactions.
+- Using Blixt Wallet with your LND seed words and SCB file provides a straightforward method to rescue your funds without needing a fully synced Bitcoin blockchain.
 
-Now install the LND Lightning Desktop App for your OS: https://github.com/lightninglabs/lightning-app/releases
-
-Then start the App and create a new wallet - it's a throw-away wallet (will be deleted afterwards with no funds) - so you don't need to keep seeds safe. To get easily through the setup just make a photo of the seed with your mobile. If you get asked for funding - just click "done" until you reach the basic wallet screen. Then close the LND Desktop App.
-
-Now find out the path where LND stores the wallet data on your computer.
-
-Linux: [USER-DIRECTORY]/.config/lightning-app/lnd
-OSX: [USER-DIRECTORY]/Library/Application Support/lightning-app/lnd
-Windows: %USERPROFILE%\AppData\Roaming\lightning-app\lnd
-
-Then open that directory on your local file manager and delete all data in the `lnd` directory.
-
-Now unpack the lnd-rescue you made before and copy all the data from the `mnt/hdd/lnd` directory (including sub directories) into the LND-Path lnd directory. Delete the "lnd.conf" file.
-
-Now start the Lightning App again. Your wallet password should now be your RaspIBlitz Password C.
-
-**If it's working and you have access to your funds/channels on the Desktop App ... don't start the RaspiBlitz anymore. Delete SD card and HDD.**
-
-### How do I change the Name/Alias of my lightning node
+### How do I change the Name/Alias of my lightning node?
 
 Use the "Change Name/Alias of Node" option in the Lightning - LND Wallet Options menu. The RaspiBlitz will automatically reboot after this.
 
@@ -473,11 +460,23 @@ You don't need a LAN port on your laptop as long as you can connect over WLAN to
 
 A LAN cable is recommended because it reduces a possible source of error on the network connection side. But how to setup WLAN when you don't have a LAN-Router/Switch available see here:
 
-Using [Raspberry Pi Imager: ](https://www.raspberrypi.com/software/)
-https://raspibolt.org/guide/raspberry-pi/operating-system.html#configure-boot-options
+To set up WiFi on the RaspiBlitz, you need to place a configuration file on the root directory of the SD card used to boot your Raspberry Pi. The RaspiBlitz checks for two specific files: `wifi` and `wpa_supplicant.conf`.
 
-Manually
-https://github.com/raspibolt/raspibolt/blob/a21788c0518618d17093e3f447f68a53e4efa6e7/raspibolt/raspibolt_20_pi.md#prepare-wifi
+To store these files on the root directory of your SD card, you can use a computer with an SD card reader:
+1. Insert the SD card into your computer.
+2. Open the SD card directory (usually labeled as "boot" or similar).
+3. Create a `wifi` text file (without an ening like .txt - just the name) on the root directory of the SD card (not inside any folders).
+4. Within the file write the SSID (name of your WiFi network) on the first line and the WiFi password on the second line. Make sure there are no extra spaces or blank lines. Save this file and place it in the root directory of your SD card.
+
+Example content of the `wifi` file:
+```
+YourWiFiSSID
+YourWiFiPassword
+```
+
+When the RaspiBlitz boots up, it will check for the presence of the `wifi` file. If it finds the file, it will read the SSID and password and attempt to configure the WiFi connection. If the configuration is successful, the `wifi` file will be removed from the SD card, and a success message will be logged.
+
+If an error occurs during this process, an error message will be logged, "errorWIFI" will be displayed on the LCD for one minute, and the system will shut down.
 
 ### Can I directly connect the RaspiBlitz to my laptop?
 
@@ -755,8 +754,7 @@ everything is working as expected.
 
 ![HeatsinkCaseAssembly](../../static/img/heatsink_case/heatsink_case_assembly.jpg)
 
-Certainly! Here's a concise English response for your FAQ section regarding selling RaspiBlitz hardware:
-
 ### Can I sell RaspiBlitz hardware and pay you?**
 
 Yes, you are free to sell hardware running RaspiBlitz software as it is released under the MIT License, which permits commercial use. Please note that as an independent commercial seller, you are not representing the RaspiBlitz developer team. Just make sure your customers don’t get confused about this distinction in your advertising. While we don't enter into formal partnerships or contracts, we appreciate voluntary donations. Donations can be made through our donation page: raspiblitz.org/#donation. Contributions motivate us and often lead to us mentioning supportive shops in our documentation, following the "Value for Value" principle—those who add value to the project are recognized in kind. If you inform us about your contribution and your shop, we're also happy to mention or retweet about your initiative to support community engagement.
+
