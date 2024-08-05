@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.4.0">
 <title data-rh="true">SSH Menu | RaspiBlitz</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.raspiblitz.org/docs/usage/ssh_menu"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="SSH Menu | RaspiBlitz"><meta data-rh="true" name="description" content="Once the Blockchain is synced you will enter the SSH Main Menu:"><meta data-rh="true" property="og:description" content="Once the Blockchain is synced you will enter the SSH Main Menu:"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.raspiblitz.org/docs/usage/ssh_menu"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/usage/ssh_menu" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/usage/ssh_menu" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://H1OPUQUC79-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="RaspiBlitz" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.1e07cf12.css">
-<script src="/assets/js/runtime~main.ec5abcfd.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.6208b52e.js" defer="defer"></script>
 <script src="/assets/js/main.a482c2f4.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -84,7 +84,7 @@ Keep in mind that when you force-close a channel it can take a much longer time 
 <p>Use if you want to remove all funds from the RaspiBlitz.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="settings-basic-settings-of-raspiblitz">SETTINGS: Basic Settings of RaspiBlitz<a class="hash-link" aria-label="Direct link to SETTINGS: Basic Settings of RaspiBlitz" title="Direct link to SETTINGS: Basic Settings of RaspiBlitz" href="/docs/usage/ssh_menu#settings-basic-settings-of-raspiblitz">​</a></h4>
 <p>Here you will find basic settings for your RaspiBlitz:</p>
-<p><img decoding="async" loading="lazy" alt="MainMenu-Settings" src="/assets/images/settings-f4ecbfdf5cc49180f2596a40a0bbb73d.png" width="412" height="505" class="img_ev3q"></p>
+<p><img decoding="async" loading="lazy" alt="MainMenu-Settings" src="/assets/images/settings-b0be99210fc663293d546ace1f1e2792.png" width="420" height="465" class="img_ev3q"></p>
 <p>Activate/Deactivate settings with the space bar and then select &#x27;OK&#x27; to activate changes.
 You can find more details about those options (top to down):</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="touchscreen-experimental">Touchscreen (experimental)<a class="hash-link" aria-label="Direct link to Touchscreen (experimental)" title="Direct link to Touchscreen (experimental)" href="/docs/usage/ssh_menu#touchscreen-experimental">​</a></h5>
@@ -141,15 +141,6 @@ RaspiBlitz allows this through activating &quot;testnet &amp; signet&quot; that 
 If switched on it means the LND lightning node implementation is installed and running on your RaspiBlitz - it can run in parallel to Core Lightning.
 If activated you will find an additional option in the SSH Main Menu that offers you more options for operating the LND node.
 Also under <code>SERVICES</code> some apps might only be available if LND is activated.</p>
-<h5 class="anchor anchorWithStickyNavbar_LWe7" id="lnd-channel-autopilot">LND Channel Autopilot<a class="hash-link" aria-label="Direct link to LND Channel Autopilot" title="Direct link to LND Channel Autopilot" href="/docs/usage/ssh_menu#lnd-channel-autopilot">​</a></h5>
-<p>The channel autopilot feature of LND allows an &quot;autopilot&quot; to automatically use around half of your on-chain (i.e. bitcoin) funds, if available, to open new channels with other lightning nodes.
-The autopilot can be very useful to get started transacting swiftly if you&#x27;re a newbie, as channels are opened for you.
-It is very likely that after a while, once you will have a hang of the concept of channels and how they work, that you will not need channels autopilot any more.</p>
-<p>Beware that currently, toggling the Channels Autopilot setting will trigger a reboot of your RaspiBlitz.
-It is not a problem per se, just a bit of waste of time <a href="https://github.com/rootzoll/raspiblitz/issues/1953" target="_blank" rel="noopener noreferrer">Improvement request #1953</a></p>
-<h5 class="anchor anchorWithStickyNavbar_LWe7" id="lnd-accept-keysend">LND Accept Keysend<a class="hash-link" aria-label="Direct link to LND Accept Keysend" title="Direct link to LND Accept Keysend" href="/docs/usage/ssh_menu#lnd-accept-keysend">​</a></h5>
-<p>Keysend is a feature of LND that allows your node to accept payments without having created an invoice first.
-This needs to be activated, for example, if you want to use your nodes for experimental messaging over the Lightning Network (see RaspiBlitz MOBILE apps like SendMany).</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="lnd-circuitbreaker-firewall-for-lnd">LND Circuitbreaker (Firewall for LND)<a class="hash-link" aria-label="Direct link to LND Circuitbreaker (Firewall for LND)" title="Direct link to LND Circuitbreaker (Firewall for LND)" href="/docs/usage/ssh_menu#lnd-circuitbreaker-firewall-for-lnd">​</a></h5>
 <p>Not all peers in the Lightning network are necessarily friendly.
 Circuitbreaker is a background service you can activate that acts similarly to a firewall to protect your node.
