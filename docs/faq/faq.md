@@ -753,3 +753,8 @@ with physical access to the device.
 everything is working as expected.
 
 ![HeatsinkCaseAssembly](../../static/img/heatsink_case/heatsink_case_assembly.jpg)
+
+### Can I sell RaspiBlitz hardware and pay you?**
+
+Yes, you are free to sell hardware running RaspiBlitz software as it is released under the MIT License, which permits commercial use. Please note that as an independent commercial seller, you are not representing the RaspiBlitz developer team. Just make sure your customers don’t get confused about this distinction in your advertising. While we don't enter into formal partnerships or contracts, we appreciate voluntary donations. Donations can be made through our donation page: raspiblitz.org/#donation. Contributions motivate us and often lead to us mentioning supportive shops in our documentation, following the "Value for Value" principle—those who add value to the project are recognized in kind. If you inform us about your contribution and your shop, we're also happy to mention or retweet about your initiative to support community engagement.
+
