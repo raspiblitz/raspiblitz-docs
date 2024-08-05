@@ -1,4 +1,4 @@
-# RaspiBLitz Documentation Website
+# RaspiBlitz Documentation Website
 
 This is the repository for the documentation for the [RaspiBlitz](https://github.com/raspiblitz/raspiblitz) project. It is built using [Docusaurus 3](https://docusaurus.io/).
 
