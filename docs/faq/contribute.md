@@ -34,7 +34,7 @@ Now you go back into the original RaspiBlitz Documentation GitHub project into t
 - Click on the pencil icon (✏️) in the upper-right corner to edit the file.
 - Make your changes in the online editor.
 
-![edit page](/static/img/contribute_docs/editpage.png)
+![edit page](/img/contribute_docs/editpage.png)
 
 #### 4. Commit Your Changes & Create a Pull Request
 
@@ -43,22 +43,22 @@ When ready you need to save/commit the changes and create a request to add the c
 
 - Click in top right corner on "Commit Changes" button.
 
-![commit changes](/static/img/contribute_docs/commitchange.png)
+![commit changes](/img/contribute_docs/commitchange.png)
 
 - Give it a title .. a description is optional.
 - Click on "Propose changes"
 
-![commit changes](/static/img/contribute_docs/proposechange.png)
+![commit changes](/img/contribute_docs/proposechange.png)
 
 - You see then a screen that shows a comparison of what changed.
 - You can ignore that and just click "Create Pull Request"
 
-![create pull request](/static/img/contribute_docs/createpr.png)
+![create pull request](/img/contribute_docs/createpr.png)
 
 - Done
 - You now the the number of your Pull Request that got submitted to the maintainers of the RaspiBlitz Documentation for review.
 
-![your PR](/static/img/contribute_docs/yourpr.png)
+![your PR](/img/contribute_docs/yourpr.png)
 
 - You can bookmark the URL to add comments later.
 - You should get an email once your changes got accepted.
