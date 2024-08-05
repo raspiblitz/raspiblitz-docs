@@ -12,15 +12,11 @@ In this section you find the latest ready-to-use RaspiBlitz SDcard images. Basic
 
 This is the sd card image you should choose if your at the beginning of your RaspiBlitz journey or you are a casual node runner wanna download the next update/upgrade - with WebUI & fast installing bonus apps.
 
-{/* :::warning */}
-{/* THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF LOSING FUNDS! */}
-{/* ::: */}
-
-- **FATPACK SD CARD IMAGE ⮕ [raspiblitz-fat-v1.11.0-2024-04-16.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.0-2024-04-16.img.gz)**
-- SHA-256: 273df65e64d36f38496cdc82171b97eb87ecce92e01bcca03b918764e7b9c735
+- **FATPACK SD CARD IMAGE ⮕ [raspiblitz-fat-v1.11.1-2024-07-31.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.1-2024-07-31.img.gz)**
+- SHA-256: 8d85796b3ad6412a1b419b33ebe181fbd7c96ac4bc36efceb46d5e07fc2aa66f
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
-- Signature-File: [raspiblitz-fat-v1.11.0-2024-04-16.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.0-2024-04-16.img.gz.sig)
-- Torrent: [raspiblitz-fat-v1.11.0-2024-04-16.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/raspiblitz-fat-v1.11.0-2024-04-16.img.gz.torrent)
+- Signature-File: [raspiblitz-fat-v1.11.1-2024-07-31.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.1-2024-07-31.img.gz.sig)
+- Torrent: [raspiblitz-fat-v1.11.1-2024-07-31.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/v1.11/home.admin/assets/raspiblitz-fat-v1.11.1-2024-07-31.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 
@@ -28,15 +24,11 @@ This is the sd card image you should choose if your at the beginning of your Ras
 
 This is the sd card image for RaspiBlitz users that are already more experienced and want to use just a limited set of features of the RaspiBlitz. This image has just the bare minimum of features pre-installed - LCD & HDMI output is off by default. Setup, Update or Recovery needs to be done thru SSH login - API & WebUI are later available but are not pre-installed/activated by default. The RaspiBlitz will download & compile just the tools that are in your ´raspiblitz.conf´ - this will take longer but as a trade-off this RaspiBlitz then just runs with a reduced set of dependencies and so a minimized attack vector and better performance. Its for the serious & experienced node runners.
 
-{/*- :::warning */}
-{/*- THIS IS STILL A RELEASE CANDIDATE VERSION JUST USE FOR TESTING, HIGHER RISK OF LOSING FUNDS! */}
-{/*- ::: */}
-
-- **MINIMAL SD CARD IMAGE ⮕ [raspiblitz-min-v1.11.0-2024-04-16.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.0-2024-04-16.img.gz)**
-- SHA-256: aa02ba01fab9a5832a66cdf3059ddf5128df963e924a10e4b8cd68a861820b02
+- **MINIMAL SD CARD IMAGE ⮕ [raspiblitz-min-v1.11.1-2024-07-30.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.1-2024-07-30.img.gz)**
+- SHA-256: 2d6dd0478e15982a331d6dea3324cd6a2641d5de729b931d7afc728e847352c6
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
-- Signature-File: [raspiblitz-min-v1.11.0-2024-04-16.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.0-2024-04-16.img.gz.sig)
-- Torrent: [raspiblitz-min-v1.11.0-2024-04-16.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/raspiblitz-min-v1.11.0-2024-04-16.img.gz.torrent)
+- Signature-File: [raspiblitz-min-v1.11.1-2024-07-30.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.1-2024-07-30.img.gz.sig)
+- Torrent: [raspiblitz-min-v1.11.1-2024-07-30.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/v1.11/home.admin/assets/raspiblitz-min-v1.11.1-2024-07-30.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 
