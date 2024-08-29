@@ -15,7 +15,7 @@ This is the sd card image you should choose if your at the beginning of your Ras
 - **FATPACK SD CARD IMAGE ⮕ [raspiblitz-fat-v1.11.2-2024-08-15.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.2-2024-08-15.img.gz)**
 - SHA-256: f784b750473ee6dd61d09d67c728ecf5d53b660e00f98285b0ffcb1ee7a6dea6
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
-- Signature-File: [raspiblitz-fat-v1.11.1-2024-07-31.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.2-2024-08-15.img.gz.sig)
+- Signature-File: [raspiblitz-fat-v1.11.2-2024-08-15.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.2-2024-08-15.img.gz.sig)
 - Torrent: [raspiblitz-fat-v1.11.2-2024-08-15.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/v1.11/home.admin/assets/raspiblitz-fat-v1.11.2-2024-08-15.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
