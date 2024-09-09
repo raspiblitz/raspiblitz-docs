@@ -19,7 +19,7 @@ But verifying the shasum does not prove to you that the SD card image was actual
 To verify that the download was actually signed by rootzoll (FINGERPRINT: 92A746AE33A3C186D014BF5C1C73060C7C176461) you need to use GPG and import the following public key:
 
 ```
-curl --tlsv1.2 --proto '=https' curl --tlsv1.2 --proto '=https' https://keys.openpgp.org/vks/v1/by-fingerprint/92A746AE33A3C186D014BF5C1C73060C7C176461 | gpg --import | gpg --import
+curl --tlsv1.2 --proto '=https' https://keys.openpgp.org/vks/v1/by-fingerprint/92A746AE33A3C186D014BF5C1C73060C7C176461 | gpg --import
 ```
 
 Next, download the "signature file" for the SD card image. It's the same download link as for the image file - just added a `.sig` at the end. You should also always find the download link for the signature file in the README right next to the image download link.
