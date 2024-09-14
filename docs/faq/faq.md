@@ -16,10 +16,10 @@ shasum -a 256 [DOWNLOADED-FILE-TO-CHECK]
 
 But verifying the shasum does not prove to you that the SD card image was actually built by the lead developer of the RaspiBlitz project.
 
-To verify that the download was actually signed by [rootzoll](https://keybase.io/rootzoll) you need to use GPG and import the following public key:
+To verify that the download was actually signed by rootzoll (FINGERPRINT: 92A746AE33A3C186D014BF5C1C73060C7C176461) you need to use GPG and import the following public key:
 
 ```
-curl --tlsv1.2 --proto '=https' https://keybase.io/rootzoll/pgp_keys.asc | gpg --import
+curl --tlsv1.2 --proto '=https' https://keys.openpgp.org/vks/v1/by-fingerprint/92A746AE33A3C186D014BF5C1C73060C7C176461 | gpg --import
 ```
 
 Next, download the "signature file" for the SD card image. It's the same download link as for the image file - just added a `.sig` at the end. You should also always find the download link for the signature file in the README right next to the image download link.
@@ -30,7 +30,7 @@ If you now have all the three elements needed - the imported public key, the ima
 gpg --verify [SIGNATURE-FILE] [IMAGE-FILE]
 ```
 
-As a result you should see a "good signature" message with a main fingerprint the same as you can find on the [keybase.io/rootzoll](https://keybase.io/rootzoll) that is ending on `1C73 060C 7C17 6461`. You should also see the sub-key fingerprint ending on `AA9D D1B5 CC56 47DA`, that is used at the moment to sign the sd card image. If those fingerprints shown correctly, the SD card image you downloaded is an original RaspiBlitz release.
+As a result you should see a "good signature" message with a main fingerprint that is ending on `1C73 060C 7C17 6461`. You should also see the sub-key fingerprint ending on `AA9D D1B5 CC56 47DA`, that is used at the moment to sign the sd card image. If those fingerprints shown correctly, the SD card image you downloaded is an original RaspiBlitz release.
 
 _You can ignore any warning about the key being 'not a trusted signature' or untrusted .. as long you see "good signature" and the correct main & sub fingerprints the download is valid._
 
