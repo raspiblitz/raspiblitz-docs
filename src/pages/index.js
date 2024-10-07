@@ -87,7 +87,7 @@ function HomepageHeader() {
         </ul>
       </div>
       <div style={{ paddingTop: "0px" }}>
-        Shops that offer ready-made Hardware:
+        Shops that offer RaspiBlitz Hardware:
         <ul style={{ padding: "0px 20px" }}>
           <li>
             <a href="https://diynodes.com">DIYnodes.com</a>
