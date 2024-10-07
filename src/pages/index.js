@@ -99,8 +99,8 @@ function HomepageHeader() {
       </div>
       <div style={{ paddingTop: "0px" }}>
         <a href="#donation" />
-        Scan or Click to Donate to the RaspiBlitz Project:<br />
-        <a href="https://yourdevice.ch/produkt-kategorie/btc-nodes-zubehoer/"><img
+        Donate to the RaspiBlitz Project:<br />
+        <img
           src="https://github.com/rootzoll/raspiblitz/raw/dev/pictures/qr_donate.png"
           alt="Donate to RaspiBlitz Project with Lightning Address"
           style={{
@@ -110,7 +110,7 @@ function HomepageHeader() {
             marginTop: "10px",
             marginBottom: "6px",
           }}
-        /></a><br />
+        /><br />
         Lightning Address: raspiblitz@btcypay.fulmo.org<br />All donations for the RaspiBlitz project are collected by <a href="https://fulmo.org" target="_blank">Fulmo</a> & managed together with the developer team.
       </div>
       <div style={{ paddingTop: "10px" }}>
