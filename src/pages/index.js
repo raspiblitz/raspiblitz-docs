@@ -28,7 +28,18 @@ function HomepageHeader() {
         }}
       />
       <div style={{ paddingTop: "15px" }}>
-        The complete tutorial on how to build from single parts &amp; setup:
+        Download the lastest Version for Install & Update:
+        <ul style={{ padding: "0px 20px", listStyleType: "disc" }}>
+          <li>
+            <a href="https://docs.raspiblitz.org/docs/setup/software-setup/download">
+              RasperryPi SD-Card Images
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <div style={{ paddingTop: "15px" }}>
+          Tutorial on how to build from Single Parts &amp; Setup:
         <ul style={{ padding: "0px 20px", listStyleType: "disc" }}>
           <li>
             <a href="https://docs.raspiblitz.org/docs/setup/intro">
