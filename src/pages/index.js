@@ -96,7 +96,31 @@ function HomepageHeader() {
       </div>
 
       <div style={{ paddingTop: "15px" }}>
-        Donations for the RaspiBlitz project are collected by{" "}
+        <a href="#shops">Shops that offer ready-made Hardware:</a>
+        <ul style={{ padding: "0px 20px" }}>
+          <li>
+            <a href="https://diynodes.com">DIYnodes.com</a>
+          </li>
+          <li>
+            <a href="https://yourdevice.ch/produkt-kategorie/btc-nodes-zubehoer/">yourdevice.ch</a>
+          </li>
+        </ul>
+      </div>
+
+      <div style={{ paddingTop: "15px" }}>
+        <a href="#donation">Scan or Click to Donate to the RaspiBlitz Project:</a>
+        <img
+          src="https://github.com/rootzoll/raspiblitz/raw/dev/pictures/qr_donate.png"
+          alt="Donate to RaspiBlitz Project with Lightning Address"
+          style={{
+            width: "100%",
+            maxWidth: "100px",
+            minHeight: "100px",
+            marginTop: "10px",
+            marginBottom: "6px",
+          }}
+        />
+        Lightning Address: raspiblitz@btcypay.fulmo.org<br />All donations for the RaspiBlitz project are collected by{" "}
         <a href="https://fulmo.org" target="_blank">
           Fulmo
         </a>{" "}
