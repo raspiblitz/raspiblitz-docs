@@ -99,8 +99,8 @@ function HomepageHeader() {
       </div>
       <div style={{ paddingTop: "0px" }}>
         <a href="#donation" />
-        Donate to the RaspiBlitz Project:<br />
-        <img
+        Scan or <a href="/donation.html">Click to Donate</a> to the RaspiBlitz Project:<br />
+        <a href="/donation.html"><img
           src="https://github.com/rootzoll/raspiblitz/raw/dev/pictures/qr_donate.png"
           alt="Donate to RaspiBlitz Project with Lightning Address"
           style={{
@@ -110,7 +110,7 @@ function HomepageHeader() {
             marginTop: "10px",
             marginBottom: "6px",
           }}
-        /><br />
+        /></a><br />
         Lightning Address: raspiblitz@btcypay.fulmo.org<br />All donations for the RaspiBlitz project are collected by <a href="https://fulmo.org" target="_blank">Fulmo</a> & managed together with the developer team.
       </div>
       <div style={{ paddingTop: "10px" }}>
