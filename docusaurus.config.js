@@ -65,7 +65,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "RaspiBlitz",
+        title: "",
         logo: {
           alt: "RaspiBlitz logo",
           src: "img/RaspiBlitz_Logo_Main_Negative.svg",
@@ -75,7 +75,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "blitzSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Documentation",
           },
           {
             href: "https://github.com/raspiblitz/raspiblitz",
