@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -53,6 +54,8 @@ const config = {
       }),
     ],
   ],
+
+  plugins: [tailwindPlugin],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
