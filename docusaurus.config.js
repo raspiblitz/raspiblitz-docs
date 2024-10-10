@@ -95,7 +95,7 @@ const config = {
       footer: {
         style: "dark",
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} RaspiBlitz open source project. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} RaspiBlitz open source project. Built with Docusaurus. Impressum: Christian Rotzoll, christian [ at ] rotzoll.de - this site is not using any cookies and is not storing your data. Icons by https://fontawesome.com/ (CC BY 4.0) and https://lucide.dev/ (ISC)`,
       },
       prism: {
         theme: prismThemes.github,
