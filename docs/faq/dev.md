@@ -214,7 +214,9 @@ So your workflow can go like this: You write code on your local computer. Commit
 
 ### How can I manual provision an image with updated code?
 
-To boot an already build sd card image with your updated raspiblitz code base you can use the `stop` file flag. This will make the `_bootstrap.sh` script stop basically before making any setup or recovery changes to the system. You can SSH in an use the `github` command to update the raspiblitz code and then use `release` command. To set the `stop` file flag. Insert a fresh written sd card into your PC and on the root of `bootfs` drive with a file manager place a empty file simply called `stop` (with no file extension).
+For RaspberryPi: To boot an already build sd card image with your updated raspiblitz code base you can use the `stop` file flag. This will make the `_bootstrap.sh` script stop basically before making any setup or recovery changes to the system. You can SSH in an use the `github` command to update the raspiblitz code and then use `release` command. To set the `stop` file flag. Insert a fresh written sd card into your PC and on the root of `bootfs` drive with a file manager place a empty file simply called `stop` (with no file extension).
+
+For VMs/Proxmox (since 1.11.3): If you wanna stop the bootstrap of a RaspiBlitz running in a VM you can add an "Audio Device" to it. If RaspiBlitz is running in a VM and an audio device it will stop for manual provision. So you just need to build your RaspiBlitz VM once, than have it as a template with an added audio device and just clone it, start it, SSH in to provision updated code (change to another branch or PR you want to test) and then use `release` to shutdown. Remove the audio device and your good to go. Under Proxmox on your VM under `Hardware` just add any of the three basic emulated audio devices available - just choose `driver=none`.
 
 ### How to add an app to the RaspiBlitz?
 
