@@ -166,7 +166,11 @@ The RaspiBlitz is your computer to experiment with. Feel free to add your own sc
 
 ### Can I run RaspiBlitz on other computers than RaspberryPi?
 
-There is an experimental section in this GitHub that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: [alternative.platforms/README.md](https://github.com/raspiblitz/raspiblitz/blob/dev/alternative.platforms/README.md)
+Yes. The build script `build_sdcard.sh` (in the root of the raspiblitz repo) has the goal to be able to turn a fresh setup of the Linux distribution [Debian](https://cdimage.debian.org/cdimage/) (use latest release) into a RaspiBlitz system. Login as root and run:
+
+``
+
+There is also an experimental section in the raspiblitz repo that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: [alternative.platforms/README.md](https://github.com/raspiblitz/raspiblitz/blob/dev/alternative.platforms/README.md)
 
 ### How can I build an SD card from another branch?
 
@@ -190,25 +194,9 @@ Once the branch is available and synced between the RaspiBlitz GitHub repo, your
 
 ### How can I sync a branch of my forked GitHub with my local RaspiBlitz?
 
-Since v1.5 of RaspiBlitz there has been an easy way thru the SSH menus: Under `MAIN MENU > UPDATE > PATCH` you have the option to change the GitHub repository and and branch to sync with. You change the GitHub Repository by setting the GitHub username where you forked the Repo.
+On the terminal use the command `github` and a menu shows up. Change the `REPO` to your forked Github repo. And then use `BRANCH` from that menu to set the branch your are working in.
 
-So for example: If you forked the RaspiBlitz project (raspiblitz/raspiblitz) on GitHub and your GitHub project page is now called: https://github.com/raumi75/raspiblitz ... then just change the repo to sync/patch with to your username `raumi75`.
-
-Now you can use the `Patch/Sync RaspiBlitz with GitHub Repo` to easily keep your RaspiBlitz in sync with your forked repository and develop your own customizations and features.
-
-Background info and doing it manually:
-
-There is a git copy of the original RaspiBlitz GitHub repo on your physical RaspiBlitz in the folder `/home/admin/raspiblitz`. If you change into that folder and run `git remote -v` you can see the set origin repo.
-
-You need to change that origin repo to your forked repo. You do that with:
-```
-git remote set-url origin [THE-URL-OF-YOUR-FORKED-REPO]
-```
-
-Now to sync your branch namend BRANCH on your forked repo with your RaspiBlitz, you always just run:
-```
-/home/admin/config.scripts/blitz.github.sh BRANCH
-```
+You can the always use `PATCH` from that menu if you want to sync the scripts of your RaspiBlitz with the latest version of the scripts in your forked repo & branc. You can also use the terminal command `patch code` diretcly to trigger the sync.
 
 So your workflow can go like this: You write code on your local computer. Commit to your local repo, push it to your forked repo and use the sync-script above to get the code to your RaspiBlitz.
 
@@ -230,33 +218,11 @@ See more info: https://yangsu.github.io/pull-request-tutorial/
 
 ### How can I help testing a Pull Request?
 
-Make sure to have the correct base image.
-Then go to the command line and create a branch for the PR:
-
-```
-cd /home/admin/raspiblitz
-git fetch origin pull/[PRNUMBER]/head:pr[PRNUMBER]
-git checkout pr[PRNUMBER]
-cd /home/admin
-/home/admin/config.scripts/blitz.github.sh -justinstall
-```
-
-Now you have the code of the PR active - depending on what scripts are changed you might need to reboot.
-
-To change back to the code:
-```
-/home/admin/config.scripts/blitz.github.sh master
-```
+On the terminal use command 'github' (make sure your on the main raspiblitz repo). In the menu choose `PR` and enter the issue number of the pull request. Then your scripts will sync to the state of the PR and you can test it. If your done - use command `github` again and change `BRANCH` back to dev or the latest release.
 
 ### How can I push changes to an existing Pull Request?
 
 See article: https://tech.sycamore.garden/add-commit-push-contributor-branch-git-github .. only works if your a contributor on raspiblitz repo.
-
-### How to cherry-pick with branch protections & CODEOWNERS file?
-
-Chery-picking patch PRs from dev to a release-branch like 'v1.8' (for example) is now a bit more complicated. Either an admin switches temorarly the branch protection "require a pull request before merging" setting off for the `git cherry-pick` OR we create a `p1.8` branch from `v1.8`, cherry-pick the squashed patch PR into that unprotected `p1.8` and then open a PR back to `v1.8`.
-
-But what we gain is that better branch protection and we can add more contributors to the project that are allowed to manage issues - like adding labels or closing.
 
 ### How to run the automatic amd64 build on a VM on OSX?
 
