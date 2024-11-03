@@ -168,7 +168,9 @@ The RaspiBlitz is your computer to experiment with. Feel free to add your own sc
 
 Yes. The build script `build_sdcard.sh` (in the root of the raspiblitz repo) has the goal to be able to turn a fresh setup of the Linux distribution [Debian](https://cdimage.debian.org/cdimage/) (use latest release) into a RaspiBlitz system. Login as root and run:
 
-``
+`wget --no-cache https://raw.githubusercontent.com/raspiblitz/raspiblitz/dev/build_sdcard.sh && bash build_sdcard.sh -u raspiblitz -b dev -f 0 -d headless`
+
+You can replace the first `raspiblitz` in the URL & after parameter `-u` with your github username and `dev` (replace 2 times) the the branch you want to build the system from. 
 
 There is also an experimental section in the raspiblitz repo that tries to build for other SingleBoardComputers. Feel free to try it out and share your experience: [alternative.platforms/README.md](https://github.com/raspiblitz/raspiblitz/blob/dev/alternative.platforms/README.md)
 
@@ -196,7 +198,7 @@ Once the branch is available and synced between the RaspiBlitz GitHub repo, your
 
 On the terminal use the command `github` and a menu shows up. Change the `REPO` to your forked Github repo. And then use `BRANCH` from that menu to set the branch your are working in.
 
-You can the always use `PATCH` from that menu if you want to sync the scripts of your RaspiBlitz with the latest version of the scripts in your forked repo & branc. You can also use the terminal command `patch code` diretcly to trigger the sync.
+You can the always use `PATCH` from that menu if you want to sync the scripts of your RaspiBlitz with the latest version of the scripts in your forked repo & branch. You can also use the terminal command `patch code` diretcly to trigger the sync.
 
 So your workflow can go like this: You write code on your local computer. Commit to your local repo, push it to your forked repo and use the sync-script above to get the code to your RaspiBlitz.
 
