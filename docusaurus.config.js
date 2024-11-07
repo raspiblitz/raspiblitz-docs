@@ -5,6 +5,7 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import { themes as prismThemes } from "prism-react-renderer";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -54,6 +55,8 @@ const config = {
     ],
   ],
 
+  plugins: [tailwindPlugin],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -65,7 +68,7 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "RaspiBlitz",
+        title: "",
         logo: {
           alt: "RaspiBlitz logo",
           src: "img/RaspiBlitz_Logo_Main_Negative.svg",
@@ -75,7 +78,7 @@ const config = {
             type: "docSidebar",
             sidebarId: "blitzSidebar",
             position: "left",
-            label: "Tutorial",
+            label: "Documentation",
           },
           {
             href: "https://github.com/raspiblitz/raspiblitz",
@@ -92,7 +95,7 @@ const config = {
       footer: {
         style: "dark",
         links: [],
-        copyright: `Copyright © ${new Date().getFullYear()} RaspiBlitz open source project. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} RaspiBlitz open source project. Built with Docusaurus. Impressum: Christian Rotzoll, christian [ at ] rotzoll.de - this site is not using any cookies and is not storing your data. Icons by https://fontawesome.com/ (CC BY 4.0) and https://lucide.dev/ (ISC)`,
       },
       prism: {
         theme: prismThemes.github,
