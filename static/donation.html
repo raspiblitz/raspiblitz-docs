@@ -118,11 +118,18 @@
 
 <body>
     <header>
-        <h1>RaspiBlitz - Donations</h1>
+        <h1 style="margin-bottom: 0px;">RaspiBlitz - Donations</h1>
     </header>
     <main>
-        <p style="text-align: center; margin-top: 0px;">Set your Donation Amount:</p>
-        <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
+        <p style="text-align: center; margin-top: 0px; margin-bottom: 10px;">Donate to static Lightning Address:</p>
+        <p style="text-align: center; margin-top: 0px; margin-bottom: 0px;">
+            <img style="width: 209px;" src="https://docs.raspiblitz.org/img/qr_donate.png" alt="Lightning Address">
+        </p>
+        <p style="text-align: center; margin-top: 0px; margin-bottom: 20px; font-size: 0.8em;color: #b0b0b0;">
+            raspiblitz@btcypay.fulmo.org
+        </p>
+        <p style="text-align: center; margin-top: 5px; margin-bottom: 13px;">Or generate your BTC/Lightning invoice:</p>
+        <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
             <form method="POST" action="https://btcpay.fulmo.org/api/v1/invoices"
                 class="btcpay-form btcpay-form--block">
                 <input type="hidden" name="storeId" value="CzD1ddWDKR7PqNUuw2Sbt41oELNvY59Cg62LCMT8gNnA" />
@@ -151,7 +158,9 @@
     </main>
 
     <footer style="color: #b0b0b0; font-size: 0.8em;">
-        <p>All donations for the RaspiBlitz project are collected by Fulmo &<br /> managed together with the developer
+        <p>All donations for the RaspiBlitz project are collected by <a style="color: #b0b0b0;"
+                href="https://fulmo.org/impressum/">Fulmo GmbH</a>
+            &<br /> managed together with the developer
             team.</p>
     </footer>
 
