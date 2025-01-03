@@ -114,7 +114,7 @@ const RaspiBlitzOverview = () => {
                                 className="w-32 h-32 mx-auto mb-4"
                             />
                             <Link href='https://docs.raspiblitz.org/donation.html' className="primary underline">Donate with BTCPay</Link>
-                            <p className="mb-2">Lightning Address: <span className='primary'>raspiblitz@btcypay.fulmo.org</span></p>
+                            <p className="mb-2">Lightning Address: <span className='primary'>raspiblitz@btcpay.fulmo.org</span></p>
                             <p className="text-sm">
                                 All donations for the RaspiBlitz project are collected by{" "}
                                 <Link href="https://fulmo.org" target="_blank" rel="noreferrer"
