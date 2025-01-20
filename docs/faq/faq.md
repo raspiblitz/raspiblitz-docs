@@ -30,7 +30,7 @@ If you now have all the three elements needed - the imported public key, the ima
 gpg --verify [SIGNATURE-FILE] [IMAGE-FILE]
 ```
 
-As a result you should see a "good signature" message with a main fingerprint that is ending on `1C73 060C 7C17 6461`. You should also see the sub-key fingerprint ending on `AA9D D1B5 CC56 47DA`, that is used at the moment to sign the sd card image. If those fingerprints shown correctly, the SD card image you downloaded is an original RaspiBlitz release.
+As a result you should see a "good signature" message with a main fingerprint that is ending on `1C73 060C 7C17 6461`. You should also see the sub-key fingerprint ending on `AA9D D1B5 CC56 47DA`, that is used at the moment to sign the SD card image. If those fingerprints shown correctly, the SD card image you downloaded is an original RaspiBlitz release.
 
 _You can ignore any warning about the key being 'not a trusted signature' or untrusted .. as long you see "good signature" and the correct main & sub fingerprints the download is valid._
 
@@ -46,14 +46,14 @@ The upgrade should be quite simple - you don't need to close any channels:
 - In the SSH main menu of you RaspiBlitz choose `UPDATE` & follow the dialogs until shutdown
 - Download the new RaspiBlitz image file from the [GitHub README](https://github.com/raspiblitz/raspiblitz/blob/dev/README.md#installing-the-software)
 - Write the new image to the (new) SD card with a tool like [balena etcher](https://www.balena.io/etcher/)
-- RaspiBlitz with new SD card image - it now goes through a recover/update phase - this may take some time.
-- Once that's done, login once via SSH and use the password raspiblitz and set a new password A (can be your old one or a new one).
+- Start the RaspiBlitz with the new SD card image - it now goes through a recover/update phase - this may take some time.
+- Once that's done, login once via SSH and use the password 'raspiblitz' and set a new password A (can be your old one or a new one).
 
 After the final reboot your RaspiBlitz should be ready, running the new RaspiBlitz version.
 
 ### Why do I need to re-burn my SD card for an update?
 
-I know it would be nicer to run just an update script and be ready to go. But then the scripts would need to be written in a much more complex way to be able to work with any versions of LND and Bitcoind (they are already complex enough with all the edge cases) and testing would become even more time consuming than it is now. That's not something that a single developer can deliver.
+I know it would be nicer to run just an update script and be ready to go. But then the scripts would need to be written in a much more complex way to be able to work with any versions of LND and Bitcoind (they are already complex enough with all the edge cases) and testing would become even more time-consuming than it is now. That's not something that a single developer can deliver.
 
 For some, it might be a pain point to make an update by re-burning a new SD card - especially if you added your own scripts or made changes to the system - but that's by design. It's a way to enforce a "clean state" with every update - the same state that I tested and developed the scripts with. The reason for that pain: I simply cannot write and support scripts that run on every modified system forever - that's simply too much work.
 
@@ -88,7 +88,7 @@ After that, you should be able to login with SSH again.
 
 Just removing power from the RaspiBlitz can lead to data corruption if the HDD is right in the middle of a writing process. The safest way is always to SSH into the RaspiBlitz and use the "POWER OFF" option in the main menu.
 
-But if cannot login with SSH and you need to power off at least remove the LAN cable (network connection)first for sometime (around 10-30 secs - until you can see no more blinking lights on the HDD) and then remove the power cable. This should minimize the risk if data corruption in this situations.
+But if you cannot login with SSH and you need to power off at least remove the LAN cable (network connection)first for sometime (around 10-30 secs - until you can see no more blinking lights on the HDD) and then remove the power cable. This should minimize the risk if data corruption in this situations.
 
 ### I cannot connect via SSH to my RaspiBlitz. What do I do?
 
@@ -121,7 +121,7 @@ Get the address:
 
 ### How to setup port-forwarding with a SSH tunnel?
 
-To use a public server for port-forwarding thru a SSH tunnel you can use the following experimental script on the RaspiBlitz (since v1.2):
+To use a public server for port-forwarding through a SSH tunnel you can use the following experimental script on the RaspiBlitz (since v1.2):
 
 `/home/admin/config.scripts/internet.sshtunnel.py`
 
@@ -212,7 +212,7 @@ Some displays have a different orientation. To fix this activate/deactivate the 
 
 The display is one of the nice features of the RaspiBlitz but it can run without it. Maybe not all the add-on features can be used to the full extent, but you can get started without the LCD and if you wish, plug it on later.
 
-If you want to use the HDMI output you can place a file called `hdmi` on the `boot` section of the RaspiBlitz sd card ... just connect the sd card to your laptop, create that file and then boot it up in the Raspberry Pi.
+If you want to use the HDMI output you can place a file called `hdmi` on the `boot` section of the RaspiBlitz SD card ... just connect the SD card to your laptop, create that file and then boot it up in the Raspberry Pi.
 
 If you are already logged in you can use on the console the commands:
 
@@ -225,7 +225,7 @@ If you can login into your local internet router it should show you the IP addre
 
 Another way is to use [Angry IP Scanner](https://angryip.org/) to find the IP address.
 
-You can also put an empty file just called `hdmi` (without any ending) onto the sd card when connected to your laptop and then start it up on the Raspberry Pi. This will activate the HDMI port and if you connect a HDMI monitor to the Raspberry Pi it will show you the RaspiBlitz status screen containing the local IP address.
+You can also put an empty file just called `hdmi` (without any ending) onto the SD card when connected to your laptop and then start it up on the Raspberry Pi. This will activate the HDMI port and if you connect a HDMI monitor to the Raspberry Pi it will show you the RaspiBlitz status screen containing the local IP address.
 
 ## Debug
 
@@ -240,9 +240,9 @@ When you use the WebUI in the browser than you can follow the steps:
 - Under "Generate Debug Report" click "Generate"
 - This might take some minutes, but then a Text-File will be offered for download
 
-You can also get a debug report thru the SSH menus:
+You can also get a debug report through the SSH menus:
 
-- SSH into your raspiblitz as admin user with your password A
+- SSH into your Raspiblitz as admin user with your password A
 - If you see the menu - use CTRL+C to get to the terminal
 - To generate debug report run: `debug`, optionally create a link with `debug -l`
 - Then copy all output beginning with `*** RASPIBLITZ LOGS ***` and share this
@@ -271,11 +271,11 @@ To find/access information fast in large data sets like the Bitcoin blockchain i
 
 So if you read in your debug logs of Bitcoind that you should "reindex" you can try first just to do a fast "reindex-chainstate" and if that didnt worked a slow and full "reindex".
 
-See the raspiblitz script `./config.scripts/network.reindex.sh` or the REAPIR menu to start these processes.
+See the Raspiblitz script `./config.scripts/network.reindex.sh` or the REPAIR menu to start these processes.
 
 ### Why is my "final sync" taking so long?
 
-First of all if you see a final sync over 90% and you can see from time to time small increase - you should be OK ... this can take a looong time to catch up with the network. Only in the case that you actively choose the `SYNC` option in the `Getting the Blockchain` is a final sync under 90% OK. If you did a torrent or a copy from another computer and you are seeing under 90% something went wrong, and the setup process is ignoring your prepared Blockchain and doing a full sync - which can almost take forever on a raspberryPi.
+First of all if you see a final sync over 90% and you can see from time to time small increase - you should be OK ... this can take a looong time to catch up with the network. Only in the case that you actively choose the `SYNC` option in the `Getting the Blockchain` is a final sync under 90% OK. If you did a torrent or a copy from another computer and you are seeing under 90% something went wrong, and the setup process is ignoring your prepared Blockchain and doing a full sync - which can almost take forever on a Raspberry Pi.
 
 If something is wrong (like mentioned above) then try again from the beginning. You need to reset your HDD for a fresh start: SSH in as admin user. Abort the final sync info with CTRL+c to get to the terminal. Then run `sudo /home/admin/XXcleanHDD.sh -all` and follow the script to delete all data in HDD. When finished power down with `sudo shutdown now`. Then make a fresh SD card from image and this time try another option to get the blockchain. If you run into trouble the second time, please report an issue on GitHub.
 
@@ -320,7 +320,7 @@ Then to restore your old LND data and to recover your funds and channels:
 
 This script will offer you a way to transfer the lnd-rescue file from your laptop to the new RaspiBlitz and will restore the old data. LND then gets restarted for you, and after some time it should show you the status screen again with your old funds and channels.
 
-**Be aware that if backup is some hours old, channels could have been closed by the other party and it may take some time until you see funds back on-chain. If backup is somewhat older then 1 day also the channel counter-parties may have used your offline time to cheat you with an old state. And if your backup was not the latest state it could also be happening that you are posting an old channel state (seen as cheating) and funds of that channel get forfeited as punishment. So again .. this backup method can be risky, use with caution. While it's recommended to try in recover and rescue situations - it's not for regular backups.**
+**Be aware that if backup is some hours old, channels could have been closed by the other party and it may take some time until you see funds back on-chain. If backup is somewhat older than 1 day also the channel counter-parties may have used your offline time to cheat you with an old state. And if your backup was not the latest state it could also be happening that you are posting an old channel state (seen as cheating) and funds of that channel get forfeited as punishment. So again .. this backup method can be risky, use with caution. While it's recommended to try in recover and rescue situations - it's not for regular backups.**
 
 #### 2) Recover from Wallet Seed
 
@@ -434,7 +434,7 @@ Add an entry called `staticIP` in `raspiblitz.conf` to prevent external IP detec
 
 ### How do I fix a displayed Error in my Config?
 
-When the LCD display is telling you to do a config check:
+When the LCD is telling you to do a config check:
 
 - go to the RaspiBlitz terminal (X on main menu) and run 'patch'
 - start reboot with command: 'restart'
@@ -450,7 +450,7 @@ BTCPay Server is a solution to be your own payment processor to accept Lightning
 
 You can find setup instructions for a experimental setup here: https://goo.gl/KnTzLu
 
-Thanks to @RobEdb (ask on twitter for more details) for running his demo store with RaspiBlitz: https://store.edberg.eu - buy a picture of [him and Andreas](https://store.edberg.eu/produkt/jag-andreas/) :)
+Thanks to @RobEdb (ask on Twitter for more details) for running his demo store with RaspiBlitz: https://store.edberg.eu - buy a picture of [him and Andreas](https://store.edberg.eu/produkt/jag-andreas/) :)
 
 ### I don't have a LAN port on my Laptop - how do I connect to my RaspiBlitz?
 
@@ -465,7 +465,7 @@ To set up WiFi on the RaspiBlitz, you need to place a configuration file on the 
 To store these files on the root directory of your SD card, you can use a computer with an SD card reader:
 1. Insert the SD card into your computer.
 2. Open the SD card directory (usually labeled as "boot" or similar).
-3. Create a `wifi` text file (without an ening like .txt - just the name) on the root directory of the SD card (not inside any folders).
+3. Create a `wifi` text file (without an ending like .txt - just the name) on the root directory of the SD card (not inside any folders).
 4. Within the file write the SSID (name of your WiFi network) on the first line and the WiFi password on the second line. Make sure there are no extra spaces or blank lines. Save this file and place it in the root directory of your SD card.
 
 Example content of the `wifi` file:
@@ -508,7 +508,7 @@ If anyone has experience on doing this in Linux please share.
 
 #rd## Are those "Under-Voltage detected" warnings a problem?
 
-When your USB power adapter for the RaspiBlitz delivers too low of a power level, those messages with "Under-Voltage detected" (under-voltage) are shown on the display. This can lead to data loss/corruption on the HDD. If you see this just one or two times it's not OK, but can be in a tolerant window. Nevertheless it is important to make sure that your USB power adapter can deliver at least 3A (big and stable is good). If you still see those warnings maybe get a second USB Power adapter just for the HDD, and power the HDD through a Y-Cable - see https://en.wikipedia.org/wiki/Y-cable#USB or put a USB Hub with extra power between the Raspberry and the HDD.
+When your USB power adapter for the RaspiBlitz delivers too low of a power level, those messages with "Under-Voltage detected" (under-voltage) are shown on the display. This can lead to data loss/corruption on the HDD. If you see this just one or two times it's not OK, but can be in a tolerant window. Nevertheless, it is important to make sure that your USB power adapter can deliver at least 3A (big and stable is good). If you still see those warnings maybe get a second USB Power adapter just for the HDD, and power the HDD through a Y-Cable - see https://en.wikipedia.org/wiki/Y-cable#USB or put a USB Hub with extra power between the Raspberry and the HDD.
 
 ### How do I return to the menu after exiting to the command line
 
@@ -520,7 +520,7 @@ When you put in a SD card with a new/clean RaspiBlitz image the RaspiBlitz will 
 
 But there might be cases where you want to start a totally fresh/clean RaspiBlitz from the beginning. To do so you need to delete the old data from the HDD. Choose the option `RESET-ALL` under `REPAIR` to delete all data and start fresh.
 
-When the HDD is clean, then flash a new RaspiBlitz sd card and your setup should start fresh.
+When the HDD is clean, then flash a new RaspiBlitz SD card and your setup should start fresh.
 
 ### My blockchain data is corrupted - what can I do?
 
@@ -540,11 +540,11 @@ Yes but you need to change the port number (for example to 9736) on at least one
 
 ### How can I enforce UASP mode for my SSD controller?
 
-By default just tested & selected SSD encasings/controller are running enabled with UASP in RaspiBlitz. UASP brings a speed up for the SSD but also if not well supported by the SSD encasing/controller can lead to system halts. If you know for sure that your SSD encasing/controller is supporting UASP fully you can place a file called `uasp.force` on the sd card boot section after flashing the image with your laptop. See details or report errors on issue [#2488](https://github.com/raspiblitz/raspiblitz/issues/2488)
+By default just tested & selected SSD encasings/controller are running enabled with UASP in RaspiBlitz. UASP brings a speed up for the SSD but also if not well supported by the SSD encasing/controller can lead to system halts. If you know for sure that your SSD encasing/controller is supporting UASP fully you can place a file called `uasp.force` on the SD card boot section after flashing the image with your laptop. See details or report errors on issue [#2488](https://github.com/raspiblitz/raspiblitz/issues/2488)
 
 ### I am facing maintenance/emergency mode on boot. How do I fix it?
 
-This behavior is caused by either the software that flashes the RaspiBlitz image onto the sd card, or by a faulty sd-card. The only solution is to try switching the software/computer you use for flashing and/or trying another sd card.
+This behavior is caused by either the software that flashes the RaspiBlitz image onto the SD card, or by a faulty SD-card. The only solution is to try switching the software/computer you use for flashing and/or trying another SD card.
 
 See issues #3039, #1053 & #782
 
@@ -601,7 +601,7 @@ Just run this once and then lean back and forget about it. :-D
 #### Let's Encrypt - DNS-01
 
 The `DNS-01` standard **proves ownership** by creating `DNS TXT` records on the domain or subdomain you want to use.
-This requires interaction with and access to a dns server but comes with the benefit that `wildcard certificates`
+This requires interaction with and access to a DNS server but comes with the benefit that `wildcard certificates`
 can be issued.
 
 It is beyond the scope of this FAQ entry to explain all details of this - please refer to the official documentation.
@@ -703,7 +703,7 @@ For the RaspiBlitz this means that you can connect an additional 32GB USB3 Thumb
 
 #### Snapshotting the Blockchain
 
-BTRFS comes with a build in snapshot feature - that means that your RaspiBlitz can make every day a backup of the blockchain data and if a blockchain corruption occurs (example thru a power outage) there is no need to sync the complete chain again. Just switch back to the last backup state and quickly sync up from there. On BTRFS such backups can be done as snapshots that dont need much more space on the drive and are quickly done - no need to buy a bigger SSD or wait for copying over 200GB.
+BTRFS comes with a build in snapshot feature - that means that your RaspiBlitz creates a backup of the blockchain data every day and if a blockchain corruption occurs (for example through a power outage) there is no need to sync the complete chain again. Just switch back to the last backup state and quickly sync up from there. On BTRFS such backups can be done as snapshots that dont need much more space on the drive and are quickly done - no need to buy a bigger SSD or wait for copying over 200GB.
 
 #### How do I use BTRFS on RaspiBlitz?
 
@@ -711,17 +711,17 @@ Because the BTRFS is still experimental it's a bit hidden. There are two ways to
 
 - When you start a fresh setup just connect a 32GB Thumb Drive on the second USB3 port from the beginning and you should be asked during HDD setup if you want to try out BTRFS and gave the Thumb Drive as RAID1.
 
-- If you have a existing RaspiBlitz and you want to switch to BTRFS then you need to export a Migration File (MAINMENU > REPAIR > MIGRATION) an then format your HDD/SSD clean. When you import a Migration File during a fresh Setup (see above) you will get the option to format the HDD/SSD with BTRFS.
+- If you have a existing RaspiBlitz and you want to switch to BTRFS then you need to export a Migration File (MAINMENU > REPAIR > MIGRATION) and then format your HDD/SSD clean. When you import a Migration File during a fresh Setup (see above) you will get the option to format the HDD/SSD with BTRFS.
 
 Once the Blitz is running on BTRFS you can use the '/home/admin/config.scripts/blitz.datadrive.sh' script to add a RAID drive or make a snapshot.
 
 #### How to recover a BTRFS partition?
 
-This articles goes thru the usual options:
+This articles goes through the usual options:
 https://ownyourbits.com/2019/03/03/how-to-recover-a-btrfs-partition/
 https://seravo.fi/2015/using-raid-btrfs-recovering-broken-disks
 
-### How to setup RaspberryPi4 with Heatsink Case
+### How to setup Raspberry Pi 4 with Heatsink Case
 
 1. Put screw mounts on the SSD shield.
 2. Prepare screws for mounting the Raspberry PI and corresponding heat sink.
@@ -743,7 +743,7 @@ with physical access to the device.
 
 ![MetalCasePart2](../../static/img/metal_case/part_2_with_numbers.jpg)
 
-### How to setup RaspberryPi4 with Metal Case
+### How to setup Raspberry Pi 4 with Metal Case
 
 1. Apply thermal pads.
 2. Close the case.
