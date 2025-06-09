@@ -13,7 +13,7 @@ Only use this software with funds you could afford to lose. Especially a lightni
 Just because the software is OpenSource does not mean its free of errors. Especially if you run additional apps, the RaspiBlitz team cannot review all the code of those external projects.
 
 The software is provided "AS IS", without warranty of any kind. In no event shall the authors or copyright holders be liable for any claim, damages or other
-liability. [details on legal license](https://github.com/fusion44/raspiblitz/blob/dev/LICENSE)
+liability. [details on legal license](https://github.com/raspiblitz/raspiblitz/blob/dev/LICENSE)
 
 ## Minimal SD Card Build
 
