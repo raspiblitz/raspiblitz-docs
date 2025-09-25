@@ -67,7 +67,7 @@ To copy the data from the old to the new drive - 2 drives need to be connected a
 
 ## 5. Safety & backup checklist
 
-Even if you’re “just” swapping drives, back up **before** you migrate. This protects you against copy errors, power glitches, or a mis‑click.
+Even if you’re “just” swapping drives, back up **before** you migrate. This protects you against copy errors, power glitches, etc.
 
 **Recommended (preferred):**
 
