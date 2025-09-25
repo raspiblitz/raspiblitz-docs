@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-community/storage_migration" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.5.2">
+<title data-rh="true">Storage Migration Guide | RaspiBlitz</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.raspiblitz.org/docs/community/storage_migration"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Storage Migration Guide | RaspiBlitz"><meta data-rh="true" name="description" content="This guide documents - step by step - how to perform a storage migration (moving your RaspiBlitz data &amp; blockchain to a new &amp; bigger drive) without reinstalling the node from scratch with RaspiBlitz v1.12 (or higher) on a Raspberry Pi 5 (or higher)."><meta data-rh="true" property="og:description" content="This guide documents - step by step - how to perform a storage migration (moving your RaspiBlitz data &amp; blockchain to a new &amp; bigger drive) without reinstalling the node from scratch with RaspiBlitz v1.12 (or higher) on a Raspberry Pi 5 (or higher)."><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.raspiblitz.org/docs/community/storage_migration"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/community/storage_migration" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/community/storage_migration" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://H1OPUQUC79-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="RaspiBlitz" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.7f4c0b8f.css">
+<script src="/assets/js/runtime~main.169048c1.js" defer="defer"></script>
+<script src="/assets/js/main.c41d16cc.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"dark")}(),function(){try{const n=new URLSearchParams(window.location.search).entries();for(var[t,e]of n)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/RaspiBlitz_Logo_Main_Negative.svg" alt="RaspiBlitz logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/RaspiBlitz_Logo_Main_Negative.svg" alt="RaspiBlitz logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate"></b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/docs/intro">Documentation</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/raspiblitz/raspiblitz" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><a href="https://docs.raspiblitz.org/docs/setup/software-setup/download" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">Download<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="navbarSearchContainer_Bca1"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20" aria-hidden="true"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"></span></button></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/intro">Intro</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/security">Security Policy</a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/raspiblitz-setup">RaspiBlitz Setup</a><button aria-label="Expand sidebar category &#x27;RaspiBlitz Setup&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/raspiblitz-usage">RaspiBlitz Usage</a><button aria-label="Expand sidebar category &#x27;RaspiBlitz Usage&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--active" href="/docs/category/community-resources">Community Resources</a><button aria-label="Collapse sidebar category &#x27;Community Resources&#x27;" aria-expanded="true" type="button" class="clean-btn menu__caret"></button></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/community/support">Support</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/docs/community/workshops">Workshop Tutorial</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/docs/community/storage_migration">Storage Migration Guide</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist" href="/docs/category/faqs">FAQ&#x27;s</a><button aria-label="Expand sidebar category &#x27;FAQ&#x27;s&#x27;" aria-expanded="false" type="button" class="clean-btn menu__caret"></button></div></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/docs/shops">Shops</a></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><a aria-label="Home page" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item"><a class="breadcrumbs__link" itemprop="item" href="/docs/category/community-resources"><span itemprop="name">Community Resources</span></a><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Storage Migration Guide</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><header><h1>Storage Migration Guide</h1></header>
+<p>This guide documents - step by step - how to perform a <strong>storage migration</strong> (moving your RaspiBlitz data &amp; blockchain to a new &amp; bigger drive) <strong>without</strong> reinstalling the node from scratch with RaspiBlitz v1.12 (or higher) on a Raspberry Pi 5 (or higher).</p>
+<hr>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="contents">Contents<a href="#contents" class="hash-link" aria-label="Direct link to Contents" title="Direct link to Contents">​</a></h3>
+<ol>
+<li>
+<p>Migration scenarios</p>
+</li>
+<li>
+<p>Hardware &amp; adapter requirements</p>
+</li>
+<li>
+<p>What gets migrated</p>
+</li>
+<li>
+<p>Safety &amp; backup checklist</p>
+</li>
+<li>
+<p>Preparation — Shutdown, Swap Drive &amp; new SD</p>
+</li>
+<li>
+<p>Migration — Boot &amp; Copy Data</p>
+</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-migration-scenarios">1. Migration scenarios<a href="#1-migration-scenarios" class="hash-link" aria-label="Direct link to 1. Migration scenarios" title="Direct link to 1. Migration scenarios">​</a></h2>
+<p>All three scenarios are possible; you only need the matching adapters (see below):</p>
+<ol>
+<li>SATA‑USB SSD → bigger SATA‑USB SSD </li>
+<li>SATA‑USB SSD → bigger NVMe </li>
+<li>NVMe → bigger NVMe</li>
+</ol>
+<p>These work on <strong>Raspberry Pi 5</strong> (recommended for NVMe). Scenario 1 (SATA‑USB → SATA‑USB) also works on <strong>Raspberry Pi 4</strong>.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-hardware--adapter-requirements">2. Hardware &amp; adapter requirements<a href="#2-hardware--adapter-requirements" class="hash-link" aria-label="Direct link to 2. Hardware &amp; adapter requirements" title="Direct link to 2. Hardware &amp; adapter requirements">​</a></h2>
+<p>To copy the data from the old to the new drive - 2 drives need to be connected at the same time to your RaspberryPi. So depending on your scenario you need to choose the matching adapter.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="a-nvme-on-raspberry-pi5">A) NVMe on Raspberry Pi 5<a href="#a-nvme-on-raspberry-pi5" class="hash-link" aria-label="Direct link to A) NVMe on Raspberry Pi 5" title="Direct link to A) NVMe on Raspberry Pi 5">​</a></h3>
+<ul>
+<li><strong>NVMe → NVMe:</strong> You’ll need a <strong>USB→NVMe adapter/enclosure</strong> for the <em>second</em> NVMe during migration (the primary NVMe sits on the Pi 5 NVMe baseboard - something like this: <a href="https://www.amazon.de/dp/B0CB7MGWGQ" target="_blank" rel="noopener noreferrer">https://www.amazon.de/dp/B0CB7MGWGQ</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="b-sata-ssds-25-on-raspberry-pi5-or-4">B) SATA SSDs (2.5&quot;) on Raspberry Pi 5 or 4<a href="#b-sata-ssds-25-on-raspberry-pi5-or-4" class="hash-link" aria-label="Direct link to B) SATA SSDs (2.5&quot;) on Raspberry Pi 5 or 4" title="Direct link to B) SATA SSDs (2.5&quot;) on Raspberry Pi 5 or 4">​</a></h3>
+<ul>
+<li><strong>SATA‑USB → SATA‑USB (Pi 5 or Pi 4):</strong> Use your existing <strong>USB 3.0 SATA enclosure/adapter(s)</strong>.<br>
+<strong>Power nuance:</strong>
+<ul>
+<li>On <strong>Pi 5</strong>, a <em>bus‑powered</em> USB 3.0 SATA adapter is generally fine for the additional drive.</li>
+<li>On <strong>Pi 4</strong>, if <strong>two SSDs</strong> are attached simultaneously, the <strong>second SSD should be additionally powered</strong> (e.g., powered dock, Y‑cable, or enclosure with its own power). In tests this powered dock worked fine: <a href="https://www.amazon.de/dp/B016UBXH3O" target="_blank" rel="noopener noreferrer">https://www.amazon.de/dp/B016UBXH3O</a></li>
+</ul>
+</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="c-special-case--satausb-ssd--nvme-on-raspberry-pi5">C) Special case — <strong>SATA‑USB SSD → NVMe on Raspberry Pi 5</strong><a href="#c-special-case--satausb-ssd--nvme-on-raspberry-pi5" class="hash-link" aria-label="Direct link to c-special-case--satausb-ssd--nvme-on-raspberry-pi5" title="Direct link to c-special-case--satausb-ssd--nvme-on-raspberry-pi5">​</a></h3>
+<ul>
+<li>You <strong>do not need to buy an extra migration adapter</strong>. You already need the <strong>Pi 5 NVMe baseboard</strong> for normal operation; install the <strong>new NVMe</strong> on that baseboard as the <strong>primary/target</strong>. Keep your <strong>old SATA SSD</strong> in its <strong>existing USB SATA adapter</strong> as the <strong>secondary/source</strong>.</li>
+<li>On <strong>Pi 5</strong>, the SATA USB adapter <strong>does not need extra power</strong> for this migration.</li>
+<li>The powered‑adapter requirement applies <strong>only to Pi 4</strong> when two SSDs are connected at the same time (see section B).</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-what-gets-migrated">4. What gets migrated<a href="#4-what-gets-migrated" class="hash-link" aria-label="Direct link to 4. What gets migrated" title="Direct link to 4. What gets migrated">​</a></h2>
+<ul>
+<li><strong>Bitcoin Core data</strong> (blockchain, indexes, configuration)</li>
+<li><strong>Lightning data</strong> (LND or CLN—whichever you run)</li>
+<li><strong>RaspiBlitz configuration</strong> and relevant service data (e.g., web UIs/tools)</li>
+</ul>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="5-safety--backup-checklist">5. Safety &amp; backup checklist<a href="#5-safety--backup-checklist" class="hash-link" aria-label="Direct link to 5. Safety &amp; backup checklist" title="Direct link to 5. Safety &amp; backup checklist">​</a></h2>
+<p>Even if you’re “just” swapping drives, back up <strong>before</strong> you migrate. This protects you against copy errors, power glitches, etc.</p>
+<p><strong>Recommended (preferred):</strong></p>
+<ul>
+<li><strong>RaspiBlitz migration bundle</strong> (&quot;Migration Download&quot;) — export the full migration package for your setup.\</li>
+<li><strong>Lightning rescue backup</strong> depending on your LN implementation:<!-- -->
+<ul>
+<li><strong>LND:</strong> ensure you have a fresh <strong>Static Channel Backup (SCB)</strong> and store it off‑device.</li>
+<li><strong>Core Lightning (CLN):</strong> create the <strong>rescue backup</strong> via RaspiBlitz (the CLN equivalent), and store it off‑device.\</li>
+</ul>
+</li>
+<li>Optionally copy <strong>TLS certificates</strong> and <strong>macaroons</strong> (can simplify API access after migration).</li>
+</ul>
+<p><strong>Absolute minimum (at least do this):</strong></p>
+<ul>
+<li>Your <strong>on‑chain wallet seed words</strong> (24 words), correctly noted and verified.</li>
+<li>For <strong>LND</strong>, a recent <strong>SCB</strong> stored safely off the node. For <strong>CLN</strong>, the respective <strong>rescue backup</strong>.</li>
+</ul>
+<blockquote>
+<p><strong>Side note:</strong> If the node holds <strong>no funds</strong> (no on‑chain balance, no open channels), the backup urgency is lower. Still, it’s good practice to keep basic backups—especially if the device hosts any <strong>critical services</strong>.</p>
+</blockquote>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="6-preparation--clean-shutdown-hardware-swap-and-sdcard-refresh-mandatory">6. Preparation — Clean shutdown, hardware swap <strong>and SD‑card refresh</strong> (mandatory)<a href="#6-preparation--clean-shutdown-hardware-swap-and-sdcard-refresh-mandatory" class="hash-link" aria-label="Direct link to 6-preparation--clean-shutdown-hardware-swap-and-sdcard-refresh-mandatory" title="Direct link to 6-preparation--clean-shutdown-hardware-swap-and-sdcard-refresh-mandatory">​</a></h2>
+<p>Do <strong>not</strong> copy data while the node is running. Shut down cleanly, then place the <strong>new, larger drive</strong> in the <em>primary</em> position, prepare the <strong>old drive</strong> as the <strong>secondary/source</strong>, <strong>refresh the microSD</strong>, and only then proceed.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="1-clean-shutdown">1) Clean shutdown<a href="#1-clean-shutdown" class="hash-link" aria-label="Direct link to 1) Clean shutdown" title="Direct link to 1) Clean shutdown">​</a></h2>
+<ul>
+<li><strong>From RaspiBlitz UI:</strong> <em>Shutdown</em>\</li>
+<li><strong>From shell (preferred on RaspiBlitz):</strong>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">OFF</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<!-- -->The <code>OFF</code> command triggers RaspiBlitz’s safe shutdown routine.</li>
+<li><strong>Standard Linux alternative:</strong>
+<div class="language-bash codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#F8F8F2;--prism-background-color:#282A36"><div class="codeBlockContent_biex"><pre tabindex="0" class="prism-code language-bash codeBlock_bY9V thin-scrollbar" style="color:#F8F8F2;background-color:#282A36"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#F8F8F2"><span class="token plain">sudo shutdown -h now</span><br></span></code></pre><div class="buttonGroup__atx"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_eSgA" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_y97N"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+</li>
+</ul>
+<p>Wait until LEDs indicate the system is fully off.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="2-promote-the-new-drive-to-primary">2) Promote the new drive to primary<a href="#2-promote-the-new-drive-to-primary" class="hash-link" aria-label="Direct link to 2) Promote the new drive to primary" title="Direct link to 2) Promote the new drive to primary">​</a></h2>
+<p>After the system is off, swap the roles of the drives so that the <strong>new, larger drive</strong> becomes the <strong>primary/target</strong> and the old drive becomes the <strong>secondary/source</strong> attached over USB (but <strong>don’t plug it in yet</strong> — see Final Prep below).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenarioa--nvme--nvme-raspberry-pi5">Scenario A — NVMe → NVMe (Raspberry Pi 5)<a href="#scenarioa--nvme--nvme-raspberry-pi5" class="hash-link" aria-label="Direct link to Scenario A — NVMe → NVMe (Raspberry Pi 5)" title="Direct link to Scenario A — NVMe → NVMe (Raspberry Pi 5)">​</a></h3>
+<ol>
+<li>Remove the <strong>old 1 TB NVMe</strong> from the <strong>Pi 5 NVMe baseboard</strong>.</li>
+<li>Install the <strong>new 2 TB NVMe</strong> onto the <strong>NVMe baseboard</strong> (now <strong>primary/target</strong>).<br>
+<em>Check form factor (e.g., 2280) and keying; use the standoff/screw.</em></li>
+<li>Place the <strong>old 1 TB NVMe</strong> into a <strong>USB→NVMe adapter/enclosure</strong> (this will be <strong>secondary/source</strong>).\</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenariob--satausb-ssd--satausb-ssd-raspberry-pi5-or-pi4">Scenario B — SATA‑USB SSD → SATA‑USB SSD (Raspberry Pi 5 or Pi 4)<a href="#scenariob--satausb-ssd--satausb-ssd-raspberry-pi5-or-pi4" class="hash-link" aria-label="Direct link to Scenario B — SATA‑USB SSD → SATA‑USB SSD (Raspberry Pi 5 or Pi 4)" title="Direct link to Scenario B — SATA‑USB SSD → SATA‑USB SSD (Raspberry Pi 5 or Pi 4)">​</a></h3>
+<ol>
+<li>Remove the <strong>old 1 TB 2.5&quot; SSD</strong> from your <strong>main USB 3.0 SATA enclosure/adapter</strong>.</li>
+<li>Insert the <strong>new 2 TB 2.5&quot; SSD</strong> into that <strong>main enclosure/adapter</strong> (now <strong>primary/target</strong>).</li>
+<li>Put the <strong>old 1 TB SSD</strong> into your <strong>second USB 3.0 SATA adapter/dock</strong> (this will be <strong>secondary/source</strong>).<!-- -->
+<ul>
+<li>On <strong>Pi 5</strong>, bus‑powered is typically fine.</li>
+<li>On <strong>Pi 4</strong>, the <strong>secondary/source should be additionally powered</strong> (powered dock/Y‑cable).\</li>
+</ul>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="scenarioc--satausb-ssd--nvme-raspberry-pi5">Scenario C — SATA‑USB SSD → NVMe (Raspberry Pi 5)<a href="#scenarioc--satausb-ssd--nvme-raspberry-pi5" class="hash-link" aria-label="Direct link to Scenario C — SATA‑USB SSD → NVMe (Raspberry Pi 5)" title="Direct link to Scenario C — SATA‑USB SSD → NVMe (Raspberry Pi 5)">​</a></h3>
+<p><strong>No extra migration adapter needed:</strong></p>
+<ol>
+<li>Install the <strong>new 2 TB NVMe</strong> on the <strong>Pi 5 NVMe baseboard</strong> (<strong>primary/target</strong>).</li>
+<li>Place the <strong>old 1 TB SATA SSD</strong> in its <strong>existing USB 3.0 SATA adapter</strong> (this will be <strong>secondary/source</strong>).\</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="3-refresh-the-microsd-with-a-clean-raspiblitz-image-recommended">3) Refresh the microSD with a clean RaspiBlitz image (recommended)<a href="#3-refresh-the-microsd-with-a-clean-raspiblitz-image-recommended" class="hash-link" aria-label="Direct link to 3) Refresh the microSD with a clean RaspiBlitz image (recommended)" title="Direct link to 3) Refresh the microSD with a clean RaspiBlitz image (recommended)">​</a></h2>
+<p>With the Pi powered off, remove the <strong>microSD card</strong> and flash a <strong>fresh RaspiBlitz image</strong> — at least <strong>v1.12</strong>, or a newer release if available.</p>
+<p><strong>Why now?</strong> Doing this between shutdown and the copy avoids filesystem surprises and ensures you’ll boot into a clean userspace for the migration steps.</p>
+<p><strong>Capacity &amp; rollback recommendation:</strong></p>
+<ul>
+<li><strong>Upgrade to a 64 GB microSD.</strong> Older installs often used 32 GB; moving to <strong>64 GB</strong> provides more headroom for logs and updates.</li>
+<li><strong>Use a second, new microSD for this update.</strong> Keep your <strong>existing microSD untouched</strong> as a fallback. If anything goes wrong during migration, you can re‑insert the <strong>old microSD</strong> <em>and</em> the <strong>old drive</strong> to boot the node back in its previous state.</li>
+<li>(Optional but helpful) Choose a <strong>UHS‑I A1/A2‑rated</strong> card from a reputable brand for better I/O consistency.</li>
+</ul>
+<p><strong>Steps (summary):</strong></p>
+<ol>
+<li>Remove the microSD from the Pi.</li>
+<li>Download the latest <strong>RaspiBlitz image</strong> (&gt;= v1.12).\</li>
+<li>Flash the image to the <strong>new 64 GB microSD</strong> using your preferred tool like <strong>balenaEtcher</strong> : <a href="https://etcher.balena.io%5C" target="_blank" rel="noopener noreferrer">https://etcher.balena.io\</a></li>
+<li>Safely eject the card and re‑insert into the Pi (leave the Pi <strong>powered off</strong> until the copy setup is ready).</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="4-final-prep--seat-the-old-drive-in-its-adapter-but-do-not-connect-yet">4) Final prep — <strong>seat the old drive in its adapter, but do NOT connect yet</strong><a href="#4-final-prep--seat-the-old-drive-in-its-adapter-but-do-not-connect-yet" class="hash-link" aria-label="Direct link to 4-final-prep--seat-the-old-drive-in-its-adapter-but-do-not-connect-yet" title="Direct link to 4-final-prep--seat-the-old-drive-in-its-adapter-but-do-not-connect-yet">​</a></h2>
+<p>As the last preparation step of <strong>Preparation</strong>, seat the <strong>old (source) drive</strong> in its adapter — but <strong>do not plug it into the Raspberry Pi yet</strong>.</p>
+<p><strong>Why this matters</strong></p>
+<ul>
+<li>Avoids accidental boot from the <strong>old drive</strong> or confusing device order at first power‑on.</li>
+<li>Ensures the Pi boots cleanly from the <strong>fresh microSD</strong> and recognizes the <strong>new primary/target drive</strong> first.</li>
+<li>Prevents early automounts that might interfere with partitioning and mount configuration.</li>
+</ul>
+<p><strong>What to do</strong></p>
+<ol>
+<li>Place the <strong>old drive</strong> into the corresponding adapter:<!-- -->
+<ul>
+<li><strong>NVMe source:</strong> slide into the <strong>USB→NVMe enclosure</strong> (leave its USB cable <strong>unplugged</strong>).</li>
+<li><strong>SATA source (2.5&quot; SSD):</strong> attach to the <strong>USB 3.0 SATA adapter/dock</strong> (leave its USB cable <strong>unplugged</strong>; on Pi 4, attach external power to the dock only when instructed later).</li>
+</ul>
+</li>
+<li>Route the cable so it’s ready, but keep the <strong>USB end disconnected from the Pi</strong>.</li>
+</ol>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="7-migration--boot-with-the-new-sd-old-drive-still-disconnected--prepare-the-target-drive">7. Migration — Boot with the new SD (old drive <strong>still disconnected</strong>) &amp; prepare the <strong>target</strong> drive<a href="#7-migration--boot-with-the-new-sd-old-drive-still-disconnected--prepare-the-target-drive" class="hash-link" aria-label="Direct link to 7-migration--boot-with-the-new-sd-old-drive-still-disconnected--prepare-the-target-drive" title="Direct link to 7-migration--boot-with-the-new-sd-old-drive-still-disconnected--prepare-the-target-drive">​</a></h2>
+<p>In this step you start the Raspberry Pi/RaspiBlitz using the <strong>fresh 64 GB microSD</strong> you flashed in <strong>Preparation</strong>. Make sure the <strong>old/source drive is NOT connected</strong> yet. Only the <strong>new/target drive</strong> should be present (NVMe on the Pi 5 baseboard, or the new SATA SSD in the main USB enclosure).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="21-boot-from-the-new-microsd--open-setup-via-ssh">2.1 Boot from the new microSD &amp; open setup (via SSH)<a href="#21-boot-from-the-new-microsd--open-setup-via-ssh" class="hash-link" aria-label="Direct link to 2.1 Boot from the new microSD &amp; open setup (via SSH)" title="Direct link to 2.1 Boot from the new microSD &amp; open setup (via SSH)">​</a></h3>
+<p><strong>When the setup menu opens</strong> in your terminal session, choose: <strong>From HDD → Copy from HDD/SSD/NVMe</strong>. This is the migration entry that initiates copying data from your <strong>old/source drive</strong> to the <strong>new/target drive</strong>.</p>
+<img src="/img/migration/migration1.png">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="22-connect-the-oldsource-drive-usb-30-blue-ports">2.2 Connect the <strong>old/source drive</strong> (USB 3.0 blue ports)<a href="#22-connect-the-oldsource-drive-usb-30-blue-ports" class="hash-link" aria-label="Direct link to 22-connect-the-oldsource-drive-usb-30-blue-ports" title="Direct link to 22-connect-the-oldsource-drive-usb-30-blue-ports">​</a></h3>
+<ul>
+<li>Now plug the adapter with the <strong>old drive</strong> into a <strong>USB 3.0</strong> port on the Raspberry Pi. These ports are typically marked with <strong>blue plastic</strong>.</li>
+<li>Avoid USB 2.0 (black) ports — they are slower and may cause timeouts during large transfers.</li>
+<li>If you’re on a <strong>Raspberry Pi 4</strong> and using two SATA SSDs, ensure the <strong>second (source) SSD</strong> has <strong>additional power</strong> (powered dock/Y‑cable), as noted in the adapter section.</li>
+</ul>
+<p>Back in the migration dialog (<strong>Migrate Data</strong>):</p>
+<ul>
+<li>Select <strong>Start migration</strong> to begin the copy process from the just‑connected <strong>source</strong> to the <strong>target</strong>.</li>
+</ul>
+<img src="/img/migration/migration2.png">
+<blockquote>
+<p><strong>Only if</strong> the old drive is <strong>not detected:</strong></p>
+<ul>
+<li>Re‑check all physical connections: Is the drive fully seated in the adapter? Is the adapter firmly connected to a <strong>USB 3.0 (blue)</strong> port? For NVMe, is the module correctly keyed and screwed down? For SATA, is the connector fully engaged?</li>
+<li>On a <strong>Raspberry Pi 4</strong>, ensure the <strong>source SSD/adapter</strong> has <strong>additional power</strong> (powered dock or Y‑cable), as noted earlier.</li>
+<li>Make sure that the new bigger drive is empty with no partitions</li>
+</ul>
+<p>Worst-Case Fallback: If it still won’t show up, disconnect power, put the <strong>old microSD</strong> and the <strong>old drive</strong> back into their original places, and boot the system to restore the previous state. You can then investigate and retry the migration later.</p>
+</blockquote>
+<p>Normally you will see a dialog showing the old &amp; the new drive and if all looks good, choose continue.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="23-after-selecting-continue">2.3 After selecting <strong>Continue</strong><a href="#23-after-selecting-continue" class="hash-link" aria-label="Direct link to 23-after-selecting-continue" title="Direct link to 23-after-selecting-continue">​</a></h3>
+<ul>
+<li>The wizard may ask for basic restore/setup details (e.g., <strong>password confirmation</strong>, regional options). Follow the prompts.</li>
+<li>Once confirmed, the <strong>copy process</strong> starts.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="24-what-to-expect-during-copying">2.4 What to expect during copying<a href="#24-what-to-expect-during-copying" class="hash-link" aria-label="Direct link to 2.4 What to expect during copying" title="Direct link to 2.4 What to expect during copying">​</a></h3>
+<ul>
+<li>Duration depends on disk speed and data size; <strong>several hours</strong> is normal for full nodes.</li>
+<li>In the terminal you’ll see <strong>progress updates</strong>; on the hardware you’ll usually see <strong>activity LEDs blinking</strong> while data is copied.</li>
+<li>It’s common to see phases (e.g., <strong>blockchain first</strong>, then <strong>Lightning/service data</strong>). As a result, the <strong>percentage may jump or pause</strong>—that’s normal.</li>
+<li>Avoid disconnecting power or cables until the process completes.</li>
+</ul>
+<img src="/img/migration/migration3.png">
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="25-before-the-final-reboot-remove-the-oldsource-drive">2.5 Before the final reboot: remove the old/source drive<a href="#25-before-the-final-reboot-remove-the-oldsource-drive" class="hash-link" aria-label="Direct link to 2.5 Before the final reboot: remove the old/source drive" title="Direct link to 2.5 Before the final reboot: remove the old/source drive">​</a></h3>
+<ul>
+<li>After the copy and remaining system install finish and the wizard prompts for a reboot, <strong>unplug the old drive/adapter</strong> from USB <strong>before</strong> continuing.</li>
+<li>This avoids accidentally booting from or auto‑mounting the old disk and ensures the Pi starts with the <strong>new target drive only</strong>.</li>
+<li>On <strong>Pi 4</strong> with powered docks/Y‑cables, also <strong>switch off/undo the extra power</strong> to the source dock.</li>
+<li>Then proceed with <strong>Reboot</strong> in the wizard.</li>
+</ul>
+<img src="/img/migration/migration4.png"></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col"><a href="https://github.com/fusion44/raspiblitz/tree/main/docs/docs/community/storage_migration.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/docs/community/workshops"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Workshop Tutorial</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/docs/category/faqs"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">FAQ&#x27;s</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#contents" class="table-of-contents__link toc-highlight">Contents</a></li><li><a href="#1-migration-scenarios" class="table-of-contents__link toc-highlight">1. Migration scenarios</a></li><li><a href="#2-hardware--adapter-requirements" class="table-of-contents__link toc-highlight">2. Hardware &amp; adapter requirements</a><ul><li><a href="#a-nvme-on-raspberry-pi5" class="table-of-contents__link toc-highlight">A) NVMe on Raspberry Pi 5</a></li><li><a href="#b-sata-ssds-25-on-raspberry-pi5-or-4" class="table-of-contents__link toc-highlight">B) SATA SSDs (2.5&quot;) on Raspberry Pi 5 or 4</a></li><li><a href="#c-special-case--satausb-ssd--nvme-on-raspberry-pi5" class="table-of-contents__link toc-highlight">C) Special case — <strong>SATA‑USB SSD → NVMe on Raspberry Pi 5</strong></a></li></ul></li><li><a href="#4-what-gets-migrated" class="table-of-contents__link toc-highlight">4. What gets migrated</a></li><li><a href="#5-safety--backup-checklist" class="table-of-contents__link toc-highlight">5. Safety &amp; backup checklist</a></li><li><a href="#6-preparation--clean-shutdown-hardware-swap-and-sdcard-refresh-mandatory" class="table-of-contents__link toc-highlight">6. Preparation — Clean shutdown, hardware swap <strong>and SD‑card refresh</strong> (mandatory)</a></li><li><a href="#1-clean-shutdown" class="table-of-contents__link toc-highlight">1) Clean shutdown</a></li><li><a href="#2-promote-the-new-drive-to-primary" class="table-of-contents__link toc-highlight">2) Promote the new drive to primary</a><ul><li><a href="#scenarioa--nvme--nvme-raspberry-pi5" class="table-of-contents__link toc-highlight">Scenario A — NVMe → NVMe (Raspberry Pi 5)</a></li><li><a href="#scenariob--satausb-ssd--satausb-ssd-raspberry-pi5-or-pi4" class="table-of-contents__link toc-highlight">Scenario B — SATA‑USB SSD → SATA‑USB SSD (Raspberry Pi 5 or Pi 4)</a></li><li><a href="#scenarioc--satausb-ssd--nvme-raspberry-pi5" class="table-of-contents__link toc-highlight">Scenario C — SATA‑USB SSD → NVMe (Raspberry Pi 5)</a></li></ul></li><li><a href="#3-refresh-the-microsd-with-a-clean-raspiblitz-image-recommended" class="table-of-contents__link toc-highlight">3) Refresh the microSD with a clean RaspiBlitz image (recommended)</a></li><li><a href="#4-final-prep--seat-the-old-drive-in-its-adapter-but-do-not-connect-yet" class="table-of-contents__link toc-highlight">4) Final prep — <strong>seat the old drive in its adapter, but do NOT connect yet</strong></a></li><li><a href="#7-migration--boot-with-the-new-sd-old-drive-still-disconnected--prepare-the-target-drive" class="table-of-contents__link toc-highlight">7. Migration — Boot with the new SD (old drive <strong>still disconnected</strong>) &amp; prepare the <strong>target</strong> drive</a><ul><li><a href="#21-boot-from-the-new-microsd--open-setup-via-ssh" class="table-of-contents__link toc-highlight">2.1 Boot from the new microSD &amp; open setup (via SSH)</a></li><li><a href="#22-connect-the-oldsource-drive-usb-30-blue-ports" class="table-of-contents__link toc-highlight">2.2 Connect the <strong>old/source drive</strong> (USB 3.0 blue ports)</a></li><li><a href="#23-after-selecting-continue" class="table-of-contents__link toc-highlight">2.3 After selecting <strong>Continue</strong></a></li><li><a href="#24-what-to-expect-during-copying" class="table-of-contents__link toc-highlight">2.4 What to expect during copying</a></li><li><a href="#25-before-the-final-reboot-remove-the-oldsource-drive" class="table-of-contents__link toc-highlight">2.5 Before the final reboot: remove the old/source drive</a></li></ul></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 RaspiBlitz open source project. Built with Docusaurus. Impressum: Christian Rotzoll, christian [ at ] rotzoll.de - this site is not using any cookies and is not storing your data. Icons by https://fontawesome.com/ (CC BY 4.0) and https://lucide.dev/ (ISC)</div></div></div></footer></div>
+</body>
+</html>
