@@ -31,6 +31,13 @@ $ yarn build
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
 
+### Spellcheck on MacOS
+
+```
+brew install typos-cli
+typos --config typos.toml
+```
+
 ### Deployment
 
 Using SSH:
