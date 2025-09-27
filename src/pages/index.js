@@ -26,7 +26,8 @@ const RaspiBlitzOverview = () => {
                     <img
                         src="/img/raspiblitz.jpg"
                         alt="Raspberry Pi Blitz"
-                        className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-8"
+                        className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-8 border-2 border-black"
+                        style={{ borderWidth: '1px', borderColor: '#000', borderStyle: 'solid' }}
                     />
                     <p className="text-center text-white max-w-2xl mx-auto">
                         RaspiBlitz is an open-source project that allows you to run your own Bitcoin and Lightning

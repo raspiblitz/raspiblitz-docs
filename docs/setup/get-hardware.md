@@ -4,18 +4,10 @@ sidebar_position: 2
 
 # Hardware
 
-RaspiBlitz runs on RaspberryPi 4&5 - but if you go buy new hardware anyway, we recommend getting a RaspberryPi 5 with 8GB RAM. The LCD screen is optional but also recommended for easier setup and monitoring once running.
+RaspiBlitz runs on RaspberryPi 4&5 - but if you go buy new hardware anyway, we strongly recommend getting a RaspberryPi 5 with 8GB RAM. The LCD screen is optional but also recommended for easier setup and monitoring once running.
 
 :::info
-For the RaspberryPi 5 you can already use an NVMe (over the new PCIexpress) instead of an external SSD via USB3. But we dont have settled on a final hardware recommendation for NVMe yet - so for RaspBlitz v1.11 we still recommend using an external SSD. If you want to play it safe with an NVMe upgrade, wait until we offer a hardware recommendation and a migration path with a later version release of RaspiBlitz.
-:::
-
-# Shopping Lists
-
-:::caution
-Please try to use the exact hardware models that are recommended in the shopping lists.
-We have had multiple reports where, for example, other SSD or SSD cases/controllers lead to problems.
-The idea of the shopping lists is to provide you the best tested hardware components that work together - improvement recommendations are always welcome.
+Starting with RaspiBlitz v1.12.0, you can now boot directly from NVMe on the RaspberryPi 5! The new drive layout supports NVMe drives over PCIexpress and allows for optional separation of Data & Storage/Blockchain drives with Auto-Expand functionality for Proxmox setups. You can also copy data from old HDD/SSD/NVMe drives during setup.
 :::
 
 ### RaspberryPi 5 Setup (recommended)
@@ -23,22 +15,14 @@ The idea of the shopping lists is to provide you the best tested hardware compon
 - RaspberryPi 5 8GB [pimoroni shop](https://shop.pimoroni.com/products/raspberry-pi-5?variant=41044580171859)
 - RaspberryPi 5 Active Cooler [pimoroni shop](https://shop.pimoroni.com/products/raspberry-pi-5-active-cooler)
 - RaspberryPi 5 Official Power Supply 27W [pimoroni shop](https://shop.pimoroni.com/products/raspberry-pi-27w-usb-c-power-supply)
-- 1TB SSD - SanDisk SSD Plus 1TB 2.5" : [amazon referral link](https://geni.us/raspiblitz-1000gb-san) _other 1TB SSD models might cause power issues_
-- SSD-case - UGREEN 2.5" External USB 3.0 Hard Disk Case with UASP support : [amazon referral link](https://geni.us/raspiblitz-ssd-case)
-- LCD - 3.5" RPi Display, GPIO connection, XPT2046 Touch Controller: [amazon referral link](https://geni.us/raspiblitz-touchscreen)
-- MicroSDCard 32GB - Samsung PRO Endurance 32 GB microSDHC UHS-I U1: [amazon referral link](https://geni.us/raspiblitz-sc-card)
-
-### RaspberryPi 4 Setup (legacy)
-
-- Raspberry Pi 4 4GB (or 8GB) [amazon referral link](https://geni.us/raspiblitz-4gb-new)
-- Heatsink Case for RPi4 : [amazon referral link](https://geni.us/heatsink-raspi4)
-- Power Supply - USB-C, 5V, >=3A [amazon referral link](https://geni.us/raspiblitz-ps)
-- 1TB SSD - SanDisk SSD Plus 1TB 2.5" : [amazon referral link](https://geni.us/raspiblitz-1000gb-san) _other 1TB SSD models might cause power issues_
-- SSD-case - UGREEN 2.5" External USB 3.0 Hard Disk Case with UASP support : [amazon referral link](https://geni.us/raspiblitz-ssd-case)
-- LCD - 3.5" RPi Display, GPIO connection, XPT2046 Touch Controller: [amazon referral link](https://geni.us/raspiblitz-touchscreen)
-- MicroSDCard 32GB - Samsung PRO Endurance 32 GB microSDHC UHS-I U1: [amazon referral link](https://geni.us/raspiblitz-sc-card)
+- NVMe Base for Raspberry Pi 5 [pimoroni shop](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579)
+- NVMe - Crucial P3 Plus SSD 2TB M.2 PCIe Gen4 : [amazonUS](https://www.amazon.com/Crucial-Plus-PCIe-NAND-5000MB/dp/B0B25ML2FH) [amazonDE](https://www.amazon.de/dp/B0BYW8FLKN)
+- LCD - 3.5" RPi Display 480x320, GPIO connection, XPT2046 Touch Controller: [amazonUS](https://www.amazon.com/Hosyond-480x320-Screen-Display-Raspberry/dp/B0BJDTL9J3) [amazonDE](https://www.amazon.de/Elegoo-Display-Monitor-Raspberry-Schnittstelle/dp/B01JRUH0CY)
+- MicroSDCard 64GB - Kingston High Endurance microSDXC95R 64 GB: [amazonUS](https://www.amazon.com/Kingston-Endurance-64GB-Performance-SDCE/dp/B07PM2VX4F) [amazonDE](https://www.amazon.de/dp/B07PM2VX4F)
 
 ### Alternative Parts
+
+_If you searching for alternative NVMe drives >=2TB that work with the recommended Pimorini NVMe base:_ - check the compatibility list under https://shop.pimoroni.com/products/nvme-base?variant=41219587178579
 
 _If the above mentioned LCD screen is sold out you can also use these different vendors for the screen on Amazon:_
 
@@ -49,13 +33,9 @@ _If the above mentioned LCD screen is sold out you can also use these different 
 
 With all LCD screen models don't use the ones that have an HDMI port/connector - what you need is a 3.5 inch LCD screen model (resolution of 480×320) that connects only thru the GPIO ports (SPI) and has an XPT2046 touch controller.
 
-If you already want to get an NVMe instead of a external SSD you can try these parts (instead of external SSD & SSD-case) - but this remommendation might still change in the future:
+### RaspberryPi 4 Setup (not recommended anymore)
 
-- Pimoroni NVMe Base [pimoroni shop](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579)
-- NVMe Crucial P3 Plus 2TB Gen4 CT2000P3PSSD8 [amazon link](https://www.amazon.com/dp/B0B25ML2FH)
-
-If you are testing or searching alternative SSD/NVMe models - check out this repository:
-[https://github.com/chGoodchild/raspi5_ssd_compattibility](https://github.com/chGoodchild/raspi5_ssd_compattibility)
+You can still run RaspiBlitz on a Raspberry Pi 4, but it is not recommended because performance will be slow and the device does not support NVMe storage, requiring the use of older [SSDs](https://geni.us/raspiblitz-1000gb-san) with a [USB 3.0 SSD adapter](https://geni.us/raspiblitz-ssd-case) (the specific adapter and SSD model are strongly recommended for reliability, though other setups have worked in the past). For better performance and compatibility, a Raspberry Pi 5 is preferred, and if one is not available, an older laptop can also serve as a suitable alternative.
 
 ## Assemble your RaspiBlitz
 

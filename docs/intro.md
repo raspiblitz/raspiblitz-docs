@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Intro
 
-**The RaspiBlitz is a do-it-yourself Lightning Node (LND and/or Core Lightning) running together with a Bitcoin-Fullnode on a Raspberry Pi (1TB SSD) and a nice display for easy setup & monitoring.**
+**The RaspiBlitz is a do-it-yourself Lightning Node (LND and/or Core Lightning) running together with a Bitcoin-Fullnode on a Raspberry Pi (2TB NVMe) and a nice display for easy setup & monitoring.**
 
 RaspiBlitz is mainly targeted for learning how to run your own node decentralized from home - because: Not your Node, Not your Rules.
 Discover & develop the growing ecosystem of the Lightning Network by becoming a full part of it.
@@ -23,6 +23,7 @@ Additional Services that can be installed thru WebUI (beginners):
 - **LNbits** (Lightning wallet/accounts System) [details](https://twitter.com/lnbits/status/1253700293440741377?s=20)
 - **Mempool Explorer** [details](https://github.com/mempool/mempool)
 - **JAM** (JoinMarket Web UI) [details](https://github.com/joinmarket-webui/joinmarket-webui)
+- **Alby Hub** (Feature-rich Lightning wallet connector) [details](https://github.com/getAlby/hub)
 
 Further Services that are just available thru SSH menu (advanced users):
 
