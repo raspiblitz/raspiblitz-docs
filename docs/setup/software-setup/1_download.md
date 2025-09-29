@@ -10,6 +10,10 @@ In this section you find the latest ready-to-use RaspiBlitz SDcard images. Basic
 
 - [What has changed from version to version?](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.md)
 
+:::caution BEWARE
+Once you update to RaspiBlitz v1.12.0, you cannot revert to an older version because the SSD/NVMe data layout changes and is no longer compatible with older versions.
+:::
+
 ### FATPACK SD Card Image (Beginners - WebUI)
 
 This is the sd card image you should choose if your at the beginning of your RaspiBlitz journey or you are a casual node runner wanna download the next update/upgrade - with WebUI & fast installing bonus apps.
