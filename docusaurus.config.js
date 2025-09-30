@@ -46,7 +46,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/fusion44/raspiblitz/tree/main/docs",
+          editUrl: "https://github.com/raspiblitz/raspiblitz-docs/tree/master",
         },
         theme: {
           customCss: "./src/css/custom.css",

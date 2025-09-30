@@ -36,7 +36,7 @@ _You can ignore any warning about the key being 'not a trusted signature' or unt
 
 ### What changed on every upgrade?
 
-See the [CHANGES.md](https://github.com/fusion44/raspiblitz/blob/95c495ea0195765d3391eb9603e6cdeb24075c2c/CHANGES.md) file for details.
+See the [CHANGES.md](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.md) file for details.
 
 ### How do I upgrade my RaspiBlitz?
 
