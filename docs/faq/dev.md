@@ -99,7 +99,7 @@ Creating a fatpack sd card from the minimal image:
 * Start TAILS live image
 * On NTFS USB Stick (Open in Terminal) check hash of raspiblitz-min-vX.X.X.img wit analog note:
 * `shasum -a 256 ./raspiblitz-min-vX.X.X.img`
-* Right-Click the file and write to a min 32GB sd card
+* Right-Click the file and write to a min 64GB sd card
 * On `bootfs` in FileManger (Open in Terminal):
 * `touch stop` & `exit` terminal
 * Shutdown TAILS & eject sd card

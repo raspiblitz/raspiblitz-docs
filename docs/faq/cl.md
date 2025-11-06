@@ -41,7 +41,7 @@
   ```
 - The logs can be accessed in the menu `SYSTEM` - `CLLOG`
   or with the alias: `cllog`
-- The frequently used commands are shortened with alisases. Check them with the command `alias`:
+- The frequently used commands are shortened with aliases. Check them with the command `alias`:
   ```
   alias cl='sudo -u bitcoin /usr/local/bin/lightning-cli --conf=/home/bitcoin/.lightning/config'
   alias clconf='sudo nano /home/bitcoin/.lightning/config'
