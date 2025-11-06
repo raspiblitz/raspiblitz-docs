@@ -42,7 +42,7 @@ See the [CHANGES.md](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.m
 
 The upgrade should be quite simple - you don't need to close any channels:
 
-- It would be best to get a second 16GB or 32GB SD card - but you can also reuse your old one
+- It would be best to get a second 64GB SD card - but you can also reuse your old one
 - In the SSH main menu of you RaspiBlitz choose `UPDATE` & follow the dialogs until shutdown
 - Download the new RaspiBlitz image file from the [GitHub README](https://github.com/raspiblitz/raspiblitz/blob/dev/README.md#installing-the-software)
 - Write the new image to the (new) SD card with a tool like [balena etcher](https://www.balena.io/etcher/)

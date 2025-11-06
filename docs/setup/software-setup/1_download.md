@@ -40,7 +40,7 @@ This is the sd card image for RaspiBlitz users that are already more experienced
 
 ## Write the SD-Card image to your SD Card
 
-You need to write the downloaded SD card image (the img.gz-file) to your SD card (32GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
+You need to write the downloaded SD card image (the img.gz-file) to your SD card (64GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
 
 ## Boot your RaspiBlitz
 
