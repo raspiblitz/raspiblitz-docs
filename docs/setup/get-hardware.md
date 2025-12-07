@@ -33,6 +33,17 @@ _If the above mentioned LCD screen is sold out you can also use these different 
 
 With all LCD screen models don't use the ones that have an HDMI port/connector - what you need is a 3.5 inch LCD screen model (resolution of 480×320) that connects only thru the GPIO ports (SPI) and has an XPT2046 touch controller.
 
+If you want to get an NVMe instead of a external SSD you can try these parts (release 1.12 needed):
+
+- Pimoroni NVMe Base [pimoroni shop](https://shop.pimoroni.com/products/nvme-base?variant=41219587178579)
+- NVMe Crucial P3 Plus 2TB Gen4 CT2000P3PSSD8 [amazon link](https://www.amazon.com/dp/B0B25ML2FH)
+
+- Geekworm X1004 V1.1 NVME PIP shield [Geekworm official] (https://geekworm.com/products/x1004)
+- NVMe Verbatim VI3000 2TB (49376) drive 
+
+If you are testing or searching alternative SSD/NVMe models - check out this repository:
+[https://github.com/chGoodchild/raspi5_ssd_compattibility](https://github.com/chGoodchild/raspi5_ssd_compattibility)
+
 ### RaspberryPi 4 Setup (not recommended anymore)
 
 You can still run RaspiBlitz on a Raspberry Pi 4, but it is not recommended because performance will be slow and the device does not support NVMe storage, requiring the use of older [SSDs](https://geni.us/raspiblitz-1000gb-san) with a [USB 3.0 SSD adapter](https://geni.us/raspiblitz-ssd-case) (the specific adapter and SSD model are strongly recommended for reliability, though other setups have worked in the past). For better performance and compatibility, a Raspberry Pi 5 is preferred, and if one is not available, an older laptop can also serve as a suitable alternative.
