@@ -36,13 +36,13 @@ _You can ignore any warning about the key being 'not a trusted signature' or unt
 
 ### What changed on every upgrade?
 
-See the [CHANGES.md](https://github.com/fusion44/raspiblitz/blob/95c495ea0195765d3391eb9603e6cdeb24075c2c/CHANGES.md) file for details.
+See the [CHANGES.md](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.md) file for details.
 
 ### How do I upgrade my RaspiBlitz?
 
 The upgrade should be quite simple - you don't need to close any channels:
 
-- It would be best to get a second 16GB or 32GB SD card - but you can also reuse your old one
+- It would be best to get a second 64GB SD card - but you can also reuse your old one
 - In the SSH main menu of you RaspiBlitz choose `UPDATE` & follow the dialogs until shutdown
 - Download the new RaspiBlitz image file from the [GitHub README](https://github.com/raspiblitz/raspiblitz/blob/dev/README.md#installing-the-software)
 - Write the new image to the (new) SD card with a tool like [balena etcher](https://www.balena.io/etcher/)
@@ -691,35 +691,11 @@ _Advanced Options > Resolution_
 
 **Hint 2**: Find more info about VNC in Raspberry [here](https://www.raspberrypi.org/documentation/remote-access/vnc/).
 
-### Why use BTRFS on RaspiBlitz?
+#### Why does RaspiBlitz does not support RAID or better file systems than ext4?
 
-The file system [BTRFS](https://de.wikipedia.org/wiki/Btrfs) for your HDD/SSD provides two new features to make the data storage more resilient:
+The RaspiBlitz project opts for simplicity, reliability, and maintainability over complexity. Using a single drive with a well-understood, mature file system (ext4) minimizes support burden, reduces the chance of user error, and keeps the system accessible for newcomers. More advanced storage setups (RAID, Btrfs, ZFS, etc.) introduce additional layers of complexity, edge cases, and maintenance overhead that are hard to support in a volunteer-driven, community project. 
 
-#### Storing your important Data in RAID1 with a USB Thumb Drive
-
-BTRFS comes with build in RAID features - that means that data can be stored on two physical drives at the same time and if one is failing the other one can be used to heal the other one or its replacement.
-
-For the RaspiBlitz this means that you can connect an additional 32GB USB3 Thumb Drive (under 10 USD) and have it running in a RAID with your HDD/SSD - keeping your LND channel data and all other important data of your RaspiBlitz double-safe.
-
-#### Snapshotting the Blockchain
-
-BTRFS comes with a build in snapshot feature - that means that your RaspiBlitz creates a backup of the blockchain data every day and if a blockchain corruption occurs (for example through a power outage) there is no need to sync the complete chain again. Just switch back to the last backup state and quickly sync up from there. On BTRFS such backups can be done as snapshots that dont need much more space on the drive and are quickly done - no need to buy a bigger SSD or wait for copying over 200GB.
-
-#### How do I use BTRFS on RaspiBlitz?
-
-Because the BTRFS is still experimental it's a bit hidden. There are two ways to activate:
-
-- When you start a fresh setup just connect a 32GB Thumb Drive on the second USB3 port from the beginning and you should be asked during HDD setup if you want to try out BTRFS and gave the Thumb Drive as RAID1.
-
-- If you have a existing RaspiBlitz and you want to switch to BTRFS then you need to export a Migration File (MAINMENU > REPAIR > MIGRATION) and then format your HDD/SSD clean. When you import a Migration File during a fresh Setup (see above) you will get the option to format the HDD/SSD with BTRFS.
-
-Once the Blitz is running on BTRFS you can use the '/home/admin/config.scripts/blitz.datadrive.sh' script to add a RAID drive or make a snapshot.
-
-#### How to recover a BTRFS partition?
-
-This articles goes through the usual options:
-https://ownyourbits.com/2019/03/03/how-to-recover-a-btrfs-partition/
-https://seravo.fi/2015/using-raid-btrfs-recovering-broken-disks
+For users who need more sophisticated storage setups, the recommended path is to run RaspiBlitz on more powerful hardware and virtualized under something like Proxmox where those filesystems, backup and RAID features are much better supported and documented.
 
 ### How to setup Raspberry Pi 4 with Heatsink Case
 

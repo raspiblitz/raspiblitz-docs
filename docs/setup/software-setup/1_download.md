@@ -8,15 +8,21 @@ sidebar_position: 1
 
 In this section you find the latest ready-to-use RaspiBlitz SDcard images. Basically you just download, write/flash the image file to an sd card and start your Raspberry Pi with it - its the same for first install or updating to a newer version. You can choose from two ready-made sd card images below.
 
+- [What has changed from version to version?](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.md)
+
+:::caution BEWARE
+Once you update to RaspiBlitz v1.12.0, you cannot revert to an older version because the SSD/NVMe data layout changes and is no longer compatible with older versions.
+:::
+
 ### FATPACK SD Card Image (Beginners - WebUI)
 
 This is the sd card image you should choose if your at the beginning of your RaspiBlitz journey or you are a casual node runner wanna download the next update/upgrade - with WebUI & fast installing bonus apps.
 
-- **FATPACK SD CARD IMAGE ⮕ [raspiblitz-fat-v1.11.4-2024-12-24.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.4-2024-12-24.img.gz)**
-- SHA-256: 31877d0085c20f34bf2bedeeec6bd4abc108595a4b0985d273ddaba2b0fbe654
+- **FATPACK SD CARD IMAGE ⮕ [raspiblitz-fat-v1.12.0-2025-09-26.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.12.0-2025-09-26.img.gz)**
+- SHA-256: 5b65467c899947748a7c7812d89d24673817067812acb275f9902bcd03a280e6
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
-- Signature-File: [raspiblitz-fat-v1.11.4-2024-12-24.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.11.4-2024-12-24.img.gz.sig)
-- Torrent: [raspiblitz-fat-v1.11.4-2024-12-24.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/raspiblitz-fat-v1.11.4-2024-12-24.img.gz.torrent)
+- Signature-File: [raspiblitz-fat-v1.12.0-2025-09-26.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-fat-v1.12.0-2025-09-26.img.gz.sig)
+- Torrent: [raspiblitz-fat-v1.12.0-2025-09-26.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/refs/heads/dev/home.admin/assets/raspiblitz-fat-v1.12.0-2025-09-26.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 
@@ -24,18 +30,17 @@ This is the sd card image you should choose if your at the beginning of your Ras
 
 This is the sd card image for RaspiBlitz users that are already more experienced and want to use just a limited set of features of the RaspiBlitz. This image has just the bare minimum of features pre-installed - LCD & HDMI output is off by default. Setup, Update or Recovery needs to be done thru SSH login - API & WebUI are later available but are not pre-installed/activated by default. The RaspiBlitz will download & compile just the tools that are in your ´raspiblitz.conf´ - this will take longer but as a trade-off this RaspiBlitz then just runs with a reduced set of dependencies and so a minimized attack vector and better performance. Its for the serious & experienced node runners.
 
-- **MINIMAL SD CARD IMAGE ⮕ [raspiblitz-min-v1.11.4-2024-12-24.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.4-2024-12-24.img.gz)**
-- SHA-256: 3d874e8e2518bb9db79df196d1dd7e6d567a0608a3df568cadef87a77b4d3841
+- **MINIMAL SD CARD IMAGE ⮕ [raspiblitz-min-v1.12.0-2025-09-26.img.gz](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.12.0-2025-09-26.img.gz)**
+- SHA-256: 6b0fb38132b66b79255efd34b2a387ee8418787cfa3f5ff9e8821735101866d2
 - GPG 64-bit (main): 1C73 060C 7C17 6461 & (sub): AA9D D1B5 CC56 47DA
-- Signature-File: [raspiblitz-min-v1.11.4-2024-12-24.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.11.4-2024-12-24.img.gz.sig)
-- Torrent: [raspiblitz-min-v1.11.4-2024-12-24.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/raspiblitz-min-v1.11.4-2024-12-24.img.gz.torrent)
+- Signature-File: [raspiblitz-min-v1.12.0-2025-09-26.img.gz.sig](https://raspiblitz.fulmo.org/images/raspiblitz-min-v1.12.0-2025-09-26.img.gz.sig)
+- Torrent: [raspiblitz-min-v1.12.0-2025-09-26.img.gz.torrent](https://github.com/raspiblitz/raspiblitz/raw/refs/heads/dev/home.admin/assets/raspiblitz-min-v1.12.0-2025-09-26.img.gz.torrent)
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
-- [What has changed from version to version?](https://github.com/raspiblitz/raspiblitz/blob/dev/CHANGES.md)
 
 ## Write the SD-Card image to your SD Card
 
-You need to write the downloaded SD card image (the img.gz-file) to your SD card (32GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
+You need to write the downloaded SD card image (the img.gz-file) to your SD card (64GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
 
 ## Boot your RaspiBlitz
 
