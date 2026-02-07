@@ -11,7 +11,7 @@ For each password please choose unique, single strings, without spaces and speci
 
 ![SSH2](../../../static/img/ssh2-passwords.png)
 
-You can use this [RaspiBlitz Recovery Sheet (PDF)](https://github.com/rootzoll/raspiblitz/raw/v1.7/home.admin/assets/RaspiBlitzRecoverySheet.pdf) to write those passwords down for safe storage and also use it later on for your Seed Words.
+You can use this [RaspiBlitz Recovery Sheet (PDF)](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/RaspiBlitzRecoverySheet.pdf) to write those passwords down for safe storage and also use it later on for your Seed Words.
 
 :::info
 The password A,B,C idea is based on the [RaspiBolt Guide Preparations](https://raspibolt.org/guide/raspberry-pi/preparations.html#write-down-your-passwords) - check out for more background.
@@ -51,7 +51,7 @@ WRITE YOUR SEED WORDS DOWN before you continue - you will need them to recover f
 If you just want to try/experiment with the RaspiBlitz, at least take a photo of the seed words with your smartphone, so you have something just in case.
 If you plan to keep your RaspiBlitz running store this word list offline or in a password safe.
 
-You can use this [RaspiBlitz Recovery Sheet (PDF)](https://github.com/rootzoll/raspiblitz/raw/v1.7/home.admin/assets/RaspiBlitzRecoverySheet.pdf) to write down your seed words for safe storage.
+You can use this [RaspiBlitz Recovery Sheet (PDF)](https://github.com/raspiblitz/raspiblitz/raw/dev/home.admin/assets/RaspiBlitzRecoverySheet.pdf) to write down your seed words for safe storage.
 
 If you don't have a full copy of the blockchain pre-synced/validated on your hard drive/SSD then you will now be asked how you want to get your copy of the blockchain.
 There are two basic options :
