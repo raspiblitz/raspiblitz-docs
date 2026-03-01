@@ -66,5 +66,5 @@ You now have the hardware ready for your RaspiBlitz - whats missing is the softw
 To continue setup go to next chapter [Software Download](./software-setup/1_download.md).
 
 :::info
-If you are a very advanced user who is able to read/verify code or you like to run a self-modified/forked version of RaspiBlitz you can also build the sd card image yourself - see the [Build your own sd card image](../faq/dev.md#what-is-the-process-of-creating-a-new-sd-card-image-release)
+If you are a very advanced user who is able to read/verify code or you like to run a self-modified/forked version of RaspiBlitz you can also build the sd card image yourself - see the [Build your own sd card image](../faq/dev.md#what-is-the-process-of-creating-a-new-raspberrypi-sd-card-image-release-manually)
 :::
