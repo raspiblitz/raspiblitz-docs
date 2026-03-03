@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">SSH Menu | RaspiBlitz</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://docs.raspiblitz.org/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://docs.raspiblitz.org/docs/usage/ssh_menu"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="SSH Menu | RaspiBlitz"><meta data-rh="true" name="description" content="Once the Blockchain is synced you will enter the SSH Main Menu:"><meta data-rh="true" property="og:description" content="Once the Blockchain is synced you will enter the SSH Main Menu:"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://docs.raspiblitz.org/docs/usage/ssh_menu"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/usage/ssh_menu" hreflang="en"><link data-rh="true" rel="alternate" href="https://docs.raspiblitz.org/docs/usage/ssh_menu" hreflang="x-default"><link data-rh="true" rel="preconnect" href="https://H1OPUQUC79-dsn.algolia.net" crossorigin="anonymous"><link rel="search" type="application/opensearchdescription+xml" title="RaspiBlitz" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.b6035100.css">
-<script src="/assets/js/runtime~main.1a22c7c5.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e5236118.js" defer="defer"></script>
 <script src="/assets/js/main.b624d162.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -24,7 +24,7 @@ so from here on out, your RaspiBlitz is ready to play with.</em></p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="feature-documentation">Feature Documentation<a href="#feature-documentation" class="hash-link" aria-label="Direct link to Feature Documentation" title="Direct link to Feature Documentation">​</a></h3>
 <p>These are the features available through the RaspiBlitz SSH menus.
 They have the goal to offer some basic/fallback functionality &amp; configurations.
-More complex or user-friendly tasks are best to be done with wallets, apps and scripts you connect to your Lightning Node via <a href="#interface--apis">APIs</a> - because you have a full Bitcoin- and Lightning-Node on the RaspiBlitz.</p>
+More complex or user-friendly tasks are best to be done with wallets, apps and scripts you connect to your Lightning Node via <a href="#connect-connect-apps--credentials">APIs</a> - because you have a full Bitcoin- and Lightning-Node on the RaspiBlitz.</p>
 <p>So let&#x27;s take a look at the SSH main menu in detail:</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="info-raspiblitz-status-screen">INFO: Raspiblitz Status Screen<a href="#info-raspiblitz-status-screen" class="hash-link" aria-label="Direct link to INFO: Raspiblitz Status Screen" title="Direct link to INFO: Raspiblitz Status Screen">​</a></h4>
 <p>This is the screen that gets displayed on the LCD/display.
@@ -155,7 +155,7 @@ If there is a public IP change on your router LND restarts automatically, and wi
 <li><a href="/docs/faq#when-using-auto-unlock-how-much-security-do-i-lose">When using Auto-Unlock, how much security do I lose?</a></li>
 </ul>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="staticchannelemergency-backup-on-nextcloud">StaticChannel/Emergency-Backup on Nextcloud<a href="#staticchannelemergency-backup-on-nextcloud" class="hash-link" aria-label="Direct link to StaticChannel/Emergency-Backup on Nextcloud" title="Direct link to StaticChannel/Emergency-Backup on Nextcloud">​</a></h5>
-<p>See <a href="/docs/setup/software-setup/basic#backup-for-on-chain---channel-funds">below on this README</a> for your Backup options when it comes to securing your funds against accidental loss.
+<p>See <a href="/docs/faq#how-do-i-backup-my-lightning-node">How do I backup my Lightning Node?</a> for your backup options when it comes to securing your funds against accidental loss.
 Storing the encrypted Static Channel Backup file to your Nextcloud account is an easy and secure way to do this.</p>
 <p>Nextcloud is an open-source project to host your own files: <a href="https://en.wikipedia.org/wiki/Nextcloud" target="_blank" rel="noopener noreferrer">https://en.wikipedia.org/wiki/Nextcloud</a> - in its basics it&#x27;s an open DropBox replacement... but can do much much more.
 You can run it yourself or use a hosted Nextcloud server.
@@ -164,7 +164,7 @@ Find free Nextcloud providers here to sign up: <a href="https://nextcloud.com/si
 <p>You can connect a small extra USB drive to your RaspiBlitz (choose a small one up to 32GB, don&#x27;t use second HDD or SSD here as that would drain too much power from the RaspiBlitz).
 That USB drive will then be used to store your latest StaticChannelBackup, just in case your HDD encounters an error.</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="staticchannelemergency-backup-per-scpssh-to-other-server">StaticChannel/Emergency-Backup per SCP/SSH to other server<a href="#staticchannelemergency-backup-per-scpssh-to-other-server" class="hash-link" aria-label="Direct link to StaticChannel/Emergency-Backup per SCP/SSH to other server" title="Direct link to StaticChannel/Emergency-Backup per SCP/SSH to other server">​</a></h5>
-<p>See <a href="/docs/setup/software-setup/basic#b-scp-backup-target">SCP Backup Target</a> for details on how to setup static channel backups using SCP.</p>
+<p>See <a href="/docs/faq#how-do-i-backup-my-lightning-node">How do I backup my Lightning Node?</a> for details on setting up static channel backups with SCP.</p>
 <h5 class="anchor anchorWithStickyNavbar_LWe7" id="core-lightning-node">CORE LIGHTNING NODE<a href="#core-lightning-node" class="hash-link" aria-label="Direct link to CORE LIGHTNING NODE" title="Direct link to CORE LIGHTNING NODE">​</a></h5>
 <p>This needs to be switched on to see the sub-settings options for Core Lightning.
 If switched on it means the c-lighting node implementation is installed and running on your RaspiBlitz - it can run in parallel to LND.
