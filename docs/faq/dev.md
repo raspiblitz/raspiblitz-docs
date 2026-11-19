@@ -225,15 +225,3 @@ On the terminal use command 'github' (make sure your on the main raspiblitz repo
 ### How can I push changes to an existing Pull Request?
 
 See article: https://tech.sycamore.garden/add-commit-push-contributor-branch-git-github .. only works if your a contributor on raspiblitz repo.
-
-### How to run the automatic amd64 build on a VM on OSX?
-
-just notes so far:
-
-https://brew.sh
-brew install qemu
-https://github.com/raspiblitz/raspiblitz/actions --> download amd64-lean image
-double unzip until `qcow2` file 
-convert `qcow2` to `vdi:
-qemu-img convert -f qcow2 raspiblitz-amd64-debian-lean.qcow2 -O vdi raspiblitz-amd64-debian-lean.vdi
-https://www.virtualbox.org/wiki/Downloads
