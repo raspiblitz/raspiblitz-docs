@@ -2,6 +2,10 @@
 
 These are FAQ and notes for developers only - if you are just operating a RaspiBlitz you can skip these. 
 
+### Build a Raspberry Pi release image with PiKVM (Draft)
+
+Build Minimal or Fatpack on a Pi 5 and collect the checked archive for signing. The guide covers the wiring, controller download and SHA-256, one-time setup and operating commands. [RaspiBlitz PiKVM image build (Draft)](pikvm-image-build.md)
+
 ### Steps to create RaspberryPi images with Packer?
 
 * Make sure you have:

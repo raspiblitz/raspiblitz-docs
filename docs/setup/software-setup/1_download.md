@@ -38,6 +38,8 @@ This is the sd card image for RaspiBlitz users that are already more experienced
 - [How to verify the SD card image after download?](../../faq/faq.md#how-to-verify-the-sd-card-image-after-download)
 
 
+For release maintainers building these images on a Pi 5, the draft operator guide includes the PiKVM scripts and their SHA-256 checksums. [PiKVM build tools and instructions](../../faq/pikvm-image-build.md#download-and-install-the-controller)
+
 ## Write the SD-Card image to your SD Card
 
 You need to write the downloaded SD card image (the img.gz-file) to your SD card (64GB minimum) - you can use the very easy tool [Balena Etcher](https://www.balena.io/etcher/) for this. It's available for Win, Mac & Linux.
