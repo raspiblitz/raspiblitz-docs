@@ -22,6 +22,8 @@ Starting with RaspiBlitz v1.12.0, you can now boot directly from NVMe on the Ras
 
 ### Alternative Parts
 
+For a system that runs around the clock, the 64 GB Kingston High Endurance card above is our default. Kingston publishes a write-endurance rating for this model. The official 64 GB Raspberry Pi microSD card is also an option for the Pi 4 and Pi 5. Its A2 rating describes application I/O performance. Raspberry Pi publishes random read and write speeds but does not specify write endurance in its product specifications. Store the blockchain on the SSD or NVMe drive. [Kingston specifications](https://www.kingston.com/en/memory-cards/high-endurance-microsd-card) · [Raspberry Pi SD card specifications](https://www.raspberrypi.com/products/sd-cards/)
+
 _If you searching for alternative NVMe drives >=2TB that work with the recommended Pimorini NVMe base:_ - check the compatibility list under https://shop.pimoroni.com/products/nvme-base?variant=41219587178579
 
 _If the above mentioned LCD screen is sold out you can also use these different vendors for the screen on Amazon:_
