@@ -249,6 +249,26 @@ You can also get a debug report through the SSH menus:
 
 _PLEASE NOTICE: Most private information (like IPs, node IDs, ...) will filtered from debug logs, but this might not catch all sensitive information - so recheck content yourself before you share publicly._
 
+### My SSD is 99% full and CPU usage is over 100%. Do I need a bigger drive?
+
+Check which filesystem is running out of space. Log in over SSH, choose the command line and run:
+
+```sh
+df -hT /
+for path in /mnt/hdd/app-data /mnt/hdd/bitcoin; do
+  if [ -d "$path" ]; then
+    findmnt -T "$path" -o TARGET,SOURCE,FSTYPE
+    df -hT "$path"
+  fi
+done
+```
+
+The `Avail` column shows the space left for new data. On some installations the operating system, application data and blockchain share a drive; on others they occupy separate filesystems. If both data paths show the same device, count its free space once. If an expected path is missing or unexpectedly resolves to the root filesystem, check the mount before making changes.
+
+Check CPU activity separately with `top` (press `P` to sort by CPU, then `q` to quit). One busy core can show 100% for a process. A multithreaded process can go higher. If `bitcoind` is catching up or an indexer is building its index, check sync progress and take another sample later. Sustained load on a fully synced node is worth investigating by process name.
+
+If the blockchain filesystem is nearly full, even normal operation needs more space as new blocks arrive. Back up Lightning recovery data off the node while it is responsive, and plan a move to a larger drive. If space is about to run out, shut down cleanly through the RaspiBlitz menu. Deleting individual block files, chainstate or wallet databases can invalidate indexes or lose data. The [storage migration guide](../community/storage_migration.md) covers compatible v1.12 hardware, backups and copying to the replacement drive. For help with a different setup, report the RaspiBlitz version, hardware, free space per filesystem, sync state and busiest process name.
+
 ### I have the full blockchain on another storage. How do I copy it to the RaspiBlitz?
 
 Copying a already synced blockchain from another storage (e.g. your Laptop or external hard drive) can be a quick way to get the RaspiBlitz started or replacing a corrupted blockchain with a fresh one. Also that way you have synced and verified the blockchain yourself, and are not trusting the RaspiBlitz Torrent downloads (Don't trust, verify).
