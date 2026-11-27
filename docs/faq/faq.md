@@ -256,9 +256,12 @@ Check which filesystem is running out of space. Log in over SSH, choose the comm
 ```sh
 df -hT /
 for path in /mnt/hdd/app-data /mnt/hdd/bitcoin; do
-  if [ -d "$path" ]; then
+  echo "$path"
+  if [ -d "$path" ] && [ -x "$path" ]; then
     findmnt -T "$path" -o TARGET,SOURCE,FSTYPE
     df -hT "$path"
+  else
+    echo "Directory missing or inaccessible; check the mount."
   fi
 done
 ```
