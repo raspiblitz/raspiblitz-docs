@@ -60,6 +60,8 @@ When everything boots up correctly (one reboot is normal), you should finally se
 
 - [How do I find the IP address when running without a display?](../../faq/faq.md#how-do-i-find-the-ip-address-when-running-without-a-display)
 
+On the Pi 5, a white SPI LCD during first boot can simply mean the display driver is inactive. The Minimal image starts headless. Look for the Pi in the router's DHCP leases, then connect using `ssh admin@<Pi-IP>`. After setup, enter `lcd` in the admin shell to enable a supported display and confirm the restart.
+
 ![LCD0](../../../static/img/lcd0-welcome.png)
 
 Now open up a terminal ([OSX](https://www.youtube.com/watch?v=5XgBd6rjuDQ)/[Win10](https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/)) and connect through SSH with the command displayed by the RaspiBlitz:
@@ -69,3 +71,7 @@ Now open up a terminal ([OSX](https://www.youtube.com/watch?v=5XgBd6rjuDQ)/[Win1
 - [I cannot connect by SSH to my RaspiBlitz. What to do?](../../faq/faq.md#i-cannot-connect-via-ssh-to-my-raspiblitz-what-do-i-do)
 
 To follow the setup dialogue in your terminal you can continue with chapter [Basic Setup](2_basic.md).
+
+If the setup log says it is waiting for the final setup controller, open a fresh SSH session to the same Pi. Use the password A you just chose. The admin menu resumes the final setup dialogs and handles the reboot.
+
+When reusing an NVMe from a working node, check that setup recognizes the existing installation and offers recovery or update. Cancel a format prompt if you intend to retain wallet and app data. A fresh setup that offers to keep the blockchain can still erase other node data. [Migration and recovery](../migrate.md)
