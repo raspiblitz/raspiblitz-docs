@@ -60,7 +60,7 @@ When everything boots up correctly (one reboot is normal), you should finally se
 
 - [How do I find the IP address when running without a display?](../../faq/faq.md#how-do-i-find-the-ip-address-when-running-without-a-display)
 
-On the Pi 5, a white SPI LCD during first boot can simply mean the display driver is inactive. The Minimal image starts headless. Look for the Pi in the router's DHCP leases, then connect using `ssh admin@<Pi-IP>`. After setup, enter `lcd` in the admin shell to enable a supported display and confirm the restart.
+On the Pi 5, a white SPI LCD during first boot can simply mean the display driver is inactive. The Minimal image starts headless. Look for the Pi in the router's DHCP leases, then connect using `ssh admin@<Pi-IP>`. Before entering your password on a new host, verify its SSH fingerprint using a trusted console or a previously recorded fingerprint for this system. After setup, enter `lcd` in the admin shell to enable a supported display and confirm the restart.
 
 ![LCD0](../../../static/img/lcd0-welcome.png)
 
@@ -74,4 +74,4 @@ To follow the setup dialogue in your terminal you can continue with chapter [Bas
 
 If the setup log says it is waiting for the final setup controller, open a fresh SSH session to the same Pi. Use the password A you just chose. The admin menu resumes the final setup dialogs and handles the reboot.
 
-When reusing an NVMe from a working node, check that setup recognizes the existing installation and offers recovery or update. Cancel a format prompt if you intend to retain wallet and app data. A fresh setup that offers to keep the blockchain can still erase other node data. [Migration and recovery](../migrate.md)
+When reusing an NVMe from a working node, check that setup recognizes the existing installation and offers recovery or update. If you want to retain wallet and app data and neither option appears, stop here. A fresh setup can erase that data even when it offers to keep the blockchain. [Migration and recovery](../migrate.md)
